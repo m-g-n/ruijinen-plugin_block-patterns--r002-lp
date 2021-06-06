@@ -13,4 +13,4 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - npx gulp sass でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
 
 # リリーステストコメント
-- 04
+- 06
