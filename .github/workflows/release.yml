@@ -55,6 +55,16 @@ jobs:
           })
           return result.data.body
 
+    # release用のzip作成 https://github.com/marketplace/actions/zip-release
+    - name: Zip Release 
+      uses: TheDoctor0/zip-release@0.4.1
+      with:
+        filename: 'ruijinen-block-patterns--r002-lp.zip' # ファイル名
+        exclusions: '*.git* /*node_modules/* .editorconfig /*src/*scss/*' # 除外設定
+        directory: '.'
+        path: '.'
+        type: 'zip'
+
     # リリースノートの生成
     - name: Create ReleaseNote
       if: startsWith(steps.extract_branch.outputs.branch, 'release')
