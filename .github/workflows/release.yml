@@ -73,7 +73,7 @@ jobs:
 
     # リリースノートの生成
     - name: Create ReleaseNote
-      id： create_release
+      id: create_release
       if: startsWith(steps.extract_branch.outputs.branch, 'release')
       uses: actions/create-release@v1
       env:
