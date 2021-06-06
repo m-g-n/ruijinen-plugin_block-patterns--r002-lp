@@ -11,3 +11,6 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - npm i でpackegeをインストール
 - npx gulp watch でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
 - npx gulp sass でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
+
+# リリーステストコメント
+- 01
