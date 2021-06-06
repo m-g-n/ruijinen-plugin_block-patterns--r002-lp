@@ -1,4 +1,4 @@
-# action名称
+# パッケージのリリース https://tech.connehito.com/entry/2020/09/30/174451
 name: automerge
 
 # トリガー
@@ -65,11 +65,26 @@ jobs:
     - name: Zip Release 
       uses: TheDoctor0/zip-release@0.4.1
       with:
-        filename: 'ruijinen-block-patterns-beta.zip' # ファイル名
+        filename: 'ruijinen-block-patterns--r002-lp.zip' # ファイル名
         exclusions: '*.git* /*node_modules/* .editorconfig /*src/*scss/*' # 除外設定
         directory: '.'
         path: '.'
         type: 'zip'
+
+    # リリースノートの生成
+    - name: Create ReleaseNote
+      id： create_release
+      if: startsWith(steps.extract_branch.outputs.branch, 'release')
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.extract_tag.outputs.tag }}
+        release_name: Release ${{ steps.extract_tag.outputs.tag }}
+        body: |
+          ${{ steps.pr-body.outputs.result }}
+        draft: false
+        prerelease: false
 
     # releaseにzipファイルを添付
     - name: Upload Release Asset
@@ -82,17 +97,3 @@ jobs:
         asset_path: ./ruijinen-block-patterns--r002-lp.zip
         asset_name: ruijinen-block-patterns--r002-lp.zip
         asset_content_type: application/zip
-
-    # リリースノートの生成
-    - name: Create ReleaseNote
-      if: startsWith(steps.extract_branch.outputs.branch, 'release')
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: v${{ steps.extract_tag.outputs.tag }}
-        release_name: Release ${{ steps.extract_tag.outputs.tag }}
-        body: |
-          ${{ steps.pr-body.outputs.result }}
-        draft: false
-        prerelease: false
