@@ -13,17 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
+    # ブランチ抽出?
     - name: Extract branch name
       uses: mdecoleman/pr-branch-name@1.0.0
       id: extract_branch
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    # タグ名の取得?
     - name: Extract tag name
       shell: bash
       run: |
         branch=${{ steps.extract_branch.outputs.branch }}
         echo "##[set-output name=tag;]$(echo ${branch#release-})"
       id: extract_tag
+
+    # devとmainブランチにマージ
     - name: Merge
       if: startsWith(steps.extract_branch.outputs.branch, 'release')
       uses: yanamura/git-flow-merge-action@v1
@@ -33,6 +39,8 @@ jobs:
         develop_branch: 'dev'
         main_branch: 'main'
         tag: v${{ steps.extract_tag.outputs.tag }}
+
+    # プルリクの内容を取得（relese note用）
     - name: Get body from PullRequest
       id: pr-body
       uses: actions/github-script@v2
@@ -46,6 +54,8 @@ jobs:
             pull_number: context.issue.number
           })
           return result.data.body
+
+    # リリースノートの生成
     - name: Create ReleaseNote
       if: startsWith(steps.extract_branch.outputs.branch, 'release')
       uses: actions/create-release@v1
@@ -58,3 +68,43 @@ jobs:
           ${{ steps.pr-body.outputs.result }}
         draft: false
         prerelease: false
+
+    #composerの実施
+    - name: Composer install
+      uses: docker://composer:1.9.1
+      with:
+        args: install
+
+# release用のzip作成 https://github.com/marketplace/actions/zip-release
+    - name: Zip Release 
+      uses: TheDoctor0/zip-release@0.4.1
+      with:
+        filename: 'ruijinen-block-patterns-beta.zip' # ファイル名
+        exclusions: '*.git* /*node_modules/* .editorconfig /*src/*scss/*' # 除外設定
+        directory: '.'
+        path: '.'
+        type: 'zip'
+
+# releaseを作成
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+# releaseにzipファイルを添付
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./ruijinen-block-patterns-beta.zip
+        asset_name: ruijinen-block-patterns-beta.zip
+        asset_content_type: application/zip
