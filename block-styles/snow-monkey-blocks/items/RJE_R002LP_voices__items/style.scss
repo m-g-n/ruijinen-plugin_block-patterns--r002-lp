@@ -1,0 +1,159 @@
+// ======================================================
+//
+// ブロックスタイル：類人猿P002_LP お客様の声の項目
+//
+// - 項目は自由入力のみ（他のスタイルの場合は余白とアイコンだけ適応される）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// 初期設定
+// ------------------------------------------------------
+@charset 'utf-8';
+@import '../../../../src/css/block-styles';
+
+// ------------------------------------------------------
+// 変数
+// ------------------------------------------------------
+
+// ------------------------------------------------------
+// 類人猿P002_LP お客様の声の項目
+// ------------------------------------------------------
+.is-style-RJE_R002LP_voices_items:not(:root){
+	> .c-row{
+		>.c-row__col{
+			margin-bottom: 2.5rem;
+			@include mq(sm){
+				margin-bottom: 3.75rem;
+			}
+		}
+	}
+	.smb-items__item{
+		padding: 2.5rem 2.25rem;
+		background-color: #fff;
+		&::before{
+			content: "";
+			position: absolute;
+			top: -1.25rem;
+			left: 1.25rem;
+			display: block;
+			width: 52px;
+			height: 43px;
+			background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA1MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQ2LjE2NjcgMEM0MyAzLjY3OTg5IDM5LjY2NjcgOC4zNjMzOCAzNi41IDEyLjg3OTZDMzEuMzMzMyAxOS45MDQ4IDI5LjUgMjMuNzUyIDI5LjUgMjkuNDM5MUMyOS41IDM2Ljk2NjEgMzQuMTY2NyA0MS4zMTUxIDQwLjgzMzMgNDEuMzE1MUM0Ni4zMzMzIDQxLjMxNTEgNTAuODMzMyAzNy4xMzM0IDUwLjgzMzMgMzEuMjc5QzUwLjgzMzMgMjYuOTMwMSA0OC42NjY3IDIzLjc1MiA0NC4zMzMzIDIyLjA3OTNDNDIuMTY2NyAyMS4yNDMgNDEuODMzMyAyMC4yMzk0IDQxLjgzMzMgMTguOTAxMkM0MS44MzMzIDE3LjU2MzEgNDIuMTY2NyAxNi4zOTIyIDQzLjMzMzMgMTQuMDUwNUM0NiA5LjUzNDI1IDQ5LjY2NjcgMy41MTI2MiA1MiAwSDQ2LjE2NjdaTTE2LjY2NjcgMEMxMy41IDMuNjc5ODkgMTAuMTY2NyA4LjM2MzM4IDcgMTIuODc5NkMxLjgzMzMzIDE5LjkwNDggMCAyMy43NTIgMCAyOS40MzkxQzAgMzYuOTY2MSA0LjY2NjY3IDQxLjMxNTEgMTEuMzMzMyA0MS4zMTUxQzE2LjgzMzMgNDEuMzE1MSAyMS4zMzMzIDM3LjEzMzQgMjEuMzMzMyAzMS4yNzlDMjEuMzMzMyAyNi45MzAxIDE5LjE2NjcgMjMuNzUyIDE0LjgzMzMgMjIuMDc5M0MxMi42NjY3IDIxLjI0MyAxMi4zMzMzIDIwLjIzOTQgMTIuMzMzMyAxOC45MDEyQzEyLjMzMzMgMTcuNTYzMSAxMi42NjY3IDE2LjM5MjIgMTMuODMzMyAxNC4wNTA1QzE2LjUgOS41MzQyNSAyMC4xNjY3IDMuNTEyNjIgMjIuNSAwSDE2LjY2NjdaIiBmaWxsPSIjQ0RDRENEIi8+Cjwvc3ZnPg==") no-repeat center center;
+			background-size: contain;
+		}
+		@media screen and (min-width: 1280px) {
+			padding: 4rem;
+		}
+	}
+	.smb-items__item--free .smb-items__item__body{
+		@include mq(lg){
+			display: flex;
+		}
+	}
+}
+
+//内容ヘッダ
+.RJE_R002LP_voices__item_heading:not(:root){
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.5rem;
+	@include mq(lg){
+		max-width:31.2%;
+		flex-basis: 31.2%;
+		padding-right: 2rem;
+	}
+	@media screen and (min-width: 1280px) {
+		padding-right: 3.75rem;
+	}
+}
+//本文
+.RJE_R002LP_voices__item_content:not(:root){
+	.RJE_R002LP_voices__item_heading + &{
+		padding-top: 1.875rem;
+		border-color: #999;
+		border-style: solid;
+		border-width: 1px 0 0;
+		@include mq(lg){
+			margin-top: 0;
+			padding-top: 0;
+			padding-left: 2rem;
+			border-width: 0 0 0 1px;
+		}
+		@media screen and (min-width: 1280px) {
+			padding-left: 3.75rem;
+		}
+	}
+	@include mq(lg){
+		max-width:68.8%;
+		flex-basis: 68.8%;
+		padding-top: 0;
+		border-top: 0;
+	}
+}
+
+
+//タイトル
+.RJE_R002LP_voices__title:not(:root){
+	margin-bottom: 0.5rem;
+	padding: 0;
+	background: none;
+	border: none;
+	@include heading4;
+}
+
+//パーソナル情報
+.RJE_R002LP_voices__person:not(:root){
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: #8F8F8F;
+	.c-row{
+		justify-content: center;
+		margin-left: 0;
+		margin-right: 0;
+		@include mq(lg){
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+		}
+	}
+	.c-row--reverse{
+		@include mq(lg){
+			justify-content: flex-end;
+		}
+		.c-row__col:last-child .smb-media-text__figure img{
+			display: inline-block;
+			margin-right: 0.75rem;
+		}
+	}
+	.c-row:not(.c-row--reverse) .c-row__col:last-child .smb-media-text__figure img{
+		display: inline-block;
+		margin-left: 0.75rem;
+	}
+
+	.c-row__col{
+		flex-basis: auto;
+		max-width: initial;
+		margin-bottom: 0;
+		padding: 0;
+		&:first-child{
+			order: 1;
+		}
+		&:last-child{
+			padding-top: 0;
+			padding-right: 0;
+			padding-bottom: 0;
+			order: 2;
+		}
+	}
+	.smb-media-text__figure{
+		padding-top: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+	.smb-media-text__figure img{
+		max-width: 60px;
+		height: auto;
+		border-radius: 50%;
+	}
+}

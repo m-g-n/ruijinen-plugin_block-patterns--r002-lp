@@ -1,4 +1,4 @@
-# action名称
+# パッケージのリリース https://tech.connehito.com/entry/2020/09/30/174451
 name: automerge
 
 # トリガー
@@ -8,22 +8,28 @@ on:
 
 # 実行内容
 jobs:
-  automerge:
+  fugahoge:
     if: github.event.label.name == 'shipit'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
+    # ブランチ抽出?
     - name: Extract branch name
       uses: mdecoleman/pr-branch-name@1.0.0
       id: extract_branch
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    # タグ名の取得?
     - name: Extract tag name
       shell: bash
       run: |
         branch=${{ steps.extract_branch.outputs.branch }}
         echo "##[set-output name=tag;]$(echo ${branch#release-})"
       id: extract_tag
+
+    # devとmainブランチにマージ
     - name: Merge
       if: startsWith(steps.extract_branch.outputs.branch, 'release')
       uses: yanamura/git-flow-merge-action@v1
@@ -33,6 +39,8 @@ jobs:
         develop_branch: 'dev'
         main_branch: 'main'
         tag: v${{ steps.extract_tag.outputs.tag }}
+
+    # プルリクの内容を取得（relese note用）
     - name: Get body from PullRequest
       id: pr-body
       uses: actions/github-script@v2
@@ -46,6 +54,8 @@ jobs:
             pull_number: context.issue.number
           })
           return result.data.body
+
+    # リリースノートの生成
     - name: Create ReleaseNote
       if: startsWith(steps.extract_branch.outputs.branch, 'release')
       uses: actions/create-release@v1
