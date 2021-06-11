@@ -2,4 +2,4 @@
   staging = dev
   production = main
 [pr-release]
-  template = .git-pr-template
+  template = .git-pr-release-template
