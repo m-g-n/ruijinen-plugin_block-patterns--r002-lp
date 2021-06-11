@@ -1,7 +1,4 @@
-release <%= Time.now %>
-
-# プルリクタイトル取得できるか
-<%= ENV['GIT_PR_RELEASE_TITLE'] %>
+release <%= Time.now %> <%= ENV['GIT_PR_RELEASE_TITLE'] %>
 
 # タスクリスト
 <% pull_requests.each do |pr| -%>
