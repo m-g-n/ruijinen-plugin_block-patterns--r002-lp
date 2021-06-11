@@ -76,3 +76,27 @@ $base-font-size: 16;
 		border-bottom: 1px solid;
 	}
 }
+
+//SMBセクション - タイトルのスタイル
+@mixin smb-section-title () {
+	@include heading2;
+	&::after{
+		display: none;
+	}
+}
+
+//SMBセクション - サブタイトルのスタイル
+@mixin smb-section-subtitle () {
+	margin-bottom: 1.25rem;
+	font-weight: normal;
+	opacity: 0.6;
+	&::after{
+		content: "";
+		display: block;
+		width: 2em;
+		height: 1px;
+		margin-top: 0.75rem;
+		background-color: var(--accent-color,#cd162c);
+		opacity: 0.3;
+	}
+}
