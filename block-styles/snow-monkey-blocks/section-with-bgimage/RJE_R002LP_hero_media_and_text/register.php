@@ -7,14 +7,19 @@
 
 $override_block_name = 'snow-monkey-blocks/section-with-bgimage';
 $block_style_label   = '類人猿P002_LP Hero（メディアと文章)';
+$basename = basename( __DIR__ );
+$front_filename  = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-front.css';
+$editor_filename = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-editor.css';
 
-
+//ブロックスタイル登録
 register_block_style(
 	$override_block_name,
 	array(
-		'name'  => basename( __DIR__ ),
+		'name'  => $basename,
 		'label' => $block_style_label,
 	)
 );
-wp_register_style( basename( __DIR__ ) . '-front', plugins_url( '', __FILE__ ) . '/style.css', $this->style_front_deps, filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ) );
-wp_register_style( basename( __DIR__ ) . '-editor', plugins_url( '', __FILE__ ) . '/style.css', $this->style_editor_deps, filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ) );
+
+//フロント・エディター用のCSSファイルを登録
+wp_register_style( 'is-style-' . $basename . '-front', RJE_R002LP_URL . $front_filename, $this->style_front_deps, filemtime( RJE_R002LP_PATH . $front_filename ) );
+wp_register_style( 'is-style-' . $basename . '-editor', RJE_R002LP_URL . $editor_filename, $this->style_editor_deps, filemtime( RJE_R002LP_PATH . $editor_filename ) );

@@ -3,5 +3,9 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>画像のパスは ` <?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>images/ ` と記載してください</p>
+<p>画像のパスは ` <?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/ ` と記載してください</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>画像はdist/img/内にアップしてください</p>
 <!-- /wp:paragraph -->
