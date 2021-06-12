@@ -1,4 +1,5 @@
-<%= ENV['GIT_PR_RELEASE_TITLE'] %> - <%= Time.now.strftime("%Y-%m-%d") %>
+<%= ENV['GIT_PR_RELEASE_TITLE'] %> - <%= Time.now.strftime("%Y-%m-%d-%h-%m") %>
+
 ### リリース時に対応すること
 - [ ] PR名を「release-x.x.x.x」に変更する（x.x.x.x はリリースするバージョン名）
 - [ ] リリースノートの内容を整備する
