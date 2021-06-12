@@ -1,7 +1,5 @@
 name: Create Git Tag
 
-#${{github.event.pull_request.title}}
-
 on:
   push:
     branches:
