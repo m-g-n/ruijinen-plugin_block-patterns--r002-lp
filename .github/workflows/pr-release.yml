@@ -1,20 +1,32 @@
-name: Create PR from c to master
+
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
-      - staging
+      - dev
+
 jobs:
-  gitPrRelease:
-    name: git-pr-release
+  create-release-pr:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-      with:
-        fetch-depth: 0
-    - name: git-pr-release
-      uses: bakunyo/git-pr-release-action@master
-      env:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: echo-npm-version
+        id: echo-version
+        run: |
+          echo v${{ steps.package-version.outputs.current-version}}
+      - name: Create a release pull request
+        uses: bakunyo/git-pr-release-action@master
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_PR_RELEASE_BRANCH_PRODUCTION: main
           GIT_PR_RELEASE_BRANCH_STAGING: dev
+          GIT_PR_RELEASE_LABELS: release
+          NPM_VERSION: v${{ steps.package-version.outputs.current-version}}
           GIT_PR_RELEASE_TEMPLATE: .github/git-pr-release/.git-pr-release-template
