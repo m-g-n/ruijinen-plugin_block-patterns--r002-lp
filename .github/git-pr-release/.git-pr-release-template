@@ -1,4 +1,8 @@
-release <%= Time.now %> <%= ENV['GIT_PR_RELEASE_TITLE'] %>
+<%= ENV['GIT_PR_RELEASE_TITLE'] %> - <%= Time.now.strftime("%Y-%m-%d") %>
+### 変更内容・ブランチ
+<% pull_requests.each do |pr| -%>
+<%= pr.to_checklist_item %>
+<% end -%>
 
 # タスクリスト
 <% pull_requests.each do |pr| -%>
