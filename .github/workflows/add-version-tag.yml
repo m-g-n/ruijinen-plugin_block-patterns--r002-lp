@@ -5,7 +5,7 @@ name: Create Git Tag
 on:
   push:
     branches:
-      - master
+      - main
     types: [closed]
 
 jobs:
