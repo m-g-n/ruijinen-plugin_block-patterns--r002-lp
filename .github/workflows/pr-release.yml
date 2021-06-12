@@ -1,8 +1,7 @@
-name: Create a release pull request
+name: Create release pull requests
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - dev
 
@@ -14,21 +13,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: get-npm-version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@master
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
 
-      - name: echo-npm-version
-        id: echo-version
-        run: |
-          echo v${{ steps.package-version.outputs.current-version}}
-
-      - name: Create a release pull request
-        uses: bakunyo/git-pr-release-action@master
+      - name: Create a pull request into release-prd
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_PR_RELEASE_BRANCH_PRODUCTION: main
           GIT_PR_RELEASE_BRANCH_STAGING: dev
-          GIT_PR_RELEASE_LABELS: release
-          NPM_VERSION: v${{ steps.package-version.outputs.current-version}}
+          GIT_PR_RELEASE_TITLE: "release-候補"
           GIT_PR_RELEASE_TEMPLATE: .github/git-pr-release/.git-pr-release-template
+        run: |
+          gem install -N git-pr-release -v "1.2.0"
+          git-pr-release --no-fetch
