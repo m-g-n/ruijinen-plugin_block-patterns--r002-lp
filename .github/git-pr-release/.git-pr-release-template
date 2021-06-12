@@ -1,15 +1,6 @@
-<%= release-ENV['GIT_PR_RELEASE_TITLE'] %> - <%= Time.now.strftime("%Y-%m-%d") %>
-
-### リリース時に対応すること
-- [ ] PR名を「release-x.x.x.x」に変更する（x.x.x.x はリリースするバージョン名）
-- [ ] リリースノートの内容を整備する
-- [ ] 「変更内容・ブランチ」をもとに挙動チェック
-- [ ] プルリクをマージする
-
+<%= ENV['GIT_PR_RELEASE_TITLE'] %> - <%= Time.now.strftime("%Y-%m-%d") %>
 ### 変更内容・ブランチ
 <% pull_requests.each do |pr| -%>
 <%= pr.to_checklist_item %>
 <% end -%>
 
-### テスト
-NPM_VERSION： <%= ENV['NPM_VERSION'] %>
