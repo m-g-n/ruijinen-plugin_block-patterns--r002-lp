@@ -7,6 +7,8 @@
  * @package ruijinen
  */
 
+namespace Ruijinen\Pattern\R002_LP;
+
 use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
 
 /**
@@ -34,9 +36,9 @@ class RJEAutoUpdate {
 	 */
 	public function _activate_autoupdate() {
 		new Updater(
-			RJE_BASENAME,
+			RJE_R002LP_BASENAME,
 			'm-g-n',
-			'ruijinen-block-patterns-beta'
+			'ruijinen-plugin_block-patterns--r002-lp'
 		);
 	}
 }

@@ -5,27 +5,36 @@
  * @license GPL-2.0+
  */
 
-/**
- * Snow Monkey および Snow Monkey Blocks が有効化されていない場合はプラグイン自体を有効化しない
- */
-add_action( 'admin_init', 'rje_pattern_activate' );
-function rje_pattern_activate() {
-	$theme = wp_get_theme( get_template() );
-	if ( is_admin() && current_user_can( 'activate_plugins' ) && ( ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->template ) || ( ! is_plugin_active( 'snow-monkey-blocks/snow-monkey-blocks.php' ) ) ) ) {
-		add_action( 'admin_notices', 'rje_pattern_notice' );
+namespace Ruijinen\Pattern\R002_LP;
 
-		deactivate_plugins( RJE_BASENAME );
+class PluginActivate {
 
-		if ( isset( $_GET['activate'] ) ) {
-			unset( $_GET['activate'] );
+	//初期処理
+	public function __construct() {
+		add_action( 'admin_init',  array( $this, 'this_plugin_activate' ) );
+	}
+
+	//アクティベートチェック
+	public function this_plugin_activate() {
+		if ( is_admin() && current_user_can( 'activate_plugins' ) ) {
+			if ( !is_plugin_active( 'ruijinen-block-patterns/ruijinen-block-patterns.php' ) ) {
+				deactivate_plugins( RJE_R002LP_BASENAME );
+				add_action( 'admin_notices', array ( $this, 'alert_notice_petterns_master' ) );
+				if ( isset( $_GET['activate'] ) ) {
+					unset( $_GET['activate'] );
+				}
+			}
 		}
+	}
+
+	//類人猿パターンプラグインベータ版がアクティベートされてた場合のエラーメッセージ
+	public function alert_notice_petterns_master() {
+		?>
+	<div class="error">
+		<p><?php esc_html_e( '[RUI-JIN-EN Block Patterns] To use the LP patterns, you need the rui-jin-en Block Patterns plugin.', 'ruijinen-block-patterns-r002-lp' ); ?></p>
+	</div>
+		<?php
 	}
 }
 
-function rje_pattern_notice() {
-	?>
-<div class="error">
-	<p><?php esc_html_e( '[RUI-JIN-EN Block Patterns] This Plugin must need the premium theme Snow Monkey and a plugin Snow Monkey Blocks.', 'ruijinen-block-patterns-beta' ); ?></p>
-</div>
-	<?php
-}
+new PluginActivate();
