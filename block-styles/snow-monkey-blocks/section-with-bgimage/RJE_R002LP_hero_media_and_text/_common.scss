@@ -29,7 +29,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 			margin-right: 1em;
 			margin-left: auto;
 		}
-		@include mq(lg){
+		@include mq(xl){
 			max-width: 80%;
 			margin-right: 3.75em;
 			// margin-left: auto;
@@ -44,7 +44,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 			padding-right: 0;
 			padding-left: 0;
 		}
-		@include mq(lg){
+		@include mq(xl){
 			max-width: 80%;
 		}
 	}
@@ -63,7 +63,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 			padding-left: 0;
 			//コンテンツ幅
 			&:first-child{
-				@include mq(lg){
+				@include mq(xl){
 					flex-basis: $content-width;
 					max-width: $content-width;
 				}
@@ -79,7 +79,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 					flex-basis: 50%;
 					max-width: 50%;
 				}
-				@include mq(lg){
+				@include mq(xl){
 					flex-basis: $figure-width;
 					max-width: $figure-width;
 				}
@@ -118,7 +118,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 				margin-left: 1em;
 				margin-right: auto;
 			}
-			@include mq(lg){
+			@include mq(xl){
 				max-width: 80%;
 				margin-left: 3.75em;
 			}

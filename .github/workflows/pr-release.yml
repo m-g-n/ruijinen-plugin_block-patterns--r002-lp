@@ -1,12 +1,14 @@
 name: Create release pull requests
 
 on:
-  push:
+  pull_request:
     branches:
       - dev
+    types: [closed]
 
 jobs:
   create-release-pr:
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'main') == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +25,7 @@ jobs:
           GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_PR_RELEASE_BRANCH_PRODUCTION: main
           GIT_PR_RELEASE_BRANCH_STAGING: dev
-          GIT_PR_RELEASE_TITLE: "release-候補"
+          GIT_PR_RELEASE_TITLE: "0.0.x.x"
           GIT_PR_RELEASE_TEMPLATE: .github/git-pr-release/.git-pr-release-template
         run: |
           gem install -N git-pr-release -v "1.2.0"
