@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿ブロックパターン：LP向けパターン集
  * Description: 類人猿ブロックパターン LP向けパターンアドオンです
- * Version: 0.0.1
+ * Version: 0.0.0.2
  * Author: mgn Inc.,
  * Author URI: https://rui-jin-en.com/
  * License: GPL-2.0+
@@ -10,14 +10,32 @@
  * @package ruijinen-block-patterns
  */
 
-
+/**
+* 定数・グローバル変数
+*/
 define( 'RJE_R002LP_KEY', 'RJE_R002LP' ); // どの類人猿プロダクトなのかを示すキー
 define( 'RJE_R002LP_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) . '/' ); // このプラグインのURL
 define( 'RJE_R002LP_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/' ); // このプラグインのパス
+define( 'RJE_R002LP_BASENAME', plugin_basename( __FILE__ ) ); // このプラグインのベースネーム.
 
-// TODO：アクティベート制御・更新チェック
+
+/**
+ * テキストドメインを宣言
+ */
+add_action( 
+	'plugins_loaded', 
+	function () {
+		load_plugin_textdomain( 'ruijinen-block-patterns-r002-lp', false, dirname( RJE_R002LP_BASENAME ) . '/languages/' );
+	}
+);
 
 
+/**
+* 各ファイルの読み込み
+*/
+require_once RJE_R002LP_PATH . 'inc/activate.php'; // 類人猿ブロックパターン本体 が有効化されていない場合の処理.
+require_once RJE_R002LP_PATH . 'inc/auto-update.php'; // 自動アップデート.
+require_once RJE_R002LP_PATH . 'vendor/autoload.php'; //自動アップデート処理用のcomposer読み込み.
 
 /**
 * LPブロックパターン共通のスタイル・スクリプトの読み込み
