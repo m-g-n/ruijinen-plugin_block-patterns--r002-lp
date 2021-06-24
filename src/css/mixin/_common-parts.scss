@@ -57,6 +57,10 @@ $base-font-size: 16;
 	padding: 0.625rem;
 	border-radius: 6.25rem;
 	line-height: 1.5;
+	transition: all 0.3s ease-out;
+	&:hover{
+		opacity: 0.7;
+	}
 }
 //ボタンスタイル - ゴースト
 @mixin button--ghost{
@@ -65,15 +69,27 @@ $base-font-size: 16;
 	border: 1px solid;
 	border-radius: 6.25rem;
 	line-height: 1.5;
+	transition: all 0.3s ease-out;
+	&:hover{
+		opacity: 0.7;
+	}
 }
 //ボタンのスタイル - SMBボタン テキストの場合
 @mixin button--text{
 	padding-right: 0;
 	padding-left: 0;
 	line-height: 1.5;
+	transition: all 0.3s ease-out;
 	.smb-btn__label{
 		padding-bottom: 0.625em;
 		border-bottom: 1px solid;
+		transition: all 0.3s ease-out;
+	}
+	&:hover{
+		opacity: 0.7;
+		.smb-btn__label{
+			opacity: 0.7;
+		}
 	}
 }
 
