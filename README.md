@@ -1,5 +1,4 @@
-<!-- TODO：正しいリポジトリーURLに変更する -->
-[![release](https://github.com/m-g-n/ruijinen-block-patterns-beta/workflows/Upload%20Release%20Asset/badge.svg)](https://github.com/megane9988/megane-auto-update/actions?query=workflow%3A%22Upload+Release+Asset%22)
+[![Create Release](https://github.com/m-g-n/ruijinen-plugin_block-patterns--r002-lp/actions/workflows/release.yml/badge.svg)](https://github.com/m-g-n/ruijinen-plugin_block-patterns--r002-lp/actions/workflows/release.yml)
 
 # 類人猿ブロックパターン：LP向けパターン集
 WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパターンプラグイン」のLP向けパターン集アドオンです
@@ -8,6 +7,22 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 
 当プラグインディレクトリーまで移動したあと、
 
-- npm i でpackegeをインストール
-- npx gulp watch でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
-- npx gulp sass でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
+- npm i(yarn)でpackegeをインストール
+- npm gulp watch(yarn gulp watch)でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
+- npm gulp sass (yarn gulp sass)でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
+
+# comporserの準備
+
+当プラグインディレクトリーまで移動したあと、
+
+- composer install でパッケージをインストール
+
+# 変更履歴
+## 0.0.0.2
+- リリース用のzipファイル名変更
+- アクティベート処理修正
+- 翻訳ファイル設定
+- オートアップデート設定
+
+## 0.0.0.1
+リリース初期整備
