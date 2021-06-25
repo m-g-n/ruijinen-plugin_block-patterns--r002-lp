@@ -88,6 +88,7 @@ function rje_r002lp_register_patterns() {
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_flow', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_merit', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_voices', 10 );
+	add_filter( 'rje_register_patterns_args', 'rje_r002lp_faq', 10 );
 }
 function rje_r002lp_hero_media_and_text( $args ) {
 	$args[] = array(
@@ -195,6 +196,17 @@ function rje_r002lp_voices( $args ) {
 		'cat'            => array( RJE_R002LP_KEY ),
 		'specific-style' => FALSE,
 		'block-style'   => array( RJE_R002LP_KEY . '_section1', RJE_R002LP_KEY . '_voices_items' ),
+		'path'           => RJE_R002LP_PATH,
+	);
+	return $args;
+}
+function rje_r002lp_faq( $args ) {
+	$args[] = array(
+		'key'            => RJE_R002LP_KEY . '_faq',
+		'title'          => 'よくある質問',
+		'cat'            => array( RJE_R002LP_KEY ),
+		'specific-style' => FALSE,
+		'block-style'   => array( RJE_R002LP_KEY . '_section1', RJE_R002LP_KEY . '_faq_items' ),
 		'path'           => RJE_R002LP_PATH,
 	);
 	return $args;
