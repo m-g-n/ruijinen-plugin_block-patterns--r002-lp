@@ -1,0 +1,90 @@
+// ======================================================
+//
+// ブロックスタイル - ギャラリーの項目（エディタ・フロント共通のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_gallery_items:not(:root){
+	> .c-row{
+		margin-bottom: 0;
+		@media screen and (max-width: 639px){
+			margin: 0;
+		}
+		> .c-row__col{
+			margin-bottom: 0;
+			@media screen and (max-width: 639px){
+				padding: 0;
+			}
+		}
+	}
+	//アイテム全体のwrapper
+	.smb-items__item{
+		position: relative;
+		&::before{
+			content: "";
+			display: block;
+			padding-top: 75%;
+		}
+	}
+	//画像
+	.smb-items__item__figure{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		margin-bottom: 0;
+		> img{
+			position: absolute;
+			top: 0; 
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	//テキスト
+	.smb-items__item__body{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		overflow: hidden;
+	}
+	//内容
+	.smb-items__item__content{
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		width: 100%;
+		min-height: 33%;
+		margin-top: 0;
+		padding: 1.125em;
+		font-size: 0.8125rem;
+		font-weight: normal;
+		line-height: 1.42;
+		text-align: right;
+		background: rgba(0,0,0,0.5);
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+	}
+	//タイトル・リード・ボタンは非表示
+	.smb-items__item__title,
+	.smb-items__item__lede,
+	.smb-items__item__action,
+	.smb-items__item__btn{
+		display: none;
+	}
+}

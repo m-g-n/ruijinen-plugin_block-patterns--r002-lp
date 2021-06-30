@@ -1,0 +1,51 @@
+// ======================================================
+//
+// ブロックスタイル - ギャラリーの項目（エディター固有のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_gallery_items:not(:root){
+	> .c-row{
+		> .c-row__col{
+			&.is-selected{
+				.smb-items__item{
+					position: static;
+					&::before{
+						display: none;
+					}
+				}
+				.smb-items__item__figure{
+					position: static;
+					margin-bottom: 1em;
+					> img{
+						position: static;
+						width: auto;
+						height: auto;
+						object-fit: cover;
+					}
+				}
+				.smb-items__item__body{
+					position: static;
+					width: auto;
+					height: auto;
+					color: #333;
+					overflow: visible;
+				}
+				.smb-items__item__content{
+					position: static;
+					display: block;
+					min-height: auto;
+					padding: 0.5em;
+					font-size: 1rem;
+					text-align: left;
+					background:  none;
+
+				}
+			}
+		}
+	}
+}
+
