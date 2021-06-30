@@ -1,0 +1,50 @@
+// ======================================================
+//
+// ブロックスタイル - ギャラリーの項目（フロント固有のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+//はみ出てしまうアイテムの処理
+@for $col from 2 through 6 { //指定のカラム数
+	@for $items from 1 through 10 { //登録アイテム数
+		@for $j from 1 through 5 { //余り数
+			@if  ( $items % $col == $j ) { //カラムにきれいに収まらないアイテム数を割り出しスタイル設定
+				$set_width: 100% / $j; //余りアイテムに設定する幅サイズ
+				.is-style-RJE_R002LP_gallery_items > .c-row[data-columns="#{$col}"] > .c-row__col:first-child:nth-last-child(#{$items}),
+				.is-style-RJE_R002LP_gallery_items > .c-row[data-columns="#{$col}"] > .c-row__col:first-child:nth-last-child(#{$items}) ~ .c-row__col:nth-child(-n + #{$j}){
+					@media screen and (max-width: 639px) {
+						flex-basis: $set_width;
+						max-width: $set_width;
+					}
+				}
+				.is-style-RJE_R002LP_gallery_items > .c-row[data-md-columns="#{$col}"] > .c-row__col:first-child:nth-last-child(#{$items}),
+				.is-style-RJE_R002LP_gallery_items > .c-row[data-md-columns="#{$col}"] > .c-row__col:first-child:nth-last-child(#{$items}) ~ .c-row__col:nth-child(-n + #{$j}){
+					@media screen and (min-width: 640px) and (max-width: 1023px) {
+						flex-basis: $set_width;
+						max-width: $set_width;
+					}
+				}
+				.is-style-RJE_R002LP_gallery_items > .c-row[data-lg-columns="#{$col}"] > .c-row__col:first-child:nth-last-child(#{$items}),
+				.is-style-RJE_R002LP_gallery_items > .c-row[data-lg-columns="#{$col}"] > .c-row__col:first-child:nth-last-child(#{$items}) ~ .c-row__col:nth-child(-n + #{$j}){
+					@include mq(lg) {
+						flex-basis: $set_width;
+						max-width: $set_width;
+					}
+				}
+			}
+		}
+	}
+}
+
+body[data-is-full-template="true"] .p-entry-content > .is-style-RJE_R002LP_gallery_items:not(:root),
+.wp-block-group.alignfull > .wp-block-group__inner-container > .is-style-RJE_R002LP_gallery_items:not(:root),
+.is-style-RJE_R002LP_gallery_items:not(:root).alignfull{
+	.smb-items__item{
+		&::before{
+			padding-top: 56.25%;
+		}
+	}
+}
