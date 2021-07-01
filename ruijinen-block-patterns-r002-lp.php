@@ -90,8 +90,9 @@ function rje_r002lp_register_patterns() {
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_voices', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_faq', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_gallery', 10 );
+	add_filter( 'rje_register_patterns_args', 'rje_r002lp_variation', 10 );
 }
-function rje_r002lp_hero_media_and_text( $args ) {
+function rje_r002lp_hero_media_and_text ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_hero_media_and_text',
 		'title'          => 'Heroイメージ（メディアと文章)',
@@ -102,7 +103,7 @@ function rje_r002lp_hero_media_and_text( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_hero_media_and_text__alignright( $args ) {
+function rje_r002lp_hero_media_and_text__alignright ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_hero_media_and_text__alignright',
 		'title'          => 'Heroイメージ（メディアと文章) - 右寄せ',
@@ -113,7 +114,7 @@ function rje_r002lp_hero_media_and_text__alignright( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_hero_one_column( $args ) {
+function rje_r002lp_hero_one_column ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_hero_one_column',
 		'title'          => 'Heroイメージ（1カラム)',
@@ -124,7 +125,7 @@ function rje_r002lp_hero_one_column( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_message_normal( $args ) {
+function rje_r002lp_message_normal ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_message_normal',
 		'title'          => '伝えたいこと（ノーマル)',
@@ -135,7 +136,7 @@ function rje_r002lp_message_normal( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_message_normal__alignright( $args ) {
+function rje_r002lp_message_normal__alignright ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_message_normal__alignright',
 		'title'          => '伝えたいこと（ノーマル) - 右寄せ',
@@ -146,7 +147,7 @@ function rje_r002lp_message_normal__alignright( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_message_accent( $args ) {
+function rje_r002lp_message_accent ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_message_accent',
 		'title'          => '伝えたいこと（アクセント)',
@@ -157,7 +158,7 @@ function rje_r002lp_message_accent( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_message_accent2( $args ) {
+function rje_r002lp_message_accent2 ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_message_accent2',
 		'title'          => '伝えたいこと（アクセント2)',
@@ -168,7 +169,7 @@ function rje_r002lp_message_accent2( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_flow( $args ) {
+function rje_r002lp_flow ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_flow',
 		'title'          => '流れ・手順',
@@ -179,7 +180,7 @@ function rje_r002lp_flow( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_merit( $args ) {
+function rje_r002lp_merit ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_merit',
 		'title'          => 'メリット・ポイント',
@@ -190,7 +191,7 @@ function rje_r002lp_merit( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_voices( $args ) {
+function rje_r002lp_voices ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_voices',
 		'title'          => 'お客様の声',
@@ -201,7 +202,7 @@ function rje_r002lp_voices( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_faq( $args ) {
+function rje_r002lp_faq ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_faq',
 		'title'          => 'よくある質問',
@@ -212,13 +213,24 @@ function rje_r002lp_faq( $args ) {
 	);
 	return $args;
 }
-function rje_r002lp_gallery( $args ) {
+function rje_r002lp_gallery ( $args ) {
 	$args[] = array(
 		'key'            => RJE_R002LP_KEY . '_gallery',
 		'title'          => 'ギャラリー',
 		'cat'            => array( RJE_R002LP_KEY ),
 		'specific-style' => FALSE,
 		'block-style'    => array( RJE_R002LP_KEY . '_section1', RJE_R002LP_KEY . '_gallery_items' ),
+		'path'           => RJE_R002LP_PATH,
+	);
+	return $args;
+}
+function rje_r002lp_variation ( $args ) {
+	$args[] = array(
+		'key'            => RJE_R002LP_KEY . '_variation',
+		'title'          => 'バリエーション',
+		'cat'            => array( RJE_R002LP_KEY ),
+		'specific-style' => FALSE,
+		'block-style'    => array( RJE_R002LP_KEY . '_section1', RJE_R002LP_KEY . '_variation_items' ),
 		'path'           => RJE_R002LP_PATH,
 	);
 	return $args;
