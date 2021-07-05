@@ -10,15 +10,9 @@
 .is-style-RJE_R002LP_variation_items:not(:root){
 	> .c-row{
 		margin: -1.125rem;
-		// @include mq(lg){
-		// 	margin: -1.875rem;
-		// }
 		> .c-row__col{
 			margin-bottom: 0;
 			padding: 1.125rem;
-			// @include mq(lg){
-			// 	padding: 1.875rem;
-			// }
 		}
 	}
 	.smb-items__item{
@@ -56,9 +50,6 @@
 		order: 1;
 		font-size: 1.125rem;
 		letter-spacing: 0.12em;
-		// @include mq(lg){
-		// 	font-size: 1.25rem;
-		// }
 	}
 	.smb-items__item__lede{
 		order: 3;
@@ -79,24 +70,3 @@
 		min-width: 100px !important;
 	}
 }
-
-//スリム幅・サイドバーテンプレート以外
-body[data-is-slim-width="false"] .is-style-RJE_R002LP_variation_items:not(:root),
-body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .is-style-RJE_R002LP_variation_items:not(:root){
-	> .c-row{
-		@include mq(lg){
-			margin: -1.875rem;
-		}
-		> .c-row__col{
-			@include mq(lg){
-				padding: 1.875rem;
-			}
-		}
-	}
-	.smb-items__item__title{
-		@include mq(lg){
-			font-size: 1.25rem;
-		}
-	}
-}
-

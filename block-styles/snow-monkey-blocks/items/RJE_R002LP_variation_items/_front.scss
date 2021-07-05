@@ -7,6 +7,23 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .example-front{
-// 	color: #f00;
-// }
+
+//スリム幅・サイドバーテンプレート以外
+body[data-is-slim-width="false"] .is-style-RJE_R002LP_variation_items:not(:root),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .is-style-RJE_R002LP_variation_items:not(:root){
+	> .c-row{
+		@include mq(lg){
+			margin: -1.875rem;
+		}
+		> .c-row__col{
+			@include mq(lg){
+				padding: 1.875rem;
+			}
+		}
+	}
+	.smb-items__item__title{
+		@include mq(lg){
+			font-size: 1.25rem;
+		}
+	}
+}
