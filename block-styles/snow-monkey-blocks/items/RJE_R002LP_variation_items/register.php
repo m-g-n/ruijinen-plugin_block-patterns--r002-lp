@@ -6,7 +6,7 @@
  */
 
 $override_block_name = 'snow-monkey-blocks/items';
-$block_style_label   = '類人猿P002_LP バリエーション';
+$block_style_label   = '類人猿R002_LP バリエーション';
 $basename = basename( __DIR__ );
 $front_filename  = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-front.css';
 $editor_filename = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-editor.css';

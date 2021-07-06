@@ -6,7 +6,7 @@
  */
 
 $override_block_name = 'snow-monkey-blocks/section-with-bgimage';
-$block_style_label   = '類人猿P002_LP Hero（1カラム)';
+$block_style_label   = '類人猿R002_LP Hero（1カラム)';
 $basename = basename( __DIR__ );
 $front_filename  = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-front.css';
 $editor_filename = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-editor.css';

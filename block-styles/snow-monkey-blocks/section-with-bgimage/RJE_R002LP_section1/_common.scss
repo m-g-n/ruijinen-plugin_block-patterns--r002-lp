@@ -37,7 +37,8 @@
 				}
 			}
 		}
-		>.smb-section__body{
+		> .smb-section__title + .smb-section__body,
+		> .smb-section__lede-wrapper + .smb-section__body{
 			margin-top: 2.5rem;
 			@include mq(sm){
 				margin-top: 4rem;

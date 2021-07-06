@@ -93,6 +93,7 @@ function rje_r002lp_register_patterns() {
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_variation', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_media_list', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_corp_list', 10 );
+	add_filter( 'rje_register_patterns_args', 'rje_r002lp_spec', 10 );
 }
 function rje_r002lp_hero_media_and_text ( $args ) {
 	$args[] = array(
@@ -255,6 +256,17 @@ function rje_r002lp_corp_list ( $args ) {
 		'cat'            => array( RJE_R002LP_KEY ),
 		'specific-style' => FALSE,
 		'block-style'    => array( RJE_R002LP_KEY . '_section1', RJE_R002LP_KEY . '_corp_list_items' ),
+		'path'           => RJE_R002LP_PATH,
+	);
+	return $args;
+}
+function rje_r002lp_spec ( $args ) {
+	$args[] = array(
+		'key'            => RJE_R002LP_KEY . '_spec',
+		'title'          => 'サービス・製品仕様',
+		'cat'            => array( RJE_R002LP_KEY ),
+		'specific-style' => FALSE,
+		'block-style'    => array( RJE_R002LP_KEY . '_section1', RJE_R002LP_KEY . '_spec_content' ),
 		'path'           => RJE_R002LP_PATH,
 	);
 	return $args;
