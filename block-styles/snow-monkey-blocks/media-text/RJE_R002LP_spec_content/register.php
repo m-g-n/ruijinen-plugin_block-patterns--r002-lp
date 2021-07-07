@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 
-$override_block_name = 'snow-monkey-blocks/section';
-$block_style_label   = '類人猿R002_LP 伝えたいこと（アクセント)';
+$override_block_name = 'snow-monkey-blocks/media-text';
+$block_style_label   = '類人猿R002_LP サービス・製品の仕様';
 $basename = basename( __DIR__ );
 $front_filename  = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-front.css';
 $editor_filename = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-editor.css';
