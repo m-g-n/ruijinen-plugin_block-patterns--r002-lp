@@ -1,0 +1,85 @@
+// ======================================================
+//
+// ブロックスタイル - お知らせ一覧（エディタ・フロント共通のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_news_list:not(:root){
+	.c-entries--text2{
+		border-top: none;
+		.c-entries__item{
+			border-color: #999;
+			> a{
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+			}
+		}
+		.c-entry-summary__body{
+			display: flex;
+			flex-direction: column;
+			letter-spacing: 0.05rem;
+			@include mq(md){
+				flex-direction: row;
+			}
+		}
+		.c-entry-summary__header{
+			order: 2;
+			margin-top: 0.75rem;
+			@include mq(md){
+				margin-top: 0;
+				margin-left: 2rem;
+			}
+		}
+		.c-entry-summary__title{
+			font-size: 0.857rem;
+			text-align: left;
+			line-height: 2;
+			@include mq(md){
+				font-size: 1rem;
+			}
+		}
+		.c-entry-summary__meta{
+			order: 1;
+			font-size: 0.857rem;
+			@include mq(md){
+				margin-top: 0;
+				font-size: 1rem;
+			}
+			> .c-meta{
+				display: flex;
+				align-items: center;
+			}
+			.c-meta__item:not(:last-child) {
+				@include mq(lg){
+					margin-right: 1.25em;
+				}
+			}
+			.c-entry-summary__term{
+				min-width: 100px;
+				padding: 0.25rem 0.5rem;
+				background-color: transparent;
+				border: 1px solid;
+				font-weight: normal;
+				text-align: center;
+				color: #999;
+			}
+		}
+		.c-meta__item--published{
+			@include mq(md){
+				width: 8.5em;
+			}
+		}
+	}
+	//任意のタクソノミーの場合はカテゴリー表記をトル
+	.snow-monkey-taxonomy-posts{
+		.c-meta__item--categories{
+			display: none;
+		}
+	}
+}
+
+
+

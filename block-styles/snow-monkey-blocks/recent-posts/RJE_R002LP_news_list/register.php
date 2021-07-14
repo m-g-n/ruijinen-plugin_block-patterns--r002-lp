@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 
-$override_block_name = 'snow-monkey-blocks/items';
-$block_style_label   = '類人猿R002_LP メディア掲載一覧';
+$override_block_name = 'snow-monkey-blocks/recent-posts';
+$block_style_label   = '類人猿R002_LP 記事一覧';
 $basename = basename( __DIR__ );
 $front_filename  = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-front.css';
 $editor_filename = 'dist/css/block-styles/' . $override_block_name . '/' . $basename . '/style-editor.css';
@@ -17,6 +17,14 @@ $editor_filetime = ( file_exists( RJE_R002LP_PATH . $editor_filename ) ) ? filem
 //ファイルパス（プラグインのルートから相対）
 register_block_style(
 	$override_block_name,
+	array(
+		'name'  => $basename,
+		'label' => $block_style_label,
+	)
+);
+//任意のタクソノミー記事にも適応する
+register_block_style(
+	'snow-monkey-blocks/taxonomy-posts',
 	array(
 		'name'  => $basename,
 		'label' => $block_style_label,
