@@ -141,3 +141,4 @@ robots.txt
 
 # CSSはコンフリクト対策でgithub側でコンパイルするため除外する
 /dist/css/
+/dist/js/
