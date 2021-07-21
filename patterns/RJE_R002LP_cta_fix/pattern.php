@@ -1,1 +1,5 @@
-<!-- あとでいれる -->
+<!-- wp:snow-monkey-blocks/items {"lg":1,"className":"is-style-RJE_R002LP_cta_fix"} -->
+<div class="wp-block-snow-monkey-blocks-items smb-items is-style-RJE_R002LP_cta_fix"><div class="c-row c-row--margin" data-columns="1" data-md-columns="1" data-lg-columns="1"><!-- wp:snow-monkey-blocks/items--item--standard {"url":"#","imageID":998} -->
+<div class="wp-block-snow-monkey-blocks-items--item--standard c-row__col"><div class="smb-items__item"><div class="smb-items__item__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/photo-woman4.jpg" alt="" width="280" height="125" class="wp-image-998"/></div><div class="smb-items__item__body"><div class="smb-items__item__title">今ならお試し1ヶ月<br>10%OFF!</div><div class="smb-items__item__lede">MATCHが気になっている…という方へ</div><div class="smb-items__item__content">単回購入プラン3,200円が2,880円に！<br>いますぐ診断して、MATCHをお試し！</div><div class="smb-items__item__action"><a class="smb-items__item__btn smb-btn" href="#"><span class="smb-btn__label">診断する</span></a></div></div></div></div>
+<!-- /wp:snow-monkey-blocks/items--item--standard --></div></div>
+<!-- /wp:snow-monkey-blocks/items -->

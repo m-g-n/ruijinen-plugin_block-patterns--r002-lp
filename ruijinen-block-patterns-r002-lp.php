@@ -317,7 +317,7 @@ function rje_r002lp_prices( $args ) {
 function rje_r002lp_cta_fix( $args ) {
 	$args[] = array(
 		'key'             => RJE_R002LP_KEY . '_cta_fix',
-		'title'           => '料金表',
+		'title'           => 'CTA（固定表示）',
 		'cat'             => array( RJE_R002LP_KEY ),
 		'specific-style'  => false,
 		'specific-script' => true,
