@@ -96,6 +96,7 @@ function rje_r002lp_register_patterns() {
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_spec', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_news', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_prices', 10 );
+	add_filter( 'rje_register_patterns_args', 'rje_r002lp_cta', 10 );
 	add_filter( 'rje_register_patterns_args', 'rje_r002lp_cta_fix', 10 );
 }
 function rje_r002lp_hero_media_and_text( $args ) {
@@ -311,6 +312,18 @@ function rje_r002lp_prices( $args ) {
 		'specific-script' => false,
 		'block-style'    => array( RJE_R002LP_KEY . '_section1', RJE_R002LP_KEY . '_price_list' ),
 		'path'           => RJE_R002LP_PATH,
+	);
+	return $args;
+}
+function rje_r002lp_cta( $args ) {
+	$args[] = array(
+		'key'             => RJE_R002LP_KEY . '_cta',
+		'title'           => 'CTA',
+		'cat'             => array( RJE_R002LP_KEY ),
+		'specific-style'  => false,
+		'specific-script' => false,
+		'block-style'     => array( RJE_R002LP_KEY . '_cta' ),
+		'path'            => RJE_R002LP_PATH,
 	);
 	return $args;
 }
