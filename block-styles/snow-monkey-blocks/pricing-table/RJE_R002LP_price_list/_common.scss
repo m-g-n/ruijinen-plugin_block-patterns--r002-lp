@@ -1,0 +1,122 @@
+// ======================================================
+//
+// ブロックスタイル - 料金表（エディタ・フロント共通のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_price_list:not(:root){
+	background-color: unset;
+	border: none;
+	@media screen and (min-width: 640px) and (max-width:1023px){
+		overflow: visible;
+	}
+	> .c-row{
+		margin: -1.25rem;
+		@media screen and (min-width: 640px) and (max-width:1023px){
+			flex-wrap: wrap;
+		}
+		@include mq(lg){
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.c-row__col{
+			padding: 1.25rem;
+			@media screen and (min-width: 640px) and (max-width:1023px){
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+			@include mq(lg){
+				display: flex;
+			}
+			&:not(:first-child){
+				border: none;
+			}
+		}
+	}
+	.smb-pricing-table__item{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		letter-spacing: 0.05em;
+		padding: 2.5rem 2.18rem;
+		border: 1px solid #999;
+		//テキスト
+		> ul{
+			order: 4;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			margin-top: 1.25rem;
+			border-top-color:#ddd;
+			> li{
+				padding-bottom: 0;
+				border: none;
+				text-align: left;
+				@include paragraph;
+			}
+		}
+	}
+	//タイトル
+	.smb-pricing-table__item__title{
+		@include heading3;
+		text-align: left;
+		order: 1;
+	}
+	//価格
+	.smb-pricing-table__item__price{
+		order: 3;
+		margin-top: 2.25rem;
+		font-size: 1.5rem;
+		text-align: left;
+		line-height: 1;
+		color: var(--accent-color,#cd162c);
+		@include mq(lg){
+			font-size: 2rem;
+		}
+	}
+	//リード
+	.smb-pricing-table__item__lede{
+		order: 2;
+		text-align: left;
+		color: #999;
+		@include paragraph;
+	}
+	//ボタン
+	.smb-pricing-table__item__action{
+		order: 5;
+	}
+	//幅指定の場合のみwrapさせる
+	&.smb-pricing-table--col-size-1-4,
+	&.smb-pricing-table--col-size-1-3,
+	&.smb-pricing-table--col-size-1-2,
+	&.smb-pricing-table--col-size-1-1{
+		overflow: visible;
+		> .c-row{
+			flex-wrap: wrap;
+			@include mq(lg){
+				margin: -1.875rem;
+			}
+		}
+		.c-row__col{
+			padding: 1.25rem;
+			@media screen and (min-width: 640px) and (max-width:1023px){
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+			@include mq(lg){
+				padding: 1.875rem;
+			}
+		}
+	}
+	.smb-pricing-table__item{
+		width: 100%;
+	}
+}
+
+
+
+

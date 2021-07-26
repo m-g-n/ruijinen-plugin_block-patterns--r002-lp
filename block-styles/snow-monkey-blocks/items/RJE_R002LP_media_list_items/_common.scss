@@ -1,0 +1,39 @@
+// ======================================================
+//
+// ブロックスタイル - メディア掲載一覧の項目（エディタ・フロント共通のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_media_list_items:not(:root){
+	> .c-row{
+		margin: -0.75rem;
+		> .c-row__col{
+			padding: 0.75rem;
+		}
+	}
+	.smb-items__item__figure{
+		margin-bottom: 1rem;
+		text-align: left;
+	}
+	.smb-items__item__body{
+		width: 100%;
+		text-align: left;
+		letter-spacing: 0.05em;
+	}
+	.smb-items__item__title{
+		font-weight: normal;
+		line-height: 1.625;
+	}
+	.smb-items__item__lede{
+		margin-top: 0.5rem;
+		line-height: 1.5;
+	}
+	.smb-items__item__content,
+	.smb-items__item__action{
+		display: none;
+	}
+}
+

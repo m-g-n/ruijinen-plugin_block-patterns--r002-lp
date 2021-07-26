@@ -12,7 +12,7 @@
 	padding-bottom: 3.75rem;
 	@include mq(sm){
 		padding-top: 5rem;
-		padding-bottom: 5rem;
+		padding-bottom: 6rem;
 	}
 	> .c-container{
 		> .smb-section__subtitle{
@@ -21,7 +21,24 @@
 		> .smb-section__title{
 			@include smb-section-title;
 		}
-		>.smb-section__body{
+		> .smb-section__lede-wrapper{
+			margin-top: 1.5rem;
+			@include mq(lg){
+				width: 70.3%;
+				margin-top: 2.5rem;
+			}
+			> .smb-section__lede{
+				margin-top: 0;
+				font-size: 0.875rem;
+				letter-spacing: 0.05em;
+				@include mq(lg){
+					font-size: 1rem;
+					line-height: 2;
+				}
+			}
+		}
+		> .smb-section__title + .smb-section__body,
+		> .smb-section__lede-wrapper + .smb-section__body{
 			margin-top: 2.5rem;
 			@include mq(sm){
 				margin-top: 4rem;
@@ -34,6 +51,12 @@
 	//中央寄せ
 	&.smb-section-with-bgimage--center{
 		> .c-container{
+			> .smb-section__lede-wrapper{
+				@include mq(lg){
+					margin-right: auto;
+					margin-left: auto;
+				}
+			}
 			> .smb-section__subtitle{
 				&::after{
 					margin-right: auto;
@@ -45,6 +68,11 @@
 	//右寄せ
 	&.smb-section-with-bgimage--right{
 		> .c-container{
+			> .smb-section__lede-wrapper{
+				@include mq(lg){
+					margin-left: auto;
+				}
+			}
 			> .smb-section__subtitle{
 				&::after{
 					margin-right: 0;
@@ -54,3 +82,6 @@
 		}
 	}
 }
+
+
+

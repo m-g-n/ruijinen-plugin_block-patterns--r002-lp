@@ -1,0 +1,71 @@
+// ======================================================
+//
+// ブロックスタイル - サービス・製品の仕様（エディタ・フロント共通のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_spec_content:not(:root){
+	> .c-row{
+		margin: -1.25rem;
+		>.c-row__col{
+			margin-bottom: 0;
+			padding: 1.25rem;
+			&:first-child{ //テキスト
+				@include mq(md){
+					flex-basis: 50%;
+					max-width: 50%;
+				}
+			}
+			&:last-child{ //画像
+				@include mq(md){
+					flex-basis: 50%;
+					max-width: 50%;
+				}
+			}
+		}
+		&.c-row--reverse{
+			.c-row__col{
+				&:first-child{
+					@media screen and (min-width: 768px) and (max-width: 1023px) {
+						order: 1;
+					}
+				}
+				&:last-child{
+					@media screen and (min-width: 768px) and (max-width: 1023px) {
+						order: 2;
+					}
+				}
+			}
+		}
+	}
+	.smb-media-text__title{
+		@include heading2;
+		+ .smb-media-text__body{
+			margin-top: 1.5rem;
+		}
+	}
+	.smb-media-text__body{
+		p{
+			font-size: 0.857rem;
+			line-height: 2;
+		}
+	}
+	.smb-box{
+		margin-top: 1rem;
+		padding: 1.5rem 1.125rem;
+	}
+	.smb-box__background{
+		border-radius: 0;
+	}
+	.smb-box__body{
+		p + p{
+			margin-top: 0.25rem;
+		}
+	}
+}
+
+
+
