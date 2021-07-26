@@ -1,0 +1,101 @@
+// ======================================================
+//
+// ブロックスタイル - CTA（エディタ・フロント共通のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_cta:not(:root){
+	padding-top: 0;
+	padding-bottom: 2.5rem;
+	@include mq(md){
+		padding-bottom: 0;
+	}
+	> .smb-section__inner{
+		> .c-container{
+			> .smb-section__body{
+				//メディアと文章
+				> .smb-media-text{
+					> .c-row{
+						margin-bottom: 0;
+						@include mq(md){
+							margin-right: -1.25rem;
+							margin-left: -1.25rem;
+						}
+						> .c-row__col{
+							margin-bottom: 0;
+							padding-right: 1rem;
+							padding-left: 1rem;
+							@include mq(md){
+								padding-right: 1.25rem;
+								padding-left: 1.25rem;
+							}
+							//文章
+							&:first-child{
+								padding-top: 1rem;
+								@media screen and (max-width: 767px) {
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+								}
+								@include mq(md){
+									flex-basis: 60%;
+									max-width: 60%;
+									padding-top: 0;
+								}
+							}
+							//メディア
+							&:last-child{
+								@include mq(md){
+									flex-basis: 40%;
+									max-width: 40%;
+								}
+							}
+						}
+					}
+					.smb-media-text__figure{
+						text-align: center;
+						img{
+
+							@media screen and (max-width: 767px){
+								max-height: 400px;
+								width: auto;
+								height: auto;
+								margin-top: -5rem;
+							}
+							@include mq(md){
+								margin-top: -15%;
+							}
+						}
+					}
+					.smb-media-text__title{
+						@include heading2;
+					}
+					.smb-media-text__body{
+						margin-top: 1rem;
+						@include mq(lg){
+							margin-top: 2.5rem;
+						}
+					}
+					.smb-buttons{
+						margin-top: 1.25rem;
+						@media screen and (max-width: 767px) {
+							justify-content: center;
+						}
+						@include mq(lg){
+							margin-top: 1.5rem;
+						}
+						.is-style-default .smb-btn{
+							border: 1px solid var(--_color-text,#333);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
