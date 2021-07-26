@@ -7,6 +7,16 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .example-editor{
-// 	color: #f00;
+// .is-style-RJE_R002LP_news_list:not(:root){
+// 	> .snow-monkey-posts{
+// 		> ul:not(.c-entries--text2)::before{
+// 			content: "※このレイアウトに特別なスタイルは設定していません";
+// 			display: block;
+// 			margin-bottom: 1.5rem;
+// 			max-width: 100%;
+// 			flex-basis: 100%;
+// 			font-size: 0.86em;
+// 			color: #888;
+// 		}
+// 	}
 // }

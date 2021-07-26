@@ -7,6 +7,23 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .example-editor{
-// 	color: #f00;
-// }
+.is-style-RJE_R002LP_voices_items:not(:root){
+	> .c-row{
+		> .c-row__col{
+			//追加ボタンを消す
+			+ .block-list-appender{
+				&::before{
+					content: "声を追加したい場合は既存の子ブロックを複製し追加ください";
+					display: block;
+					font-size: 0.86rem;
+					text-align: center;
+					color: #e00;
+				}
+				button{
+					pointer-events: none;
+					opacity: 0.1;
+				}
+			}
+		}
+	}
+}
