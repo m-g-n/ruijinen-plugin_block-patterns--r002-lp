@@ -7,6 +7,119 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .example-front{
-// 	color: #f00;
-// }
+// ======================================================
+//
+// ブロックスタイル - よくある質問（エディタ・フロント共通のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_faq_items{
+	> .smb-accordion__item{
+		//内容
+		> .smb-accordion__item__body {
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+			transition: .25s;
+			&:before{
+				visibility: hidden;
+				transition: .25s;
+			}
+		}
+		//アコーディオン開いてる時の処理
+		> .smb-accordion__item__control:checked{
+			//タイトル
+			+ .smb-accordion__item__title{
+				> .smb-accordion__item__title__icon{
+					transform: none;
+					&::after{
+						transform: none;
+					}
+				}
+				//内容
+				+ .smb-accordion__item__body {
+					visibility: visible;
+					height: auto;
+					padding-top: 2.5rem;
+					&:before{
+						visibility: visible;
+						padding-top: 2.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+//スリム幅・サイド幅以外 またはスリム幅ではあるが親要素が全幅である場合
+body:not(.page-template-left-sidebar):not(.page-template-right-sidebar):not(.page-template-blank-slim):not(.page-template-one-column-slim) .is-style-RJE_R002LP_faq_items,
+.page-template-blank-slim .alignfull .is-style-RJE_R002LP_faq_items,
+.page-template-one-column-slim .alignfull .is-style-RJE_R002LP_faq_items{
+	@include mq(lg){
+		padding: 1.25rem 5rem;
+	}
+	> .smb-accordion__item{
+		@include mq(lg){
+			padding-top: 2.5rem;
+			padding-bottom: 2.5rem;
+		}
+		//タイトル
+		> .smb-accordion__item__title{
+			> .smb-accordion__item__title__icon{
+				@include mq(lg){
+					width: 2.5rem;
+					height: 2.5rem;
+					margin-left: 1rem;
+				}
+				&::before{
+					@include mq(lg){
+						width: 1.5rem;
+					}
+				}
+				&::after{
+					@include mq(lg){
+						width: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+//スリム幅・サイド幅以外 またはスリム幅ではあるが親要素が全幅である場合
+body:not(.page-template-left-sidebar):not(.page-template-right-sidebar):not(.page-template-blank-slim):not(.page-template-one-column-slim) .is-style-RJE_R002LP_faq_items,
+.page-template-blank-slim .alignfull .is-style-RJE_R002LP_faq_items,
+.page-template-one-column-slim .alignfull .is-style-RJE_R002LP_faq_items{
+	@include mq(lg){
+		padding: 1.25rem 5rem;
+	}
+	> .smb-accordion__item{
+		@include mq(lg){
+			padding-top: 2.5rem;
+			padding-bottom: 2.5rem;
+		}
+		//タイトル
+		> .smb-accordion__item__title{
+			> .smb-accordion__item__title__icon{
+				@include mq(lg){
+					width: 2.5rem;
+					height: 2.5rem;
+					margin-left: 1rem;
+				}
+				&::before{
+					@include mq(lg){
+						width: 1.5rem;
+					}
+				}
+				&::after{
+					@include mq(lg){
+						width: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+}
