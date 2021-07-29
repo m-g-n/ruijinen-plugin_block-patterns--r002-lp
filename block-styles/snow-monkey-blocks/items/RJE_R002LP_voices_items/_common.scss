@@ -109,13 +109,13 @@
 		@include mq(lg){
 			justify-content: flex-end;
 		}
-		.c-row__col:last-child .smb-media-text__figure img{
+		.c-row__col:last-child .smb-media-text__figure{
 			display: inline-block;
 			margin-right: 0.75rem;
 		}
 	}
-	.c-row:not(.c-row--reverse) .c-row__col:last-child .smb-media-text__figure img{
-		display: inline-block;
+	.c-row:not(.c-row--reverse) .c-row__col:last-child .smb-media-text__figure{
+		// display: inline-block;
 		margin-left: 0.75rem;
 	}
 
@@ -143,5 +143,8 @@
 		max-width: 60px;
 		height: auto;
 		border-radius: 50%;
+	}
+	.smb-media-text__body > p{
+		line-height: 1.5;
 	}
 }

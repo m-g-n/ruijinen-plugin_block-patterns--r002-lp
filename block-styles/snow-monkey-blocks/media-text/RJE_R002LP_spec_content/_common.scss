@@ -8,6 +8,9 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_spec_content:not(:root){
+	max-width: 920px;
+	margin-right: auto;
+	margin-left: auto;
 	> .c-row{
 		margin: -1.25rem;
 		>.c-row__col{

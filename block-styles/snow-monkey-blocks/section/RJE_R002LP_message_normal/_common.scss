@@ -11,44 +11,55 @@
 	@media (max-width: 639px){
 		overflow: visible;
 	}
-	//大枠
-	> .c-container{
-		padding-right: 0;
-		padding-left: 0;
-		//サブタイトル
-		> .smb-section__subtitle{
-			@include smb-section-subtitle;
-		}
-		//セクションタイトル
-		.smb-section__title{
-			@include smb-section-title;
-		}
-		> .smb-section__body{
-			margin-top: 1.25rem;
-		}
-	}
 
 	// ------------------------------------------------------
-	// セクション（右寄せ時のスタイル）
+	// 大枠
 	//
-	&.smb-section-with-bgimage--right{
-		//大枠
+	>.smb-section__inner {
 		> .c-container{
+			padding-right: 0;
+			padding-left: 0;
 			//サブタイトル
 			> .smb-section__subtitle{
-				&::after{
-					margin-right: 0;
-					margin-left: auto;
+				@include smb-section-subtitle;
+			}
+			//セクションタイトル
+			> .smb-section__title{
+				@include smb-section-title;
+			}
+			> .smb-section__body{
+				margin-top: 1.25rem;
+			}
+		}
+	}
+	//左寄せ
+	&.smb-section--left{
+		> .smb-section__inner{
+			> .c-container{
+				> .smb-section__lede-wrapper{
+					@include mq(lg){
+						margin-left: 0;
+					}
+				}
+				> .smb-section__subtitle::after{
+					margin-left: 0;
 				}
 			}
 		}
-		//タイトル
-		.smb-section-break-the-grid__title{
-			text-align: left;
-		}
-		//コンテンツ
-		.smb-section-break-the-grid__body{
-			text-align: left;
+	}
+	//右寄せ
+	&.smb-section--right{
+		> .smb-section__inner{
+			> .c-container{
+				> .smb-section__lede-wrapper{
+					@include mq(lg){
+						margin-right: 0;
+					}
+				}
+				> .smb-section__subtitle::after{
+					margin-right: 0;
+				}
+			}
 		}
 	}
 
@@ -72,6 +83,8 @@
 			@include mq(sm){
 				flex: 0 1 50%;
 				max-width: 50%;
+				padding-right: 0;
+				padding-left: 0;
 			}
 			&:first-child{
 				@include mq(sm){
@@ -79,10 +92,8 @@
 				}
 			}
 		}
-		.smb-section__title{
-			@include heading3;
-		}
 	}
+
 	.smb-section-break-the-grid__content {
 		margin-top: -3.875rem;
 		padding: 1rem;
@@ -98,6 +109,14 @@
 			line-height: 2.5;
 		}
 	}
+	//タイトル
+	.smb-section-break-the-grid__title{
+		@include heading3;
+		text-align: left;
+		&::after{
+			display: none;
+		}
+	}
 	//画像
 	.smb-section-break-the-grid__figure{
 		position: relative;
@@ -105,11 +124,22 @@
 			width: calc(100% + 10rem);
 		}
 	}
+	//テキスト
+	.smb-section-break-the-grid__body{
+		text-align: left;
+		margin-top: 1rem;
+		@media screen and (min-width: 640px) and (max-width: 1023px) {
+			margin-top: 1.5rem;
+		}
+		@include mq(lg){
+			margin-top: 2.25rem;
+		}
+	}
 
 	// ------------------------------------------------------
 	// ブロークングリッド（右寄せ時のスタイル）
 	//
-	.smb-section-break-the-grid--left{
+	.smb-section-break-the-grid--right{
 		//コンテンツ
 		.smb-section-break-the-grid__content {
 			@include mq(sm){
