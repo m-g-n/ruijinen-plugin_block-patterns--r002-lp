@@ -7,6 +7,13 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .example-editor{
-// 	color: #f00;
-// }
+.is-style-RJE_R002LP_faq_items{
+	> .smb-accordion__item{
+		> .smb-accordion__item__body {
+			padding-top: 2.5rem;
+			&:before{
+				padding-top: 2.5rem;
+			}
+		}
+	}
+}

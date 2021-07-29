@@ -32,11 +32,10 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 		@include mq(xl){
 			max-width: 80%;
 			margin-right: 3.75em;
-			// margin-left: auto;
 		}
 	}
 	//セクションの内包
-	.c-container{
+	.smb-section__inner > .c-container{
 		padding-right: 1em;
 		padding-left: 1em;
 		@include mq(sm){
@@ -90,7 +89,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 	.smb-media-text__title{
 		@include heading1;
 		br{
-			@media (min-width: 40em) and (max-width: 63.9375em){
+			@media (min-width: 40em) and (max-width: 1279px){
 				display: none;
 			}
 		}
@@ -109,7 +108,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 		}
 	}
 	// コンテンツ右寄せの場合
-	&.smb-section-with-bgimage--right{
+	&.smb-section--right{
 		.smb-section-with-bgimage__bgimage{
 			margin-right: 10%;
 			margin-left: auto;
