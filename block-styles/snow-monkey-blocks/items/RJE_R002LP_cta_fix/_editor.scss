@@ -13,7 +13,7 @@
 	background-color: rgba(#e00, 0.14);
 	border: 1px dotted #e00;
 	&::before{
-		content: "※右下に固定表示されるCTAパターンです。こちらは１ページに１つのみ設置ください（２つ目以上は表示されません）";
+		content: "※右下に固定表示されるCTAパターンです。１ページに１つのみ設置可能（２つ目以上設置すると表示が正常に行われません）";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -80,17 +80,5 @@
 		.smb-items__banner__body{
 			opacity: 0.5;
 		}
-	}
-}
-
-.block-editor-block-list__layout .is-style-RJE_R002LP_cta_fix:not(:first-of-type){
-	background-color: transparent;
-	border-color: #777;
-	&::before{
-		content: "【こちらは表示されません】 右下に固定表示されるCTAパターンは１ページに１つのみ設置できます";
-		background-color: #777;
-	}
-	> .c-row{
-		opacity: 0.5;
 	}
 }

@@ -24,6 +24,7 @@
 			right: 0;
 			z-index: 2;
 			padding: 0 1.25rem 1.25rem;
+			transition: all 0.2s;
 			&:not(:first-of-type){
 				display: none;
 			}
@@ -72,8 +73,12 @@
 			transform: rotate(-45deg);
 		}
 	}
+	&.is-visible_page_top{
+		> .c-row{
+			> .c-row__col{
+				bottom: 100px;
+			}
+		}
+	}
 }
 
-.l-container .is-style-RJE_R002LP_cta_fix:not(:first-of-type){
-	display: none;
-}

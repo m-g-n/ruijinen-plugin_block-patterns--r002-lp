@@ -8,7 +8,6 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_cta:not(:root){
-	padding-top: 0;
 	padding-bottom: 2.5rem;
 	@include mq(md){
 		padding-bottom: 0;
@@ -45,6 +44,9 @@
 									max-width: 60%;
 									padding-top: 0;
 								}
+								@media screen and (min-width: 768px) and (max-width: 1023px) {
+									order: 2;
+								}
 							}
 							//メディア
 							&:last-child{
@@ -52,13 +54,32 @@
 									flex-basis: 40%;
 									max-width: 40%;
 								}
+								@media screen and (min-width: 768px) and (max-width: 1023px) {
+									order: 1;
+								}
+							}
+						}
+					}
+					>.c-row--reverse{
+						> .c-row__col{
+							//文章
+							&:first-child{
+								padding-top: 1rem;
+								@media screen and (min-width: 768px) and (max-width: 1023px) {
+									order: 2;
+								}
+							}
+							//メディア
+							&:last-child{
+								@media screen and (min-width: 768px) and (max-width: 1023px) {
+									order: 1;
+								}
 							}
 						}
 					}
 					.smb-media-text__figure{
 						text-align: center;
 						img{
-
 							@media screen and (max-width: 767px){
 								max-height: 400px;
 								width: auto;
@@ -66,7 +87,7 @@
 								margin-top: -5rem;
 							}
 							@include mq(md){
-								margin-top: -15%;
+								margin-top: -3.5rem;
 							}
 						}
 					}
@@ -96,6 +117,3 @@
 		}
 	}
 }
-
-
-
