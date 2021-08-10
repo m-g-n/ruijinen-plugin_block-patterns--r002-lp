@@ -1,0 +1,28 @@
+// ======================================================
+//
+// ブロックスタイル - CTA（フロント固有のスタイル）
+//
+// ======================================================
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
+.is-style-RJE_R002LP_cta:not(:root){
+	position: relative;
+	z-index: 2;
+	margin-top: -5rem;
+	padding-top: 5rem;
+	@include mq(md){
+		margin-top: -3.5rem;
+		padding-top: 3.5rem;
+	}
+	> .smb-section-with-bgimage__bgimage{
+		margin-top: 5rem;
+		@include mq(md){
+			margin-top: 3.5rem;
+		}
+	}
+}
+.p-entry-content > *:first-child.is-style-RJE_R002LP_cta:not(:root){
+	margin-top: 0;
+}

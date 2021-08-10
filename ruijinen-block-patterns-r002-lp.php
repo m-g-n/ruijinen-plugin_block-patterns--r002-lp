@@ -108,7 +108,7 @@ function rje_r002lp_hero_media_and_text( $args ) {
 		'cat'            => array( RJE_R002LP_KEY ),
 		'specific-style' => false,
 		'specific-script' => false,
-		'block-style'    => array( RJE_R002LP_KEY . '_hero_media_and_text' ),
+		'block-style'    => array( RJE_R002LP_KEY . '_hero_media_and_text', RJE_R002LP_KEY . '_spacer_top', RJE_R002LP_KEY . '_spacer_bottom' ), //汎用スペーサースタイルもここで読み込む
 		'path'           => RJE_R002LP_PATH,
 	);
 	return $args;
