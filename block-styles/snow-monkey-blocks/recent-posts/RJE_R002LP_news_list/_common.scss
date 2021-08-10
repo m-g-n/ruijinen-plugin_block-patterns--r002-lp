@@ -64,7 +64,7 @@
 				border: 1px solid;
 				font-weight: normal;
 				text-align: center;
-				color: #999;
+				color: var(--accent-color,#cd162c);
 			}
 		}
 		.c-meta__item--published{
