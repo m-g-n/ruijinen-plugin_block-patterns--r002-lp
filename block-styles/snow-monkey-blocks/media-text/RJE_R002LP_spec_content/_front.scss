@@ -8,8 +8,14 @@
 // スタイル
 // ------------------------------------------------------
 //スリム幅以外
-body:not([data-is-slim-width="true"]) {
+body:not([data-is-slim-width="true"]),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull {
 	.is-style-RJE_R002LP_spec_content:not(:root){
+		@include mq(lg){
+			max-width: 920px;
+			margin-right: auto;
+			margin-left: auto;
+		}
 		> .c-row{
 			>.c-row__col{
 				&:first-child{ //テキスト
@@ -39,6 +45,9 @@ body:not([data-is-slim-width="true"]) {
 				padding-left: 2.5rem;
 			}
 		}
+	}
+	.alignfull .is-style-RJE_R002LP_spec_content:not(:root){
+
 	}
 }
 
