@@ -1,6 +1,6 @@
 // ======================================================
 //
-// ブロックスタイル - セクション1（エディタ・フロント共通のスタイル）
+// ブロックスタイル - お客様の声（エディタ・フロント共通のスタイル）
 //
 // ======================================================
 
@@ -11,9 +11,6 @@
 	> .c-row{
 		>.c-row__col{
 			margin-bottom: 2.5rem;
-			@include mq(sm){
-				margin-bottom: 3.75rem;
-			}
 		}
 	}
 	.smb-items__item{
@@ -35,9 +32,9 @@
 		}
 	}
 	.smb-items__item--free .smb-items__item__body{
-		@include mq(lg){
-			display: flex;
-		}
+		// @include mq(lg){
+		// 	display: flex;
+		// }
 	}
 }
 
@@ -47,14 +44,6 @@
 	flex-direction: column;
 	align-items: center;
 	padding-bottom: 1.5rem;
-	@include mq(lg){
-		max-width:31.2%;
-		flex-basis: 31.2%;
-		padding-right: 2rem;
-	}
-	@media screen and (min-width: 1280px) {
-		padding-right: 3.75rem;
-	}
 }
 //本文
 .RJE_R002LP_voices__item_content:not(:root){
@@ -63,21 +52,6 @@
 		border-color: #999;
 		border-style: solid;
 		border-width: 1px 0 0;
-		@include mq(lg){
-			margin-top: 0;
-			padding-top: 0;
-			padding-left: 2rem;
-			border-width: 0 0 0 1px;
-		}
-		@media screen and (min-width: 1280px) {
-			padding-left: 3.75rem;
-		}
-	}
-	@include mq(lg){
-		max-width:68.8%;
-		flex-basis: 68.8%;
-		padding-top: 0;
-		border-top: 0;
 	}
 }
 
@@ -100,22 +74,16 @@
 		justify-content: center;
 		margin-left: 0;
 		margin-right: 0;
-		@include mq(lg){
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-		}
 	}
 	.c-row--reverse{
-		@include mq(lg){
-			justify-content: flex-end;
-		}
 		.c-row__col:last-child .smb-media-text__figure{
 			display: inline-block;
-			margin-right: 0.75rem;
+			img{
+				margin-right: 0.75rem;
+			}
 		}
 	}
-	.c-row:not(.c-row--reverse) .c-row__col:last-child .smb-media-text__figure{
-		// display: inline-block;
+	.c-row:not(.c-row--reverse) .c-row__col:last-child .smb-media-text__figure img{
 		margin-left: 0.75rem;
 	}
 

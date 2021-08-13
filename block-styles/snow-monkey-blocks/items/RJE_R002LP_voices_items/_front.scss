@@ -1,12 +1,104 @@
 // ======================================================
 //
-// ブロックスタイル - セクション1（フロント固有のスタイル）
+// ブロックスタイル - お客様の声（フロント固有のスタイル）
 //
 // ======================================================
 
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .example-front{
-// 	color: #f00;
-// }
+body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .is-style-RJE_R002LP_voices_items:not(:root),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .is-style-RJE_R002LP_voices_items:not(:root){
+	> .c-row{
+		>.c-row__col{
+			@include mq(sm){
+				margin-bottom: 3.75rem;
+			}
+		}
+	}
+	.smb-items__item{
+		@media screen and (min-width: 1280px) {
+			padding: 4rem;
+		}
+	}
+	.smb-items__item--free .smb-items__item__body{
+		@include mq(lg){
+			display: flex;
+		}
+	}
+}
+
+//内容ヘッダ
+body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__item_heading:not(:root),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__item_heading:not(:root){
+	@include mq(lg){
+		max-width:31.2%;
+		flex-basis: 31.2%;
+		padding-right: 2rem;
+		padding-bottom: 0;
+	}
+	@media screen and (min-width: 1280px) {
+		padding-right: 3.75rem;
+	}
+}
+//本文
+body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__item_content:not(:root),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__item_content:not(:root){
+	@include mq(lg){
+		max-width:68.8%;
+		flex-basis: 68.8%;
+		padding-top: 0;
+		border-top: 0;
+		margin-top: 0;
+	}
+}
+body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__item_heading + .RJE_R002LP_voices__item_content:not(:root),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__item_heading + .RJE_R002LP_voices__item_content:not(:root){
+	@include mq(lg){
+		margin-top: 0;
+		padding-top: 0;
+		padding-left: 2rem;
+		border-width: 0 0 0 1px;
+	}
+	@media screen and (min-width: 1280px) {
+		padding-left: 3.75rem;
+	}
+}
+
+// //パーソナル情報
+body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__person:not(:root),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__person:not(:root){
+	.c-row{
+		@include mq(lg){
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+		}
+	}
+	.c-row--reverse{
+		@include mq(lg){
+			justify-content: flex-end;
+		}
+	}
+}
+
+//サイドバーあり
+body[data-has-sidebar="true"] .is-style-RJE_R002LP_voices_items:not(:root),
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .p-entry-content > .is-style-RJE_R002LP_voices_items:not(:root){
+	.smb-items__item--free .smb-items__item__body{
+		@include mq(lg){
+			flex-wrap: wrap;
+		}
+	}
+	.RJE_R002LP_voices__item_heading{
+		@include mq(lg){
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+	}
+	.RJE_R002LP_voices__item_content{
+		@include mq(lg){
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+	}
+}
