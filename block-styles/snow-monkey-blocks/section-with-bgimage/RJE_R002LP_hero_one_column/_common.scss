@@ -29,7 +29,7 @@
 		}
 	}
 	//セクションの内包
-	> .c-container{
+	> .smb-section__inner > .c-container{
 		max-width: calc(100% - 2em);
 		margin-right: auto;
 		margin-left: auto;

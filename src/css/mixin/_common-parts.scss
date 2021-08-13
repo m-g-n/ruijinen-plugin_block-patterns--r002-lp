@@ -6,7 +6,7 @@ $base-font-size: 16;
 	font-weight: bold;
 	letter-spacing: 0.12em;
 	line-height: 1.8;
-	@include mq(sm){
+	@include mq(lg){
 		font-size: (32 / $base-font-size) * 1rem;
 	}
 }
