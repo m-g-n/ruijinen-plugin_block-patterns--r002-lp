@@ -40,7 +40,11 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R
 	@media screen and (min-width: 1280px) {
 		padding-right: 3.75rem;
 	}
+	@include mq(lg){
+		align-items: flex-start;
+	}
 }
+
 //本文
 body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__item_content:not(:root),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__item_content:not(:root){
