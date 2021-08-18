@@ -1,9 +1,7 @@
 <%= ENV['GIT_PR_RELEASE_TITLE'] %> - <%= Time.now %>
 
 ### 変更内容
-<% pull_requests.each do |pr| -%>
-<%= pr.to_checklist_item %>
-<% end -%>
+!!! 記述する !!!
 
 ### リリース時に対応すること
 - [ ] PR名を「x.x.x.x」に変更する（x.x.x.x はリリースするバージョン名）
