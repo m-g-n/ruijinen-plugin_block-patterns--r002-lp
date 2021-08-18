@@ -22,7 +22,7 @@ jobs:
       - name: echo-npm-version
         id: echo-version
         run: |
-          echo v${{ steps.package-version.outputs.current-version}}
+          echo ${{ steps.package-version.outputs.current-version}}
 
       - name: Create a release pull request
         uses: bakunyo/git-pr-release-action@master
