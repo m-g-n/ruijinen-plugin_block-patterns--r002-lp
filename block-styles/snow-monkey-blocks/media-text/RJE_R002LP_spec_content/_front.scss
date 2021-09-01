@@ -9,7 +9,8 @@
 // ------------------------------------------------------
 //スリム幅以外
 body:not([data-is-slim-width="true"]),
-body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull {
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull,
+body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .is-style-RJE_R000HELPER_enforcement_fullwidth{
 	.is-style-RJE_R002LP_spec_content:not(:root){
 		@include mq(lg){
 			max-width: 920px;
@@ -45,9 +46,6 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull {
 				padding-left: 2.5rem;
 			}
 		}
-	}
-	.alignfull .is-style-RJE_R002LP_spec_content:not(:root){
-
 	}
 }
 

@@ -7,7 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_hero_one_column{
+.is-style-RJE_R002LP_hero_one_column:not(:root){
 	min-height: 80vw;
 	@media screen and (orientation: portrait) {
 		min-height: 90vh;
