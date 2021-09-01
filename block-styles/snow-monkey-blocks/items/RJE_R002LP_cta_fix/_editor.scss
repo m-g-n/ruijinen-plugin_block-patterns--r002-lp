@@ -7,7 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_cta_fix{
+.is-style-RJE_R002LP_cta_fix:not(:root){
 	position: relative;
 	padding: 2.5rem 1rem 1rem;
 	background-color: rgba(#e00, 0.14);

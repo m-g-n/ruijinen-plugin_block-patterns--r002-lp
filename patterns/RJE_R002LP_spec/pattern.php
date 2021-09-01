@@ -16,6 +16,6 @@
 <!-- wp:paragraph -->
 <p>診断無料、送料無料</p>
 <!-- /wp:paragraph --></div></div>
-<!-- /wp:snow-monkey-blocks/box --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-2"><div class="smb-media-text__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/photo-product2.png" alt="" width="967" height="1024" class="wp-image-888"/></div></div></div></div>
+<!-- /wp:snow-monkey-blocks/box --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-2"><div class="smb-media-text__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/photo-product2.png" alt="" width="540" height="600" class="wp-image-888"/></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/media-text --></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/section -->

@@ -13,7 +13,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_hero_media_and_text{
+.is-style-RJE_R002LP_hero_media_and_text:not(:root){
 	padding-top: 2em;
 	padding-bottom: 2em;
 	@include mq(sm){

@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿ブロックパターン：LP向けパターン集
  * Description: 類人猿ブロックパターン LP向けパターンアドオンです
- * Version: 0.0.0.12
+ * Version: 0.0.0.13
  * Tested up to: 5.8
  * Requires at least: 5.8
  * Author: mgn Inc.,
@@ -46,7 +46,7 @@ add_action(
 	'wp_enqueue_scripts',
 	function () {
 		$path = 'dist/css/common.css';
-		wp_enqueue_style( RJE_R002LP_KEY . 'common', RJE_R002LP_URL . $path, array( 'snow-monkey', 'snow-monkey-blocks', 'snow-monkey-snow-monkey-blocks', 'snow-monkey-blocks-background-parallax' ), filemtime( RJE_R002LP_PATH . $path ) );
+		wp_enqueue_style( RJE_R002LP_KEY . 'common', RJE_R002LP_URL . $path, [ \Framework\Helper::get_main_style_handle() ], filemtime( RJE_R002LP_PATH . $path ) );
 	},
 	10
 );
@@ -54,7 +54,7 @@ add_action(
 	'enqueue_block_editor_assets',
 	function () {
 		$path = 'dist/css/common.css';
-		wp_enqueue_style( RJE_R002LP_KEY . 'common', RJE_R002LP_URL . $path, array( 'snow-monkey-snow-monkey-blocks-editor' ), filemtime( RJE_R002LP_PATH . $path ) );
+		wp_enqueue_style( RJE_R002LP_KEY . 'common', RJE_R002LP_URL . $path, [ \Framework\Helper::get_main_style_handle() ], filemtime( RJE_R002LP_PATH . $path ) );
 	},
 	10
 );

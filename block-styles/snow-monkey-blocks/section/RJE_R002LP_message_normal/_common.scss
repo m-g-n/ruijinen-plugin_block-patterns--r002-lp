@@ -7,7 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_message_normal{
+.is-style-RJE_R002LP_message_normal:not(:root){
 	@media (max-width: 639px){
 		overflow: visible;
 	}

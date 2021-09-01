@@ -7,7 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_cta_fix{
+.is-style-RJE_R002LP_cta_fix:not(:root){
 	> .c-row{
 		display: block;
 		> .c-row__col:not(:root){
@@ -17,7 +17,7 @@
 	.smb-items__item{
 		position: relative;
 		max-width: 350px;
-		background-color: #F4F4F4;
+		background-color: #fff;
 		border: 1px solid #999;
 		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), 0px 2px 16px rgba(0, 0, 0, 0.06);
 		@include mq(lg){
@@ -66,6 +66,7 @@
 	.smb-items__item__title{
 		font-size: 0.857rem;
 		line-height: 1.57;
+		// color: var(--accent-color,#cd162c);
 		order: 2;
 		@include mq(lg){
 			font-size: 1.125rem;
@@ -98,7 +99,7 @@
 		background-color: #fff !important;
 		border: 1px solid;
 		font-size: 0.75rem;
-		color: #4d4d4d;
+		color: var(--accent-color,#cd162c);
 		line-height: 1.5;
 		@include mq(lg){
 			padding: 6px;

@@ -6,10 +6,10 @@
 <h3 class="RJE_R002LP_voices__title">シャンプー難民からの開放</h3>
 <!-- /wp:heading -->
 
-<!-- wp:snow-monkey-blocks/media-text {"titleTagName":"none","mediaId":414,"mediaLink":"https://rui-jin-en.com/","mediaSizeSlug":"thumbnail","mediaType":"image","mediaPosition":"left","mediaColumnSize":"25","mobileOrder":"デフォルト","className":"RJE_R002LP_voices__person"} -->
+<!-- wp:snow-monkey-blocks/media-text {"titleTagName":"none","mediaId":1372,"mediaLink":"https://rui-jin-en.com","mediaSizeSlug":"thumbnail","mediaType":"image","mediaPosition":"left","mediaColumnSize":"25","mobileOrder":"デフォルト","className":"RJE_R002LP_voices__person"} -->
 <div class="wp-block-snow-monkey-blocks-media-text smb-media-text smb-media-text--mobile-デフォルト RJE_R002LP_voices__person"><div class="c-row c-row--margin c-row--reverse c-row--middle"><div class="c-row__col c-row__col--1-1 c-row__col--lg-3-4"><div class="smb-media-text__body"><!-- wp:paragraph -->
 <p>20代 会社員<br>カナさん</p>
-<!-- /wp:paragraph --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4"><div class="smb-media-text__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/avatar.jpg" alt="" width="128" height="128" class="wp-image-414"/></div></div></div></div>
+<!-- /wp:paragraph --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4"><div class="smb-media-text__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/avatar1.png" alt="" width="139" height="139" class="wp-image-1372"/></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/media-text --></div>
 <!-- /wp:group -->
 
@@ -26,10 +26,10 @@
 <h3 class="RJE_R002LP_voices__title">自分の髪がこんな綺麗になるとは…！</h3>
 <!-- /wp:heading -->
 
-<!-- wp:snow-monkey-blocks/media-text {"titleTagName":"none","mediaLink":"https://rui-jin-en.com/","mediaPosition":"left","mediaColumnSize":"25","className":"RJE_R002LP_voices__person"} -->
+<!-- wp:snow-monkey-blocks/media-text {"titleTagName":"none","mediaId":1373,"mediaLink":"https://rui-jin-en.com","mediaType":"image","mediaPosition":"left","mediaColumnSize":"25","className":"RJE_R002LP_voices__person"} -->
 <div class="wp-block-snow-monkey-blocks-media-text smb-media-text RJE_R002LP_voices__person"><div class="c-row c-row--margin c-row--reverse c-row--middle"><div class="c-row__col c-row__col--1-1 c-row__col--lg-3-4"><div class="smb-media-text__body"><!-- wp:paragraph -->
-<p>30代 自営業 みさとさん</p>
-<!-- /wp:paragraph --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4"><div class="smb-media-text__figure"></div></div></div></div>
+<p>30代 自営業<br>みさとさん</p>
+<!-- /wp:paragraph --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4"><div class="smb-media-text__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/avatar2.png" alt="" width="139" height="139" class="wp-image-1373"/></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/media-text --></div>
 <!-- /wp:group -->
 
@@ -43,19 +43,19 @@
 <!-- wp:snow-monkey-blocks/items--item--free -->
 <div class="wp-block-snow-monkey-blocks-items--item--free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
 <div class="wp-block-group RJE_R002LP_voices__item_heading"><!-- wp:heading {"level":3,"className":"RJE_R002LP_voices__title"} -->
-<h3 class="RJE_R002LP_voices__title">自分の髪がこんな綺麗になるとは…！</h3>
+<h3 class="RJE_R002LP_voices__title">ダメージ髪が見事復活！</h3>
 <!-- /wp:heading -->
 
-<!-- wp:snow-monkey-blocks/media-text {"titleTagName":"none","mediaId":414,"mediaLink":"https://rui-jin-en.com/","mediaSizeSlug":"thumbnail","mediaType":"image","mediaPosition":"left","mediaColumnSize":"25","className":"RJE_R002LP_voices__person"} -->
+<!-- wp:snow-monkey-blocks/media-text {"titleTagName":"none","mediaId":1374,"mediaLink":"https://rui-jin-en.com","mediaSizeSlug":"thumbnail","mediaType":"image","mediaPosition":"left","mediaColumnSize":"25","className":"RJE_R002LP_voices__person"} -->
 <div class="wp-block-snow-monkey-blocks-media-text smb-media-text RJE_R002LP_voices__person"><div class="c-row c-row--margin c-row--reverse c-row--middle"><div class="c-row__col c-row__col--1-1 c-row__col--lg-3-4"><div class="smb-media-text__body"><!-- wp:paragraph -->
-<p>30代 自営業<br>みさとさん</p>
-<!-- /wp:paragraph --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4"><div class="smb-media-text__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/avatar.jpg" alt="" width="128" height="128" class="wp-image-414"/></div></div></div></div>
+<p>20代 学生<br>さおりさん</p>
+<!-- /wp:paragraph --></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-4"><div class="smb-media-text__figure"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/avatar3.png" alt="" width="139" height="139" class="wp-image-1374"/></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/media-text --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"RJE_R002LP_voices__item_content"} -->
 <div class="wp-block-group RJE_R002LP_voices__item_content"><!-- wp:paragraph {"className":"RJE_R002LP_voices__text"} -->
-<p class="RJE_R002LP_voices__text">小さい頃から癖っ毛で、あちこちに跳ねる髪の毛を周りからからかわれた時期もありました。理想のストレートヘアを追い求めて縮毛矯正を繰り返し、傷んでボロボロになった過去も…。MATCHの診断でそんな過去を打ち明けつつ、届いたシャンプーを使って1ヶ月、あんなに悩みだった癖が少しずつ改善してきました！フィードバックを送って届くシャンプーも楽しみです。</p>
+<p class="RJE_R002LP_voices__text">パーマやカラーが好きで、季節の変わり目や気持ちを切り替えたいときにガラッとスタイルを変えてきましたが、気づいたら傷みで色が入らなくなっていました。ダメージケアができるシャンプーを探し始めた時、雑誌でMATCHのことを知り、試しに購入。傷んでバサバサだった髪がみるみる落ち着いていくのに驚いて、思わず継続購入！ケアしながら、カラー・パーマを楽しみたいです。</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div></div></div>
 <!-- /wp:snow-monkey-blocks/items--item--free --></div></div>
