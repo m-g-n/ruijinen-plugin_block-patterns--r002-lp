@@ -8,6 +8,6 @@
 <div class="wp-block-snow-monkey-blocks-buttons smb-buttons is-content-justification-right"><!-- wp:snow-monkey-blocks/btn {"className":"is-style-text"} -->
 <div class="wp-block-snow-monkey-blocks-btn smb-btn-wrapper is-style-text"><a class="smb-btn" href=""><span class="smb-btn__label">View More</span></a></div>
 <!-- /wp:snow-monkey-blocks/btn --></div>
-<!-- /wp:snow-monkey-blocks/buttons --></div></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-2"><div class="smb-section-break-the-grid__figure smb-section-break-the-grid__figure--w-l"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/photo-green1.jpg" alt="" width="1240" height="930" class="wp-image-701"/></div></div></div></div></div></div>
+<!-- /wp:snow-monkey-blocks/buttons --></div></div></div><div class="c-row__col c-row__col--1-1 c-row__col--lg-1-2"><div class="smb-section-break-the-grid__figure smb-section-break-the-grid__figure--w-l"><img src="<?php echo esc_url( RJE_R002LP_URL ); ?>dist/img/photo-fruits2.jpg" alt="" width="1200" height="818" class="wp-image-701"/></div></div></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/section-break-the-grid --></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/section -->

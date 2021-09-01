@@ -7,7 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_message_accent{
+.is-style-RJE_R002LP_message_accent:not(:root){
 	position: relative;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
@@ -53,20 +53,7 @@
 			padding-right: 0;
 			padding-left: 0;
 			> .smb-section__subtitle{
-				margin-bottom: 1.25rem;
-				font-weight: normal;
-				opacity: 0.6;
-				&::after{
-					content: "";
-					display: block;
-					width: 2em;
-					height: 1px;
-					margin-top: 0.75rem;
-					margin-right: auto;
-					margin-left: auto;
-					background-color: var(--accent-color,#cd162c);
-					opacity: 0.3;
-				}
+				@include smb-section-subtitle;
 			}
 			>.smb-section__title{
 				@include heading2;

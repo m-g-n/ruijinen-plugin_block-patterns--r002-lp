@@ -18,6 +18,11 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 0.0.0.13
+- Release PRのタイトルにvがつかないように修正
+- 共通CSSの依存関係をSnow Monkey公式の方法に変更
+- editorCSSの優先度を高めるためにコードを修正
+
 ## 0.0.0.12
 - Github Actionsエラー対応
 ## 0.0.0.11

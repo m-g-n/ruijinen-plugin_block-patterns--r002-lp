@@ -7,6 +7,9 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .example-editor{
-// 	color: #f00;
-// }
+.is-style-RJE_R002LP_message_accent:not(:root){
+	&::after{
+		left: auto !important;
+		top: auto !important;
+	}
+}

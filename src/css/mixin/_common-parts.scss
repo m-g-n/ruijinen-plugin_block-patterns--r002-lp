@@ -54,7 +54,7 @@ $base-font-size: 16;
 //ボタンスタイル - ノーマル
 @mixin button--normal{
 	min-width: 225px; //TODO: 最低幅で対応するかを検討する
-	padding: 0.625rem;
+	padding: 0.625rem 1.5rem;
 	border-radius: 6.25rem;
 	line-height: 1.5;
 	transition: all 0.3s ease-out;
@@ -65,7 +65,7 @@ $base-font-size: 16;
 //ボタンスタイル - ゴースト
 @mixin button--ghost{
 	min-width: 225px; //TODO: 最低幅で対応するかを検討する
-	padding: 0.625rem;
+	padding: 0.625rem 1.5rem;
 	border: 1px solid;
 	border-radius: 6.25rem;
 	line-height: 1.5;
@@ -105,7 +105,6 @@ $base-font-size: 16;
 @mixin smb-section-subtitle () {
 	margin-bottom: 1.25rem;
 	font-weight: normal;
-	opacity: 0.6;
 	&::after{
 		content: "";
 		display: block;
@@ -115,6 +114,5 @@ $base-font-size: 16;
 		margin-right: auto;
 		margin-left: auto;
 		background-color: var(--accent-color,#cd162c);
-		opacity: 0.3;
 	}
 }

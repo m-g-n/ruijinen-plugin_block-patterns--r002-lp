@@ -13,7 +13,7 @@
 <!-- /wp:snow-monkey-blocks/accordion--item -->
 
 <!-- wp:snow-monkey-blocks/accordion--item -->
-<div class="wp-block-snow-monkey-blocks-accordion--item smb-accordion__item"><input type="checkbox" class="smb-accordion__item__control"/><div class="smb-accordion__item__title"><span class="smb-accordion__item__title__label">診断せずに購入することは可能ですか？</span><div class="smb-accordion__item__title__icon"><i class="fas fa-angle-down"></i></div></div><div class="smb-accordion__item__body"><!-- wp:paragraph -->
+<div class="wp-block-snow-monkey-blocks-accordion--item smb-accordion__item"><input type="checkbox" class="smb-accordion__item__control"/><div class="smb-accordion__item__title"><span class="smb-accordion__item__title__label">好みが変わりやすく、シャンプーを選ぶ時の方針（しっとりか、サラサラか、など）もコロコロ変わるのですが、MATCHでは対応してもらえますか？</span><div class="smb-accordion__item__title__icon"><i class="fas fa-angle-down"></i></div></div><div class="smb-accordion__item__body"><!-- wp:paragraph -->
 <p>（回答を入力ください）</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:snow-monkey-blocks/accordion--item --></div>

@@ -7,7 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_hero_one_column{
+.is-style-RJE_R002LP_hero_one_column:not(:root){
 	//サイドバーあり・フル幅のテンプレート以外 かつ セクション自体全幅表示
 	body:not([data-has-sidebar="true"]):not([data-is-full-template="true"]) &{
 		&.alignfull{

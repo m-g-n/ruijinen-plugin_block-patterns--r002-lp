@@ -7,7 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_faq_items{
+.is-style-RJE_R002LP_faq_items:not(:root){
 	> .smb-accordion__item{
 		> .smb-accordion__item__body {
 			padding-top: 2.5rem;
