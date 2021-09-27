@@ -17,10 +17,11 @@
 					max-width: (100% - 8.32%);
 				}
 			}
-			//内包コンテナ
-			> .c-container{
+			> .smb-section__inner{
 				@include mq(lg){
 					max-width: (100% - 8.32%);
+					margin-right: auto;
+					margin-left: auto;
 				}
 			}
 		}
@@ -34,7 +35,7 @@
 			}
 		}
 		//内包コンテナ
-		> .c-container{
+		> .smb-section__inner{
 			@include mq(lg){
 				max-width: (100% - 8.32%);
 			}
