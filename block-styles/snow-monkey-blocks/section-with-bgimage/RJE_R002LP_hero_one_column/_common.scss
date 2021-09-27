@@ -28,7 +28,6 @@
 			max-width: 100%;
 		}
 	}
-	//セクションの内包
 	> .smb-section__inner > .c-container{
 		max-width: calc(100% - 2em);
 		margin-right: auto;
@@ -51,7 +50,7 @@
 		//セクションボディ
 		> .smb-section__body{
 			margin-top: 1.5em;
-			:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)+:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
+			> :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
 				margin-top: 1em;
 			}
 			.smb-buttons{
