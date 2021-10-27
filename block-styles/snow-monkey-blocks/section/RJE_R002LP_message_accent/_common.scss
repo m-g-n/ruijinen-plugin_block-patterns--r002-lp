@@ -55,7 +55,7 @@
 			// ------------------------------------------------------
 			// ヘッダー
 			//
-			// ----- @deprecated - SMB v15.11.1まで -----
+			// ----- @deprecated - SMB v12.6.1まで -----
 			> .smb-section__subtitle{
 				@include smb-section-subtitle;
 			}
@@ -65,7 +65,7 @@
 					display: none;
 				}
 			}
-			// ----- SMB v15.11.2から -----
+			// ----- SMB v12.6.2から -----
 			> .smb-section__contents-wrapper > .smb-section__header{
 				> .smb-section__subtitle{
 					@include smb-section-subtitle;
@@ -80,8 +80,8 @@
 			// ------------------------------------------------------
 			// ボディ
 			//
-			>.smb-section__body, //@deprecated - SMB v15.11.1まで
-			> .smb-section__contents-wrapper > .smb-section__body{ //SMB v15.11.2から
+			>.smb-section__body, //@deprecated - SMB v12.6.1まで
+			> .smb-section__contents-wrapper > .smb-section__body{ //SMB v12.6.2から
 				margin-top: 2.5rem;
 				text-align: left;
 				@include mq(sm){
@@ -95,7 +95,7 @@
 	&.smb-section--left{
 		> .smb-section__inner{
 			> .c-container{
-				// ----- @deprecated - SMB v15.11.1まで -----
+				// ----- @deprecated - SMB v12.6.1まで -----
 				> .smb-section__lede-wrapper{
 					@include mq(lg){
 						margin-left: 0;
@@ -104,7 +104,7 @@
 				> .smb-section__subtitle::after{
 					margin-left: 0;
 				}
-				// ----- SMB v15.11.2から -----
+				// ----- SMB v12.6.2から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 					.smb-section__lede-wrapper{
 						@include mq(lg){
@@ -124,7 +124,7 @@
 	&.smb-section--center{
 		> .smb-section__inner{
 			> .c-container{
-				// ----- @deprecated - SMB v15.11.1まで -----
+				// ----- @deprecated - SMB v12.6.1まで -----
 				> .smb-section__lede-wrapper{
 					@include mq(lg){
 						margin-right: auto;
@@ -135,7 +135,7 @@
 						margin-right: auto;
 						margin-left: auto;
 				}
-				// ----- SMB v15.11.2から -----
+				// ----- SMB v12.6.2から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 					.smb-section__lede-wrapper{
 						@include mq(lg){
@@ -156,7 +156,7 @@
 	&.smb-section--right{
 		> .smb-section__inner{
 			> .c-container{
-				// ----- @deprecated - SMB v15.11.1まで -----
+				// ----- @deprecated - SMB v12.6.1まで -----
 				> .smb-section__lede-wrapper{
 					@include mq(lg){
 						margin-right: 0;
@@ -165,7 +165,7 @@
 				> .smb-section__subtitle::after{
 					margin-right: 0;
 				}
-				// ----- SMB v15.11.2から -----
+				// ----- SMB v12.6.2から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 				> .smb-section__lede-wrapper{
 						@include mq(lg){
