@@ -65,7 +65,7 @@
 					display: none;
 				}
 			}
-			// ----- SMB v12.6.2から -----
+			// ----- SMB v13.0.0から -----
 			> .smb-section__contents-wrapper > .smb-section__header{
 				> .smb-section__subtitle{
 					@include smb-section-subtitle;
@@ -81,7 +81,7 @@
 			// ボディ
 			//
 			>.smb-section__body, //@deprecated - SMB v12.6.1まで
-			> .smb-section__contents-wrapper > .smb-section__body{ //SMB v12.6.2から
+			> .smb-section__contents-wrapper > .smb-section__body{ //SMB v13.0.0から
 				margin-top: 2.5rem;
 				text-align: left;
 				@include mq(sm){
@@ -104,7 +104,7 @@
 				> .smb-section__subtitle::after{
 					margin-left: 0;
 				}
-				// ----- SMB v12.6.2から -----
+				// ----- SMB v13.0.0から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 					.smb-section__lede-wrapper{
 						@include mq(lg){
@@ -135,7 +135,7 @@
 						margin-right: auto;
 						margin-left: auto;
 				}
-				// ----- SMB v12.6.2から -----
+				// ----- SMB v13.0.0から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 					.smb-section__lede-wrapper{
 						@include mq(lg){
@@ -165,7 +165,7 @@
 				> .smb-section__subtitle::after{
 					margin-right: 0;
 				}
-				// ----- SMB v12.6.2から -----
+				// ----- SMB v13.0.0から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 				> .smb-section__lede-wrapper{
 						@include mq(lg){
