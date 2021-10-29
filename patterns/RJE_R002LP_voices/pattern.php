@@ -1,5 +1,5 @@
-<!-- wp:snow-monkey-blocks/section {"fixedBackgroundColor":"#f4f4f4","contentsAlignment":"left","align":"full","className":"RJE_R002LP_voices is-style-RJE_R002LP_section1"} -->
-<div class="wp-block-snow-monkey-blocks-section alignfull smb-section smb-section--left smb-section--fit RJE_R002LP_voices is-style-RJE_R002LP_section1"><div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0;background-color:#f4f4f4"></div><div class="smb-section__inner"><div class="c-container"><div class="smb-section__subtitle"><meta charset="utf-8">USER VOICE</div><h2 class="smb-section__title"><meta charset="utf-8">お客様からの声</h2><div class="smb-section__body"><!-- wp:snow-monkey-blocks/items {"lg":1,"className":"is-style-RJE_R002LP_voices_items"} -->
+<!-- wp:snow-monkey-blocks/section {"contentsAlignment":"left","fixedBackgroundColor":"#f4f4f4","align":"full","className":"RJE_R002LP_voices is-style-RJE_R002LP_section1"} -->
+<div class="wp-block-snow-monkey-blocks-section alignfull smb-section smb-section--left smb-section--fit RJE_R002LP_voices is-style-RJE_R002LP_section1"><div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0;background-color:#f4f4f4"></div><div class="smb-section__inner"><div class="c-container"><div class="smb-section__contents-wrapper smb-section__contents-wrapper--left"><div class="smb-section__header"><div class="smb-section__subtitle"><meta charset="utf-8">USER VOICE</div><h2 class="smb-section__title"><meta charset="utf-8">お客様からの声</h2></div><div class="smb-section__body"><!-- wp:snow-monkey-blocks/items {"lg":1,"className":"is-style-RJE_R002LP_voices_items"} -->
 <div class="wp-block-snow-monkey-blocks-items smb-items is-style-RJE_R002LP_voices_items"><div class="c-row c-row--margin" data-columns="1" data-md-columns="1" data-lg-columns="1"><!-- wp:snow-monkey-blocks/items--item--free -->
 <div class="wp-block-snow-monkey-blocks-items--item--free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
 <div class="wp-block-group RJE_R002LP_voices__item_heading"><!-- wp:heading {"level":3,"className":"RJE_R002LP_voices__title"} -->
@@ -59,5 +59,5 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div></div></div>
 <!-- /wp:snow-monkey-blocks/items--item--free --></div></div>
-<!-- /wp:snow-monkey-blocks/items --></div></div></div></div>
+<!-- /wp:snow-monkey-blocks/items --></div></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/section -->
