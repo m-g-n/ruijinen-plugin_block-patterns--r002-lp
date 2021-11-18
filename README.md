@@ -18,6 +18,9 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 0.0.1.5
+- Snow Monkey Blocks v13.3 変更内容に伴うパターンのHTML変更など
+
 ## 0.0.1.4
 - CSSのスタイルでブロック名（wp-block-snow-monkey-xxx）で指定を行っていた箇所を別のクラス名で指定する形に変更
 - CTAブロックより前に固定CTAブロックがある場合、実際の画面でCTA画面の後ろに固定CTAが回ってしまう不具合を対応
