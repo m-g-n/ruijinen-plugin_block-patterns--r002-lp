@@ -93,7 +93,7 @@
 	[data-lg-columns="4"],
 	[data-lg-columns="5"],
 	[data-lg-columns="6"]{
-		> .wp-block-snow-monkey-blocks-panels--item:not(:root){
+		> .c-row__col{
 			@include mq(lg){
 				padding: 1.25rem;
 			}

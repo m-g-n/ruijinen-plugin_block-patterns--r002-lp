@@ -8,10 +8,10 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_merit_panels:not(:root){
-	.wp-block-snow-monkey-blocks-panels--item--horizontal,
-	.wp-block-snow-monkey-blocks-panels--item--free{
+	.smb-panels__item--horizontal,
+	.smb-panels__item--free{
 		position: relative;
-		&::before{
+		&::after{
 			content: "このパターン内では非推奨です";
 			position: absolute;
 			top: 1.875rem;
