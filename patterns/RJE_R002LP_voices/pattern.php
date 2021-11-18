@@ -1,7 +1,7 @@
 <!-- wp:snow-monkey-blocks/section {"contentsAlignment":"left","fixedBackgroundColor":"#f4f4f4","align":"full","className":"RJE_R002LP_voices is-style-RJE_R002LP_section1"} -->
 <div class="wp-block-snow-monkey-blocks-section alignfull smb-section smb-section--left smb-section--fit RJE_R002LP_voices is-style-RJE_R002LP_section1"><div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0;background-color:#f4f4f4"></div><div class="smb-section__inner"><div class="c-container"><div class="smb-section__contents-wrapper smb-section__contents-wrapper--left"><div class="smb-section__header"><div class="smb-section__subtitle"><meta charset="utf-8">USER VOICE</div><h2 class="smb-section__title"><meta charset="utf-8">お客様からの声</h2></div><div class="smb-section__body"><!-- wp:snow-monkey-blocks/items {"lg":1,"className":"is-style-RJE_R002LP_voices_items"} -->
-<div class="wp-block-snow-monkey-blocks-items smb-items is-style-RJE_R002LP_voices_items"><div class="c-row c-row--margin" data-columns="1" data-md-columns="1" data-lg-columns="1"><!-- wp:snow-monkey-blocks/items--item--free -->
-<div class="wp-block-snow-monkey-blocks-items--item--free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
+<div class="wp-block-snow-monkey-blocks-items smb-items is-style-RJE_R002LP_voices_items"><div class="c-row c-row--margin" data-columns="1" data-md-columns="1" data-lg-columns="1"><!-- wp:snow-monkey-blocks/items-item-free -->
+<div class="wp-block-snow-monkey-blocks-items-item-free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
 <div class="wp-block-group RJE_R002LP_voices__item_heading"><!-- wp:heading {"level":3,"className":"RJE_R002LP_voices__title"} -->
 <h3 class="RJE_R002LP_voices__title">シャンプー難民からの開放</h3>
 <!-- /wp:heading -->
@@ -18,10 +18,10 @@
 <p class="RJE_R002LP_voices__text">ドラッグストアやバラエティショップで、話題のシャンプーを買っては試し、結局合わなくてまた買っては試し…を繰り返してきました。MATCHの存在を知り、半信半疑ながらも、物は試しと思って診断して購入。そして、これまでどんなシャンプーを使ってもイマイチだった私の髪が、ずっと触っていたくなるサラサラヘアーに！びっくりしました。もう手放せません！</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div></div></div>
-<!-- /wp:snow-monkey-blocks/items--item--free -->
+<!-- /wp:snow-monkey-blocks/items-item-free -->
 
-<!-- wp:snow-monkey-blocks/items--item--free -->
-<div class="wp-block-snow-monkey-blocks-items--item--free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
+<!-- wp:snow-monkey-blocks/items-item-free -->
+<div class="wp-block-snow-monkey-blocks-items-item-free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
 <div class="wp-block-group RJE_R002LP_voices__item_heading"><!-- wp:heading {"level":3,"className":"RJE_R002LP_voices__title"} -->
 <h3 class="RJE_R002LP_voices__title">自分の髪がこんな綺麗になるとは…！</h3>
 <!-- /wp:heading -->
@@ -38,10 +38,10 @@
 <p class="RJE_R002LP_voices__text">小さい頃から癖っ毛で、あちこちに跳ねる髪の毛を周りからからかわれた時期もありました。理想のストレートヘアを追い求めて縮毛矯正を繰り返し、傷んでボロボロになった過去も…。MATCHの診断でそんな過去を打ち明けつつ、届いたシャンプーを使って1ヶ月、あんなに悩みだった癖が少しずつ改善してきました！フィードバックを送って届くシャンプーも楽しみです。</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div></div></div>
-<!-- /wp:snow-monkey-blocks/items--item--free -->
+<!-- /wp:snow-monkey-blocks/items-item-free -->
 
-<!-- wp:snow-monkey-blocks/items--item--free -->
-<div class="wp-block-snow-monkey-blocks-items--item--free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
+<!-- wp:snow-monkey-blocks/items-item-free -->
+<div class="wp-block-snow-monkey-blocks-items-item-free c-row__col"><div class="smb-items__item smb-items__item--free"><div class="smb-items__item__body"><!-- wp:group {"className":"RJE_R002LP_voices__item_heading"} -->
 <div class="wp-block-group RJE_R002LP_voices__item_heading"><!-- wp:heading {"level":3,"className":"RJE_R002LP_voices__title"} -->
 <h3 class="RJE_R002LP_voices__title">ダメージ髪が見事復活！</h3>
 <!-- /wp:heading -->
@@ -58,6 +58,6 @@
 <p class="RJE_R002LP_voices__text">パーマやカラーが好きで、季節の変わり目や気持ちを切り替えたいときにガラッとスタイルを変えてきましたが、気づいたら傷みで色が入らなくなっていました。ダメージケアができるシャンプーを探し始めた時、雑誌でMATCHのことを知り、試しに購入。傷んでバサバサだった髪がみるみる落ち着いていくのに驚いて、思わず継続購入！ケアしながら、カラー・パーマを楽しみたいです。</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div></div></div>
-<!-- /wp:snow-monkey-blocks/items--item--free --></div></div>
+<!-- /wp:snow-monkey-blocks/items-item-free --></div></div>
 <!-- /wp:snow-monkey-blocks/items --></div></div></div></div></div>
 <!-- /wp:snow-monkey-blocks/section -->
