@@ -189,6 +189,10 @@
 		margin-top: 1rem;
 		text-align: left;
 		@include paragraph;
+		font-size: 0.875rem;
+		@include mq(sm){
+			font-size: 1rem;
+		}
 	}
 }
 
