@@ -58,6 +58,10 @@
 				border: none;
 				text-align: left;
 				@include paragraph;
+				font-size: 0.875rem;
+				@include mq(sm){
+					font-size: 1rem;
+				}
 			}
 		}
 	}
@@ -85,6 +89,10 @@
 		text-align: left;
 		color: #999;
 		@include paragraph;
+		font-size: 0.875rem;
+		@include mq(sm){
+			font-size: 1rem;
+		}
 	}
 	//ボタン
 	.smb-pricing-table__item__action{

@@ -22,7 +22,9 @@
 			padding: 0;
 			background-color: transparent;
 			@include paragraph;
+			font-size: 0.875rem;
 			@include mq(sm){
+				font-size: 1rem;
 				font-weight: bold;
 			}
 			> .smb-accordion__item__title__label{
