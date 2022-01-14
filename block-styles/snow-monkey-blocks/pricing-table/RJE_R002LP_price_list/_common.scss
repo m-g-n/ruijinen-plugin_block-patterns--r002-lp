@@ -10,13 +10,17 @@
 .is-style-RJE_R002LP_price_list:not(:root){
 	background-color: unset;
 	border: none;
-	@media screen and (min-width: 640px) and (max-width:1023px){
-		overflow: visible;
+	@include mq(sm){
+		@include mq(lg,max,true){
+			overflow: visible;
+		}
 	}
 	> .c-row{
 		margin: -1.25rem;
-		@media screen and (min-width: 640px) and (max-width:1023px){
-			flex-wrap: wrap;
+		@include mq(sm){
+			@include mq(lg,max,true){
+				flex-wrap: wrap;
+			}
 		}
 		@include mq(lg){
 			margin-top: 0;
@@ -24,9 +28,11 @@
 		}
 		.c-row__col{
 			padding: 1.25rem;
-			@media screen and (min-width: 640px) and (max-width:1023px){
-				flex-basis: 100%;
-				max-width: 100%;
+			@include mq(sm){
+				@include mq(lg,max,true){
+					flex-basis: 100%;
+					max-width: 100%;
+				}
 			}
 			@include mq(lg){
 				display: flex;
@@ -112,9 +118,11 @@
 		}
 		.c-row__col{
 			padding: 1.25rem;
-			@media screen and (min-width: 640px) and (max-width:1023px){
-				flex-basis: 100%;
-				max-width: 100%;
+			@include mq(sm){
+				@include mq(lg,max,true){
+					flex-basis: 100%;
+					max-width: 100%;
+				}
 			}
 			@include mq(lg){
 				padding: 1.875rem;

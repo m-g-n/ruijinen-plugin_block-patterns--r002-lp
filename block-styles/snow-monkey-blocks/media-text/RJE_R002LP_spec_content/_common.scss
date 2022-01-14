@@ -29,13 +29,17 @@
 		&.c-row--reverse{
 			.c-row__col{
 				&:first-child{
-					@media screen and (min-width: 768px) and (max-width: 1023px) {
-						order: 1;
+					@include mq(md){
+						@include mq(lg,max,true){
+							order: 1;
+						}
 					}
 				}
 				&:last-child{
-					@media screen and (min-width: 768px) and (max-width: 1023px) {
-						order: 2;
+					@include mq(md){
+						@include mq(lg,max,true){
+							order: 2;
+						}
 					}
 				}
 			}

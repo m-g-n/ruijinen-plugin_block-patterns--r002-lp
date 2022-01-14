@@ -50,17 +50,21 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 			padding-left: 0;
 			//コンテンツ幅
 			&:first-child{
-				@media (min-width: 40em) and (max-width: 63.9375em){
-					order: 0!important;
-					flex-basis: 50%;
-					max-width: 50%;
+				@include mq(sm){
+					@include mq(lg,max,true){
+						order: 0!important;
+						flex-basis: 50%;
+						max-width: 50%;
+					}
 				}
 			}
 			//イメージ幅
 			&:last-child{
-				@media (min-width: 40em) and (max-width: 63.9375em){
-					flex-basis: 50%;
-					max-width: 50%;
+				@include mq(sm){
+					@include mq(lg,max,true){
+						flex-basis: 50%;
+						max-width: 50%;
+					}
 				}
 			}
 		}

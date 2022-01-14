@@ -126,8 +126,10 @@
 			margin-top: 8.75rem;
 			padding: 2.5rem;
 		}
-		@media (min-width: 40em) and (max-width: 1024px) {
-			width: 66vw;
+		@include mq(sm){
+			@include mq(lg,max,true){
+				width: 66vw;
+			}
 		}
 		p{
 			line-height: 2.5;
@@ -151,8 +153,10 @@
 	//テキスト
 	.smb-section-break-the-grid__body{
 		margin-top: 1rem;
-		@media screen and (min-width: 640px) and (max-width: 1023px) {
-			margin-top: 1.5rem;
+		@include mq(sm){
+			@include mq(lg,max,true){
+				margin-top: 1.5rem;
+			}
 		}
 		@include mq(lg){
 			margin-top: 2.25rem;
@@ -184,8 +188,10 @@
 	.smb-section-break-the-grid--left{
 		.smb-section-break-the-grid__content {
 			left: auto;
-			@media (min-width: 40em) and (max-width: 1024px) {
-				right: 25vw;
+			@include mq(sm){
+				@include mq(lg,max,true){
+					right: 25vw;
+				}
 			}
 		}
 		//画像
