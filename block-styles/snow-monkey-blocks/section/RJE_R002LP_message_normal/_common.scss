@@ -8,8 +8,11 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_message_normal:not(:root){
-	@media (max-width: 639px){
+	@include mq(sm, max, true){
 		overflow: visible;
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
 	}
 
 	// ------------------------------------------------------
@@ -99,11 +102,19 @@
 		}
 		.c-row {
 			position: relative;
+			margin-right: 0;
+			margin-bottom: 0;
+			margin-left: 0;
 			@include mq(sm){
 				align-items: flex-start;
 			}
 		}
 		.c-row__col{
+			margin-right: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			padding-right: 0;
+			padding-left: 0;
 			@include mq(sm){
 				flex: 0 1 50%;
 				max-width: 50%;
@@ -111,13 +122,26 @@
 				padding-left: 0;
 			}
 			&:first-child{
+				@include mq(sm, max, true){
+					order: 1 !important;
+				}
 				@include mq(sm){
-					order: 0 !important;
+					@include mq(lg, max, true){
+						order: 0 !important;
+					}
+				}
+			}
+			&:last-child{
+				@include mq(sm, max, true){
+					padding-right: 0;
+					padding-left: 0;
+					width: calc(100% + 1rem);
 				}
 			}
 		}
 	}
 
+	//コンテンツ
 	.smb-section-break-the-grid__content {
 		margin-top: -3.875rem;
 		padding: 1rem;
@@ -135,6 +159,7 @@
 			line-height: 2.5;
 		}
 	}
+
 	//タイトル
 	.smb-section-break-the-grid__title{
 		@include heading3;
@@ -148,6 +173,9 @@
 		position: relative;
 		@include mq(sm){
 			width: calc(100% + 10rem);
+		}
+		@include mq(sm,max,true){
+			width: calc(100% + 0.9rem);
 		}
 	}
 	//テキスト
@@ -175,9 +203,13 @@
 		}
 		//画像
 		.smb-section-break-the-grid__figure{
-			right: -1em;
 			@include mq(sm){
+				right: -1em;
 				margin-left: -10rem;
+				
+			}
+			@include mq(sm,max,true){
+				right: 0 !important;
 			}
 		}
 	}
@@ -201,6 +233,31 @@
 			@include mq(sm){
 				margin-right: 10em;
 				margin-left: 0;
+			}
+		}
+	}
+	// ----- @deprecated - SMB v12.6.1まで -----
+	.smb-section-break-the-grid > .smb-section__inner > .c-container > .c-row > .c-row__col{
+		&:first-child{
+			// @include mq(sm){
+			// 	@include mq(lg, max, true){
+			// 		order: 0 !important;
+			// 	}
+			// }
+		}
+		.smb-section-break-the-grid__content {
+			@include mq(sm,max,true){
+				margin-top: -3.875rem;
+			}
+		}
+	}
+	// ----- @deprecated - SMB v13.0.0から -----
+	.smb-section-break-the-grid > .smb-section__inner > .c-container > .smb-section__contents-wrapper > .c-row > .c-row__col{
+		&:first-child{
+			@include mq(sm){
+				@include mq(lg, max, true){
+					order: 0 !important;
+				}
 			}
 		}
 	}
