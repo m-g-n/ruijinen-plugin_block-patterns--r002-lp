@@ -53,7 +53,7 @@ $base-font-size: 16;
 }
 //ボタンスタイル - ノーマル
 @mixin button--normal{
-	min-width: 225px; //TODO: 最低幅で対応するかを検討する
+	min-width: 225px;
 	padding: 0.625rem 1.5rem;
 	border-radius: 6.25rem;
 	line-height: 1.5;
@@ -64,7 +64,7 @@ $base-font-size: 16;
 }
 //ボタンスタイル - ゴースト
 @mixin button--ghost{
-	min-width: 225px; //TODO: 最低幅で対応するかを検討する
+	min-width: 225px;
 	padding: 0.625rem 1.5rem;
 	border: 1px solid;
 	border-radius: 6.25rem;

@@ -17,7 +17,7 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .is-st
 		}
 	}
 	.smb-items__item{
-		@media screen and (min-width: 1280px) {
+		@include mq(xl){
 			padding: 4rem;
 		}
 	}
@@ -37,7 +37,7 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R
 		padding-right: 2rem;
 		padding-bottom: 0;
 	}
-	@media screen and (min-width: 1280px) {
+	@include mq(xl){
 		padding-right: 3.75rem;
 	}
 	@include mq(lg){
@@ -64,7 +64,7 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R
 		padding-left: 2rem;
 		border-width: 0 0 0 1px;
 	}
-	@media screen and (min-width: 1280px) {
+	@include mq(xl){
 		padding-left: 3.75rem;
 	}
 }

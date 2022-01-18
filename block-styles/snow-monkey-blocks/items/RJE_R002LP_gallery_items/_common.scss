@@ -10,12 +10,12 @@
 .is-style-RJE_R002LP_gallery_items:not(:root){
 	> .c-row{
 		margin-bottom: 0;
-		@media screen and (max-width: 639px){
+		@include mq(sm,max,true){
 			margin: 0;
 		}
 		> .c-row__col{
 			margin-bottom: 0;
-			@media screen and (max-width: 639px){
+			@include mq(sm,max,true){
 				padding: 0;
 			}
 		}

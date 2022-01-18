@@ -37,7 +37,7 @@
 		}
 	}
 	.smb-items__item{
-		@media screen and (min-width: 1280px) {
+		@include mq(xl){
 			padding: 4rem;
 		}
 	}
@@ -55,7 +55,7 @@
 		flex-basis: 31.2%;
 		padding-right: 2rem;
 	}
-	@media screen and (min-width: 1280px) {
+	@include mq(xl){
 		padding-right: 3.75rem;
 	}
 }
@@ -68,7 +68,7 @@
 			padding-left: 2rem;
 			border-width: 0 0 0 1px;
 		}
-		@media screen and (min-width: 1280px) {
+		@include mq(xl){
 			padding-left: 3.75rem;
 		}
 	}
