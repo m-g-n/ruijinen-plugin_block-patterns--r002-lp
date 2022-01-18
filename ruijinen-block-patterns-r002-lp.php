@@ -2,9 +2,9 @@
 /**
  * Plugin name: 類人猿ブロックパターン：LP向けパターン集
  * Description: 類人猿ブロックパターン LP向けパターンアドオンです
- * Version: 0.0.1.7
- * Tested up to: 5.8.2
- * Requires at least: 5.8.2
+ * Version: 0.0.1.8
+ * Tested up to: 5.8.3
+ * Requires at least: 5.8.3
  * Author: mgn Inc.,
  * Author URI: https://rui-jin-en.com/
  * License: GPL-2.0+
@@ -46,33 +46,41 @@ class Bootstrap {
 	 */
 	public function __construct() {
 		add_action( 'plugins_loaded', [ $this, 'bootstrap' ] );
-		add_action( 'plugins_loaded', [ $this, 'register_patterns' ] );
+		add_action( 'init', [ $this, 'load_textdomain' ] );
 	}
 
 	/**
 	 * Bootstrap.
 	 */
 	public function bootstrap() {
-		//クラスオブジェクト作成
-		new App\Setup\ActivatePlugin();
-		new App\Setup\AutoUpdate();
-		new App\Setup\TextDomain();
+		new App\Setup\AutoUpdate(); //自動更新チェック
+
+		//アクティベートチェックを行い問題がある場合はメッセージを出し離脱する.
+		$activate_check = new App\Setup\ActivateCheck();
+		if ( !empty( $activate_check->messages ) ) {
+			add_action('admin_notices', array( $activate_check,'make_alert_message'));
+			return;
+		}
+
+		// LPパターン用の汎用CSS・JS読み込み・テンプレートの読み込み
 		new App\Setup\Assets();
+		$this->register_patterns();
+	}
+
+	/**
+	 * Load Textdomain.
+	 */
+	public function load_textdomain() {
+		new App\Setup\TextDomain();
 	}
 
 	/**
 	 * Register Block Patterns.
 	 */
 	public function register_patterns() {
-		if ( class_exists('\Ruijinen\Pattern\RegisterBlockPatterns') ) { //本体のパターン生成のクラスが存在するか
-			//TODO：グローバル変数ではなく、静的メソッドとして呼び出したい
-			global $rje_r002lp_patterns;
-			$rje_r002lp_patterns = new App\Patterns\RegisterPatterns();
-			new App\Patterns\RegisterCategory();
-		} else {
-			add_action( 'admin_notices', array ( new App\Setup\ActivatePlugin(), 'alert_notice_petterns_master' ) );
-			return false;
-		}
+		global $rje_r002lp_patterns;
+		$rje_r002lp_patterns = new App\Patterns\RegisterPatterns();
+		new App\Patterns\RegisterCategory();
 	}
 }
 

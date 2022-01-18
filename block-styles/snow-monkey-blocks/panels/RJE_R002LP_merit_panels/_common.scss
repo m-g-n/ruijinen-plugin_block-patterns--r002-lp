@@ -68,7 +68,7 @@
 	//1カラムの場合
 	[data-columns="1"]{
 		.smb-panels__item{
-			@media screen and (max-width: 639px) {
+			@include mq(sm,max,true){
 				max-width: 320px;
 				margin-right: auto;
 				margin-left: auto;
@@ -77,10 +77,12 @@
 	}
 	[data-md-columns="1"]{
 		.smb-panels__item{
-			@media screen and (min-width: 640px) and (max-width: 1023px) {
-				max-width: 320px;
-				margin-right: auto;
-				margin-left: auto;
+			@include mq(sm){
+				@include mq(lg,max,true){
+					max-width: 320px;
+					margin-right: auto;
+					margin-left: auto;
+				}
 			}
 		}
 	}

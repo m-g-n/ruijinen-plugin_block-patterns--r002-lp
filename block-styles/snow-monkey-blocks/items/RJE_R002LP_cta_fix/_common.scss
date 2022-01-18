@@ -24,14 +24,14 @@
 			max-width: 280px;
 			width: 280px;
 		}
-		@media screen and (max-width: 1023px) {
+		@include mq(lg, max, true){
 			display: flex;
 		}
 	}
 	.smb-items__item__figure{
 		position: relative;
 		margin-bottom: 0;
-		@media screen and (max-width: 1023px) {
+		@include mq(lg, max, true){
 			max-width: 120px;
 			width: 120px;
 		}
@@ -66,7 +66,6 @@
 	.smb-items__item__title{
 		font-size: 0.857rem;
 		line-height: 1.57;
-		// color: var(--accent-color,#cd162c);
 		order: 2;
 		@include mq(lg){
 			font-size: 1.125rem;
