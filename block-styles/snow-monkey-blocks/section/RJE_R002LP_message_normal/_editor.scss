@@ -7,8 +7,7 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-// .is-style-RJE_R002LP_message_normal{
-// 	.smb-section-break-the-grid__content {
-// 		pointer-events: none;
-// 	}
-// }
+//HACK:Wp5.9でiframeのプレビュー画面でもスタイルが読み込まれるように下記を追記
+html :where(.editor-styles-wrapper) {
+	display: block;
+}
