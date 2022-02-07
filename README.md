@@ -18,6 +18,10 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 0.0.1.10
+- Composerパッケージのアップデート
+- PR用のGitHub Actionsの修正（バージョン番号取得の方法の変更）
+
 ## 0.0.1.9
 - WordPress5.9対応
 	- 編集画面でHeroイメージ（1カラム)のロゴ画像がセンターにならないバグ対応
