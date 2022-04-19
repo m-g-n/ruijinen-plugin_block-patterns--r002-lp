@@ -9,7 +9,7 @@
 
 //ファイルパス（プラグインのルートから相対）
 $basename = basename( __DIR__ );
-$front_filename = 'dist/js/patterns/' . $basename . '/script-front.min.js';
+$front_filename = 'dist/js/patterns/' . $basename . '/script-front.js';
 $front_filetime = ( file_exists( RJE_R002LP_PATH . $front_filename ) ) ? filemtime( RJE_R002LP_PATH . $front_filename ) : NULL;
 
 

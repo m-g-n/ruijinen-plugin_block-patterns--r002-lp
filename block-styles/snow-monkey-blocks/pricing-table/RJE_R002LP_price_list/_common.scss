@@ -5,36 +5,41 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_price_list:not(:root){
 	background-color: unset;
 	border: none;
-	@include mq(sm){
-		@include mq(lg,max,true){
+	@include i.mq(sm){
+		@include i.mq(lg,max,true){
 			overflow: visible;
 		}
 	}
 	> .c-row{
 		margin: -1.25rem;
-		@include mq(sm){
-			@include mq(lg,max,true){
+		@include i.mq(sm){
+			@include i.mq(lg,max,true){
 				flex-wrap: wrap;
 			}
 		}
-		@include mq(lg){
+		@include i.mq(lg){
 			margin-top: 0;
 			margin-bottom: 0;
 		}
 		.c-row__col{
 			padding: 1.25rem;
-			@include mq(sm){
-				@include mq(lg,max,true){
+			@include i.mq(sm){
+				@include i.mq(lg,max,true){
 					flex-basis: 100%;
 					max-width: 100%;
 				}
 			}
-			@include mq(lg){
+			@include i.mq(lg){
 				display: flex;
 			}
 			&:not(:first-child){
@@ -63,9 +68,9 @@
 				padding-bottom: 0;
 				border: none;
 				text-align: left;
-				@include paragraph;
+				@include i.paragraph;
 				font-size: 0.875rem;
-				@include mq(sm){
+				@include i.mq(sm){
 					font-size: 1rem;
 				}
 			}
@@ -73,7 +78,7 @@
 	}
 	//タイトル
 	.smb-pricing-table__item__title{
-		@include heading3;
+		@include i.heading3;
 		text-align: left;
 		order: 1;
 	}
@@ -85,7 +90,7 @@
 		text-align: left;
 		line-height: 1;
 		color: var(--accent-color,#cd162c);
-		@include mq(lg){
+		@include i.mq(lg){
 			font-size: 2rem;
 		}
 	}
@@ -94,9 +99,9 @@
 		order: 2;
 		text-align: left;
 		color: #999;
-		@include paragraph;
+		@include i.paragraph;
 		font-size: 0.875rem;
-		@include mq(sm){
+		@include i.mq(sm){
 			font-size: 1rem;
 		}
 	}
@@ -112,19 +117,19 @@
 		overflow: visible;
 		> .c-row{
 			flex-wrap: wrap;
-			@include mq(lg){
+			@include i.mq(lg){
 				margin: -1.875rem;
 			}
 		}
 		.c-row__col{
 			padding: 1.25rem;
-			@include mq(sm){
-				@include mq(lg,max,true){
+			@include i.mq(sm){
+				@include i.mq(lg,max,true){
 					flex-basis: 100%;
 					max-width: 100%;
 				}
 			}
-			@include mq(lg){
+			@include i.mq(lg){
 				padding: 1.875rem;
 			}
 		}
@@ -133,7 +138,3 @@
 		width: 100%;
 	}
 }
-
-
-
-

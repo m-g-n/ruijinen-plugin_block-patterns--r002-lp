@@ -5,24 +5,29 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .is-style-RJE_R002LP_voices_items:not(:root),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .is-style-RJE_R002LP_voices_items:not(:root){
 	> .c-row{
 		>.c-row__col{
-			@include mq(sm){
+			@include i.mq(sm){
 				margin-bottom: 3.75rem;
 			}
 		}
 	}
 	.smb-items__item{
-		@include mq(xl){
+		@include i.mq(xl){
 			padding: 4rem;
 		}
 	}
 	.smb-items__item--free .smb-items__item__body{
-		@include mq(lg){
+		@include i.mq(lg){
 			display: flex;
 		}
 	}
@@ -31,16 +36,16 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .is-st
 //内容ヘッダ
 body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__item_heading:not(:root),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__item_heading:not(:root){
-	@include mq(lg){
+	@include i.mq(lg){
 		max-width:31.2%;
 		flex-basis: 31.2%;
 		padding-right: 2rem;
 		padding-bottom: 0;
 	}
-	@include mq(xl){
+	@include i.mq(xl){
 		padding-right: 3.75rem;
 	}
-	@include mq(lg){
+	@include i.mq(lg){
 		align-items: flex-start;
 	}
 }
@@ -48,7 +53,7 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R
 //本文
 body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__item_content:not(:root),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__item_content:not(:root){
-	@include mq(lg){
+	@include i.mq(lg){
 		max-width:68.8%;
 		flex-basis: 68.8%;
 		padding-top: 0;
@@ -58,13 +63,13 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R
 }
 body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__item_heading + .RJE_R002LP_voices__item_content:not(:root),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__item_heading + .RJE_R002LP_voices__item_content:not(:root){
-	@include mq(lg){
+	@include i.mq(lg){
 		margin-top: 0;
 		padding-top: 0;
 		padding-left: 2rem;
 		border-width: 0 0 0 1px;
 	}
-	@include mq(xl){
+	@include i.mq(xl){
 		padding-left: 3.75rem;
 	}
 }
@@ -73,13 +78,13 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R
 body:not([data-has-sidebar="true"]):not([data-is-slim-width="true"]) .RJE_R002LP_voices__person:not(:root),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R002LP_voices__person:not(:root){
 	.c-row{
-		@include mq(lg){
+		@include i.mq(lg){
 			flex-wrap: nowrap;
 			justify-content: flex-start;
 		}
 	}
 	.c-row--reverse{
-		@include mq(lg){
+		@include i.mq(lg){
 			justify-content: flex-end;
 		}
 	}
@@ -89,18 +94,18 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull .RJE_R
 body[data-has-sidebar="true"] .is-style-RJE_R002LP_voices_items:not(:root),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .p-entry-content > .is-style-RJE_R002LP_voices_items:not(:root){
 	.smb-items__item--free .smb-items__item__body{
-		@include mq(lg){
+		@include i.mq(lg){
 			flex-wrap: wrap;
 		}
 	}
 	.RJE_R002LP_voices__item_heading{
-		@include mq(lg){
+		@include i.mq(lg){
 			flex-basis: 100%;
 			max-width: 100%;
 		}
 	}
 	.RJE_R002LP_voices__item_content{
-		@include mq(lg){
+		@include i.mq(lg){
 			flex-basis: 100%;
 			max-width: 100%;
 		}
