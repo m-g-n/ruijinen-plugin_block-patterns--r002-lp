@@ -21,6 +21,7 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 ## 1.11.0
 - Snow MonkeyのCSS用のハンドルを取得するプロパティ名を変更
 - バージョン番号の桁を繰り上げ
+- gulpでのコンパイルを廃止し、dart-scss・webpackで各種コンパイルを行う方式に変更
 
 ## 0.0.1.10
 - Composerパッケージのアップデート
