@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿ブロックパターン：LP向けパターン集
  * Description: 類人猿ブロックパターン LP向けパターンアドオンです
- * Version: 1.11.1
+ * Version: 1.11.2
  * Tested up to: 5.9
  * Requires at least: 5.9
  * Author: mgn Inc.,
@@ -26,6 +26,7 @@ define( 'RJE_R002LP_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) . '/'
 define( 'RJE_R002LP_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/' ); // このプラグインのパス
 define( 'RJE_R002LP_BASENAME', plugin_basename( __FILE__ ) ); // このプラグインのベースネーム.
 define( 'RJE_R002LP_TEXTDOMAIN', 'ruijinen-r002-lp' ); //テキストドメイン名.
+define( 'RJE_R002LP_DIRNAME', basename(__DIR__) ); //このディレクトリーのパス.
 
 /**
  * include files.
@@ -63,6 +64,7 @@ class Bootstrap {
 		}
 
 		// LPパターン用の汎用CSS・JS読み込み・テンプレートの読み込み
+		add_theme_support( 'editor-styles' );
 		new App\Setup\Assets();
 		$this->register_patterns();
 	}
