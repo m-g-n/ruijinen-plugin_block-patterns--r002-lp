@@ -5,6 +5,11 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_cta:not(:root){
@@ -17,7 +22,7 @@
 				> .smb-media-text{
 					> .c-row{
 						margin-bottom: 0;
-						@include mq(md){
+						@include i.mq(md){
 							margin-right: -1.25rem;
 							margin-left: -1.25rem;
 						}
@@ -25,37 +30,37 @@
 							margin-bottom: 0;
 							padding-right: 1rem;
 							padding-left: 1rem;
-							@include mq(md){
+							@include i.mq(md){
 								padding-right: 1.25rem;
 								padding-left: 1.25rem;
 							}
 							//文章
 							&:first-child{
 								padding-top: 1rem;
-								@include mq(md,max,true){
+								@include i.mq(md,max,true){
 									display: flex;
 									flex-direction: column;
 									align-items: center;
 								}
-								@include mq(md){
+								@include i.mq(md){
 									flex-basis: 60%;
 									max-width: 60%;
 									padding-top: 0;
 								}
-								@include mq(md){
-									@include mq(lg,max,true){
+								@include i.mq(md){
+									@include i.mq(lg,max,true){
 										order: 2;
 									}
 								}
 							}
 							//メディア
 							&:last-child{
-								@include mq(md){
+								@include i.mq(md){
 									flex-basis: 40%;
 									max-width: 40%;
 								}
-								@include mq(md){
-									@include mq(lg,max,true){
+								@include i.mq(md){
+									@include i.mq(lg,max,true){
 										order: 1;
 									}
 								}
@@ -67,19 +72,19 @@
 							//文章
 							&:first-child{
 								padding-top: 1rem;
-								@include mq(md){
-									@include mq(lg,max,true){
+								@include i.mq(md){
+									@include i.mq(lg,max,true){
 										order: 2;
 									}
 								}
-								@include mq(lg){
+								@include i.mq(lg){
 									padding-top: 2.5rem;
 								}
 							}
 							//メディア
 							&:last-child{
-								@include mq(md){
-									@include mq(lg,max,true){
+								@include i.mq(md){
+									@include i.mq(lg,max,true){
 										order: 1;
 									}
 								}
@@ -89,32 +94,32 @@
 					.smb-media-text__figure{
 						text-align: center;
 						img{
-							@include mq(md,max,true){
+							@include i.mq(md,max,true){
 								max-height: 400px;
 								width: auto;
 								height: auto;
 								margin-top: -5rem;
 							}
-							@include mq(md){
+							@include i.mq(md){
 								margin-top: -3.5rem;
 							}
 						}
 					}
 					.smb-media-text__title{
-						@include heading2;
+						@include i.heading2;
 					}
 					.smb-media-text__body{
 						margin-top: 1rem;
-						@include mq(lg){
+						@include i.mq(lg){
 							margin-top: 2.5rem;
 						}
 					}
 					.smb-buttons{
 						margin-top: 1.25rem;
-						@include mq(md,max,true){
+						@include i.mq(md,max,true){
 							justify-content: center;
 						}
-						@include mq(lg){
+						@include i.mq(lg){
 							margin-top: 1.5rem;
 						}
 						.is-style-default .smb-btn{

@@ -5,8 +5,10 @@
 // ======================================================
 
 // ------------------------------------------------------
-// 変数
+// 設定・読み込み・変数など
 // ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
 $figure-width: 64%; //PC・タブレット時のメディアのコンテナ幅
 $content-width: (100% - $figure-width);  //PC・タブレット時のコンテンツのコンテナ幅
 
@@ -18,14 +20,14 @@ body:not([data-has-sidebar="true"]){
 	.is-style-RJE_R002LP_hero_media_and_text{
 		//セクション背景
 		.smb-section-with-bgimage__bgimage{
-			@include mq(xl){
+			@include i.mq(xl){
 				max-width: 80%;
 				margin-right: 3.75em;
 			}
 		}
 		//セクションの内包
 		.smb-section__inner > .c-container{
-			@include mq(xl){
+			@include i.mq(xl){
 				max-width: 80%;
 			}
 		}
@@ -34,14 +36,14 @@ body:not([data-has-sidebar="true"]){
 			.c-row__col{
 				//コンテンツ幅
 				&:first-child{
-					@include mq(xl){
+					@include i.mq(xl){
 						flex-basis: $content-width;
 						max-width: $content-width;
 					}
 				}
 				//イメージ幅
 				&:last-child{
-					@include mq(xl){
+					@include i.mq(xl){
 						flex-basis: $figure-width;
 						max-width: $figure-width;
 					}
@@ -58,7 +60,7 @@ body:not([data-has-sidebar="true"]){
 		// コンテンツ右寄せの場合
 		&.smb-section--right{
 			.smb-section-with-bgimage__bgimage{
-				@include mq(xl){
+				@include i.mq(xl){
 					max-width: 80%;
 					margin-left: 3.75em;
 				}
@@ -71,24 +73,24 @@ body:not([data-has-sidebar="true"]){
 body[data-has-sidebar="true"]{
 	.is-style-RJE_R002LP_hero_media_and_text{
 		.smb-section-with-bgimage__bgimage{
-			@include mq(lg){
+			@include i.mq(lg){
 				margin-right: auto;
 				margin-left: 10%;
 			}
 		}
 		.smb-media-text{
 			.c-row__col{
-				@include mq(lg){
+				@include i.mq(lg){
 					flex-basis: 100%;
 					max-width: 100%;
 				}
 				&:first-child{
-					@include mq(lg){
+					@include i.mq(lg){
 						order: 2;
 					}
 				}
 				&:last-child{
-					@include mq(lg){
+					@include i.mq(lg){
 						order: 1;
 					}
 				}
@@ -97,7 +99,7 @@ body[data-has-sidebar="true"]{
 		// コンテンツ右寄せの場合
 		&.smb-section--right{
 			.smb-section-with-bgimage__bgimage{
-				@include mq(lg){
+				@include i.mq(lg){
 					max-width: none;
 					margin-right: 10%;
 					margin-left: auto;

@@ -5,6 +5,11 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_spec_content:not(:root){
@@ -14,13 +19,13 @@
 			margin-bottom: 0;
 			padding: 1.25rem;
 			&:first-child{ //テキスト
-				@include mq(md){
+				@include i.mq(md){
 					flex-basis: 50%;
 					max-width: 50%;
 				}
 			}
 			&:last-child{ //画像
-				@include mq(md){
+				@include i.mq(md){
 					flex-basis: 50%;
 					max-width: 50%;
 				}
@@ -29,15 +34,15 @@
 		&.c-row--reverse{
 			.c-row__col{
 				&:first-child{
-					@include mq(md){
-						@include mq(lg,max,true){
+					@include i.mq(md){
+						@include i.mq(lg,max,true){
 							order: 1;
 						}
 					}
 				}
 				&:last-child{
-					@include mq(md){
-						@include mq(lg,max,true){
+					@include i.mq(md){
+						@include i.mq(lg,max,true){
 							order: 2;
 						}
 					}
@@ -46,7 +51,7 @@
 		}
 	}
 	.smb-media-text__title{
-		@include heading2;
+		@include i.heading2;
 		+ .smb-media-text__body{
 			margin-top: 1.5rem;
 		}
@@ -70,6 +75,3 @@
 		}
 	}
 }
-
-
-

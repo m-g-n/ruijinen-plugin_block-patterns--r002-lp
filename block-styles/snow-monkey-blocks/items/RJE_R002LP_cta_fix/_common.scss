@@ -5,6 +5,11 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_cta_fix:not(:root){
@@ -20,18 +25,18 @@
 		background-color: #fff;
 		border: 1px solid #999;
 		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1), 0px 2px 16px rgba(0, 0, 0, 0.06);
-		@include mq(lg){
+		@include i.mq(lg){
 			max-width: 280px;
 			width: 280px;
 		}
-		@include mq(lg, max, true){
+		@include i.mq(lg, max, true){
 			display: flex;
 		}
 	}
 	.smb-items__item__figure{
 		position: relative;
 		margin-bottom: 0;
-		@include mq(lg, max, true){
+		@include i.mq(lg, max, true){
 			max-width: 120px;
 			width: 120px;
 		}
@@ -39,7 +44,7 @@
 			content: "";
 			display: block;
 			padding-top: 100%;
-			@include mq(lg){
+			@include i.mq(lg){
 				padding-top: 45%;
 			}
 		}
@@ -59,7 +64,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 0.75rem 1rem;
-		@include mq(lg){
+		@include i.mq(lg){
 			align-items: center;
 		}
 	}
@@ -67,7 +72,7 @@
 		font-size: 0.857rem;
 		line-height: 1.57;
 		order: 2;
-		@include mq(lg){
+		@include i.mq(lg){
 			font-size: 1.125rem;
 			text-align: center;
 		}
@@ -77,7 +82,7 @@
 		font-size: 0.625rem;
 		line-height: 1.5;
 		order: 1;
-		@include mq(lg){
+		@include i.mq(lg){
 			font-size: 0.75rem;
 		}
 	}
@@ -100,10 +105,9 @@
 		font-size: 0.75rem;
 		color: var(--accent-color,#cd162c);
 		line-height: 1.5;
-		@include mq(lg){
+		@include i.mq(lg){
 			padding: 6px;
 			font-size: 0.857rem;
 		}
 	}
 }
-

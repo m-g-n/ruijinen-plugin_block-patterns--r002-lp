@@ -5,6 +5,11 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_voices_items:not(:root){
@@ -27,7 +32,7 @@
 			background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA1MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQ2LjE2NjcgMEM0MyAzLjY3OTg5IDM5LjY2NjcgOC4zNjMzOCAzNi41IDEyLjg3OTZDMzEuMzMzMyAxOS45MDQ4IDI5LjUgMjMuNzUyIDI5LjUgMjkuNDM5MUMyOS41IDM2Ljk2NjEgMzQuMTY2NyA0MS4zMTUxIDQwLjgzMzMgNDEuMzE1MUM0Ni4zMzMzIDQxLjMxNTEgNTAuODMzMyAzNy4xMzM0IDUwLjgzMzMgMzEuMjc5QzUwLjgzMzMgMjYuOTMwMSA0OC42NjY3IDIzLjc1MiA0NC4zMzMzIDIyLjA3OTNDNDIuMTY2NyAyMS4yNDMgNDEuODMzMyAyMC4yMzk0IDQxLjgzMzMgMTguOTAxMkM0MS44MzMzIDE3LjU2MzEgNDIuMTY2NyAxNi4zOTIyIDQzLjMzMzMgMTQuMDUwNUM0NiA5LjUzNDI1IDQ5LjY2NjcgMy41MTI2MiA1MiAwSDQ2LjE2NjdaTTE2LjY2NjcgMEMxMy41IDMuNjc5ODkgMTAuMTY2NyA4LjM2MzM4IDcgMTIuODc5NkMxLjgzMzMzIDE5LjkwNDggMCAyMy43NTIgMCAyOS40MzkxQzAgMzYuOTY2MSA0LjY2NjY3IDQxLjMxNTEgMTEuMzMzMyA0MS4zMTUxQzE2LjgzMzMgNDEuMzE1MSAyMS4zMzMzIDM3LjEzMzQgMjEuMzMzMyAzMS4yNzlDMjEuMzMzMyAyNi45MzAxIDE5LjE2NjcgMjMuNzUyIDE0LjgzMzMgMjIuMDc5M0MxMi42NjY3IDIxLjI0MyAxMi4zMzMzIDIwLjIzOTQgMTIuMzMzMyAxOC45MDEyQzEyLjMzMzMgMTcuNTYzMSAxMi42NjY3IDE2LjM5MjIgMTMuODMzMyAxNC4wNTA1QzE2LjUgOS41MzQyNSAyMC4xNjY3IDMuNTEyNjIgMjIuNSAwSDE2LjY2NjdaIiBmaWxsPSIjQ0RDRENEIi8+Cjwvc3ZnPg==") no-repeat center center;
 			background-size: contain;
 		}
-		@include mq(xl){
+		@include i.mq(xl){
 			padding: 4rem;
 		}
 	}
@@ -50,14 +55,13 @@
 	}
 }
 
-
 //タイトル
 .RJE_R002LP_voices__title:not(:root){
 	margin-bottom: 0.5rem;
 	padding: 0;
 	background: none;
 	border: none;
-	@include heading4;
+	@include i.heading4;
 }
 
 //パーソナル情報

@@ -5,6 +5,11 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 //スリム幅以外
@@ -12,7 +17,7 @@ body:not([data-is-slim-width="true"]),
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .alignfull,
 body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .is-style-RJE_R000HELPER_enforcement_fullwidth{
 	.is-style-RJE_R002LP_spec_content:not(:root){
-		@include mq(lg){
+		@include i.mq(lg){
 			max-width: 920px;
 			margin-right: auto;
 			margin-left: auto;
@@ -20,13 +25,13 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .is-style-RJE_R00
 		> .c-row{
 			>.c-row__col{
 				&:first-child{ //テキスト
-					@include mq(lg){
+					@include i.mq(lg){
 						flex-basis: 58.7%;
 						max-width: 58.7%;
 					}
 				}
 				&:last-child{ //画像
-					@include mq(lg){
+					@include i.mq(lg){
 						flex-basis: 41.3%;
 						max-width: 41.3%;
 					}
@@ -35,13 +40,13 @@ body[data-is-slim-width="true"]:not([data-has-sidebar="true"]) .is-style-RJE_R00
 		}
 		.smb-media-text__title{
 			+ .smb-media-text__body{
-				@include mq(lg){
+				@include i.mq(lg){
 					margin-top: 2.5rem;
 				}
 			}
 		}
 		.smb-box{
-			@include mq(lg){
+			@include i.mq(lg){
 				padding-right: 2.5rem;
 				padding-left: 2.5rem;
 			}
@@ -55,14 +60,14 @@ body[data-has-sidebar="true"] {
 		> .c-row{
 			>.c-row__col{
 				&:first-child{ //テキスト
-					@include mq(lg){
+					@include i.mq(lg){
 						flex-basis: 100%;
 						max-width: 100%;
 						order: 2;
 					}
 				}
 				&:last-child{ //画像
-					@include mq(lg){
+					@include i.mq(lg){
 						flex-basis: 100%;
 						max-width: 100%;
 						order: 1;

@@ -5,11 +5,16 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // ローカルmixin
 // ------------------------------------------------------
 @mixin __section1_lede() {
 	margin-top: 1.5rem;
-	@include mq(lg){
+	@include i.mq(lg){
 		width: 70.3%;
 		margin-top: 2.5rem;
 		margin-right: auto;
@@ -19,13 +24,12 @@
 		margin-top: 0;
 		font-size: 0.875rem;
 		letter-spacing: 0.05em;
-		@include mq(lg){
+		@include i.mq(lg){
 			font-size: 1rem;
 			line-height: 2;
 		}
 	}
 }
-
 
 // ------------------------------------------------------
 // スタイル
@@ -33,7 +37,7 @@
 .is-style-RJE_R002LP_section1:not(:root){
 	padding-top: 3.75rem;
 	padding-bottom: 3.75rem;
-	@include mq(sm){
+	@include i.mq(sm){
 		padding-top: 5rem;
 		padding-bottom: 6rem;
 	}
@@ -47,10 +51,10 @@
 			//
 			// ----- @deprecated - SMB v12.6.1まで -----
 			> .smb-section__subtitle{
-				@include smb-section-subtitle;
+				@include i.smb-section-subtitle;
 			}
 			> .smb-section__title{
-				@include smb-section-title;
+				@include i.smb-section-title;
 			}
 			> .smb-section__lede-wrapper{
 				@include __section1_lede;
@@ -58,10 +62,10 @@
 			// ----- SMB v13.0.0から -----
 			> .smb-section__contents-wrapper > .smb-section__header{
 				.smb-section__subtitle{
-					@include smb-section-subtitle;
+					@include i.smb-section-subtitle;
 				}
 				.smb-section__title{
-					@include smb-section-title;
+					@include i.smb-section-title;
 				}
 				.smb-section__lede-wrapper{
 					@include __section1_lede;
@@ -76,10 +80,10 @@
 			> .smb-section__contents-wrapper > .smb-section__header{ // SMB v13.0.0から -----
 				+ .smb-section__body{
 					margin-top: 2.5rem;
-					@include mq(sm){
+					@include i.mq(sm){
 						margin-top: 4rem;
 					}
-					@include mq(lg){
+					@include i.mq(lg){
 						margin-top: 5rem;
 					}
 				}
@@ -99,7 +103,7 @@
 			> .c-container, // @deprecated - SMB v12.6.1まで
 			> .c-container > .smb-section__contents-wrapper > .smb-section__header{ // SMB v13.0.0から 
 				> .smb-section__lede-wrapper{
-					@include mq(lg){
+					@include i.mq(lg){
 						margin-left: 0;
 					}
 				}
@@ -121,7 +125,7 @@
 			> .c-container, // @deprecated - SMB v12.6.1まで
 			> .c-container > .smb-section__contents-wrapper > .smb-section__header{ // SMB v13.0.0から
 				> .smb-section__lede-wrapper{
-					@include mq(lg){
+					@include i.mq(lg){
 						margin-right: 0;
 					}
 				}
@@ -135,6 +139,3 @@
 		}
 	}
 }
-
-
-
