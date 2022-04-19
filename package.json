@@ -4,7 +4,8 @@
 	"main": "index.js",
 	"scripts": {
 		"clean": "run-s clean:**",
-		"clean:css": "del-cli dist/css/**/* -f",
+		"clean:css": "del-cli dist/css/**/* dist/css/*.css -f",
+		"clean:js": "del-cli dist/js/**/* -f",
 		"build": "run-s clean build:**",
 		"build:sass": "sass src/css:dist/css block-styles:dist/css/block-styles patterns:dist/css/patterns --no-error-css --no-source-map",
 		"build:postcss": "postcss dist/css --base ./dist/css -d dist/css",

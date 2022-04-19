@@ -16,9 +16,10 @@ const entries = glob
 const entryObj = Object.fromEntries(entries);
 
 module.exports = {
+  mode: 'production',
   entry: entryObj,
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "dist/js/patterns"),
     filename: "[name]",
   },
 };
