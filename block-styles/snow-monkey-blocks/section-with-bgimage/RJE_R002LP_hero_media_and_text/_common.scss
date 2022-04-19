@@ -5,8 +5,10 @@
 // ======================================================
 
 // ------------------------------------------------------
-// 変数
+// 設定・読み込み・変数など
 // ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
 $figure-width: 64%; //PC・タブレット時のメディアのコンテナ幅
 $content-width: (100% - $figure-width);  //PC・タブレット時のコンテンツのコンテナ幅
 
@@ -16,7 +18,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 .is-style-RJE_R002LP_hero_media_and_text:not(:root){
 	padding-top: 2em;
 	padding-bottom: 2em;
-	@include mq(sm){
+	@include i.mq(sm){
 		padding-top: 2vw;
 		padding-bottom: 2vw;
 	}
@@ -24,7 +26,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 	.smb-section-with-bgimage__bgimage{
 		max-width: 90%;
 		margin-left: 10%;
-		@include mq(sm){
+		@include i.mq(sm){
 			margin-right: 1em;
 			margin-left: auto;
 		}
@@ -33,7 +35,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 	.smb-section__inner > .c-container{
 		padding-right: 1em;
 		padding-left: 1em;
-		@include mq(sm){
+		@include i.mq(sm){
 			max-width: 90%;
 			padding-right: 0;
 			padding-left: 0;
@@ -50,8 +52,8 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 			padding-left: 0;
 			//コンテンツ幅
 			&:first-child{
-				@include mq(sm){
-					@include mq(lg,max,true){
+				@include i.mq(sm){
+					@include i.mq(lg,max,true){
 						order: 0!important;
 						flex-basis: 50%;
 						max-width: 50%;
@@ -60,8 +62,8 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 			}
 			//イメージ幅
 			&:last-child{
-				@include mq(sm){
-					@include mq(lg,max,true){
+				@include i.mq(sm){
+					@include i.mq(lg,max,true){
 						flex-basis: 50%;
 						max-width: 50%;
 					}
@@ -71,7 +73,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 	}
 	//SMBメディアと文章 - タイトル
 	.smb-media-text__title{
-		@include heading1;
+		@include i.heading1;
 	}
 	//SMBメディアと文章 - 画像
 	.smb-media-text__figure{
@@ -91,7 +93,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 		.smb-section-with-bgimage__bgimage{
 			margin-right: 10%;
 			margin-left: auto;
-			@include mq(sm){
+			@include i.mq(sm){
 				max-width: 90%;
 				margin-left: 1em;
 				margin-right: auto;

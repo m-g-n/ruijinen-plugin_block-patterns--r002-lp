@@ -5,6 +5,11 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_message_accent:not(:root){
@@ -13,7 +18,7 @@
 	margin-bottom: 3rem;
 	padding: 3rem 1.75rem;
 	border: 1px solid #999;
-	@include mq(sm){
+	@include i.mq(sm){
 		margin-top: 5rem;
 		margin-bottom: 6rem;
 		padding: 5rem;
@@ -28,14 +33,14 @@
 		background-color: #999;
 		transform: rotate(-60deg);
 		z-index: 2;
-		@include mq(sm){
+		@include i.mq(sm){
 			width: 6.25rem;
 		}
 	}
 	&::before{
 		top: 0.8rem;
 		left: -1.425rem;
-		@include mq(sm){
+		@include i.mq(sm){
 			top: 1.7rem;
 			left: -2.2rem;
 		}
@@ -43,7 +48,7 @@
 	&::after{
 		bottom: 0.8rem;
 		right: -1.425rem;
-		@include mq(sm){
+		@include i.mq(sm){
 			bottom: 1.7rem;
 			right: -2.2rem;
 		}
@@ -57,10 +62,10 @@
 			//
 			// ----- @deprecated - SMB v12.6.1まで -----
 			> .smb-section__subtitle{
-				@include smb-section-subtitle;
+				@include i.smb-section-subtitle;
 			}
 			>.smb-section__title{
-				@include heading2;
+				@include i.heading2;
 				&::after{
 					display: none;
 				}
@@ -68,10 +73,10 @@
 			// ----- SMB v13.0.0から -----
 			> .smb-section__contents-wrapper > .smb-section__header{
 				> .smb-section__subtitle{
-					@include smb-section-subtitle;
+					@include i.smb-section-subtitle;
 				}
 				>.smb-section__title{
-					@include heading2;
+					@include i.heading2;
 					&::after{
 						display: none;
 					}
@@ -84,7 +89,7 @@
 			> .smb-section__contents-wrapper > .smb-section__body{ //SMB v13.0.0から
 				margin-top: 2.5rem;
 				text-align: left;
-				@include mq(sm){
+				@include i.mq(sm){
 					margin-top: 5rem;
 				}
 			}
@@ -97,7 +102,7 @@
 			> .c-container{
 				// ----- @deprecated - SMB v12.6.1まで -----
 				> .smb-section__lede-wrapper{
-					@include mq(lg){
+					@include i.mq(lg){
 						margin-left: 0;
 					}
 				}
@@ -107,7 +112,7 @@
 				// ----- SMB v13.0.0から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 					.smb-section__lede-wrapper{
-						@include mq(lg){
+						@include i.mq(lg){
 							margin-left: 0;
 						}
 					}
@@ -126,7 +131,7 @@
 			> .c-container{
 				// ----- @deprecated - SMB v12.6.1まで -----
 				> .smb-section__lede-wrapper{
-					@include mq(lg){
+					@include i.mq(lg){
 						margin-right: auto;
 						margin-left: auto;
 					}
@@ -138,7 +143,7 @@
 				// ----- SMB v13.0.0から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 					.smb-section__lede-wrapper{
-						@include mq(lg){
+						@include i.mq(lg){
 							margin-right: auto;
 							margin-left: auto;
 						}
@@ -158,7 +163,7 @@
 			> .c-container{
 				// ----- @deprecated - SMB v12.6.1まで -----
 				> .smb-section__lede-wrapper{
-					@include mq(lg){
+					@include i.mq(lg){
 						margin-right: 0;
 					}
 				}
@@ -168,7 +173,7 @@
 				// ----- SMB v13.0.0から -----
 				> .smb-section__contents-wrapper > .smb-section__header{
 				> .smb-section__lede-wrapper{
-						@include mq(lg){
+						@include i.mq(lg){
 							margin-right: 0;
 						}
 					}
@@ -179,9 +184,4 @@
 			}
 		}
 	}
-}
-
-//HACK:Wp5.9でiframeのプレビュー画面でもスタイルが読み込まれるように下記を追記
-html :where(.editor-styles-wrapper) {
-	display: block;
 }

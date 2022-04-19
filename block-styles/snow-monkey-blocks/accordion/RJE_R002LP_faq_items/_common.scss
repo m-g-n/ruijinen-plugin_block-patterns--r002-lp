@@ -5,6 +5,11 @@
 // ======================================================
 
 // ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../../../src/css/import" as i;
+
+// ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_faq_items{
@@ -21,16 +26,16 @@
 		> .smb-accordion__item__title{
 			padding: 0;
 			background-color: transparent;
-			@include paragraph;
+			@include i.paragraph;
 			font-size: 0.875rem;
-			@include mq(sm){
+			@include i.mq(sm){
 				font-size: 1rem;
 				font-weight: bold;
 			}
 			> .smb-accordion__item__title__label{
 				position: relative;
 				padding-left: 1.875rem;
-				@include mq(sm){
+				@include i.mq(sm){
 					padding-left: 2.5rem;
 				}
 				&::before{
@@ -42,7 +47,7 @@
 					font-size: 1rem;
 					font-weight: bold;
 					color: var(--accent-color,#cd162c);
-					@include mq(sm){
+					@include i.mq(sm){
 						font-size: 1.5rem;
 						line-height: 1;
 					}
@@ -92,7 +97,7 @@
 		> .smb-accordion__item__body {
 			display: block;
 			padding: 0 0 0 1.875rem;
-			@include mq(sm){
+			@include i.mq(sm){
 				padding-left: 2.5rem;
 			}
 			&:before{
@@ -104,7 +109,7 @@
 				font-size: 1rem;
 				font-weight: bold;
 				color: var(--accent-color,#cd162c);
-				@include mq(sm){
+				@include i.mq(sm){
 					font-size: 1.5rem;
 					line-height: 1;
 				}
