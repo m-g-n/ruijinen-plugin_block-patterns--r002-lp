@@ -8,8 +8,8 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 当プラグインディレクトリーまで移動したあと、
 
 - npm i(yarn)でpackegeをインストール
-- npm gulp watch(yarn gulp watch)でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
-- npm gulp sass (yarn gulp sass)でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
+- npm run watch(yarn watch)でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
+- npm run build (yarn build)でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
 
 # comporserの準備
 
@@ -18,6 +18,9 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 1.13.0
+- README.mdのSCSSコンパイルコマンドの更新
+
 ## 1.12.0
 - CTA（固定表示）にてスマホ表示時にとじることができないバグを修正
 
