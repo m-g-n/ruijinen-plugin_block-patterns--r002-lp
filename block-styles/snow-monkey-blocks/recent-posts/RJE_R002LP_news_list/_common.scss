@@ -28,6 +28,7 @@
 			letter-spacing: 0.05rem;
 			@include i.mq(md){
 				flex-direction: row;
+				align-items: flex-start;
 			}
 		}
 		.c-entry-summary__header{
@@ -55,7 +56,9 @@
 			}
 			> .c-meta{
 				display: flex;
-				align-items: center;
+				@include i.mq(md){
+					flex-wrap: nowrap;
+				}
 			}
 			.c-meta__item:not(:last-child) {
 				@include i.mq(lg){
