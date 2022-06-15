@@ -37,6 +37,7 @@
 				display: none;
 			}
 			&:not(:first-of-type){
+				display: block !important; //フロント側のCSSで消されてしまうのでこちらで再定義
 				&::before{
 					content: "※このブロックは表示されません";
 					display: block;
