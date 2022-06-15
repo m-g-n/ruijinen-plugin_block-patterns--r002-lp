@@ -49,6 +49,14 @@
 					opacity: 0.5;
 				}
 			}
+			&.is-selected .smb-items__item__figure{
+				&::before{
+					content: unset;
+				}
+				> img{
+					position: unset;
+				}
+			}
 		}
 	}
 	.smb-items__banner{
