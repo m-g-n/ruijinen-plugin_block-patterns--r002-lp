@@ -125,6 +125,7 @@
 			> .c-container, // @deprecated - SMB v12.6.1まで
 			> .c-container > .smb-section__contents-wrapper > .smb-section__header{ // SMB v13.0.0から
 				> .smb-section__lede-wrapper{
+					text-align: right;
 					@include i.mq(lg){
 						margin-right: 0;
 					}

@@ -30,4 +30,16 @@
 			z-index: 2;
 		}
 	}
+	> .c-row{
+		> .c-row__col{
+			&.is-selected .smb-items__item__figure{
+				&::before{
+					content: unset;
+				}
+				> img{
+					position: unset;
+				}
+			}
+		}
+	}
 }
