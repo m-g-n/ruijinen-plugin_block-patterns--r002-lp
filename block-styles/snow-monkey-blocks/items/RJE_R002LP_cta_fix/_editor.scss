@@ -37,6 +37,7 @@
 				display: none;
 			}
 			&:not(:first-of-type){
+				display: block !important; //フロント側のCSSで消されてしまうのでこちらで再定義
 				&::before{
 					content: "※このブロックは表示されません";
 					display: block;
@@ -46,6 +47,14 @@
 				}
 				> .smb-items__item{
 					opacity: 0.5;
+				}
+			}
+			&.is-selected .smb-items__item__figure{
+				&::before{
+					content: unset;
+				}
+				> img{
+					position: unset;
 				}
 			}
 		}
