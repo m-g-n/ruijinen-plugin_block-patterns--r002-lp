@@ -18,6 +18,10 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 1.17.0
+- 開発環境をlocalアプリからwp-envに変更
+- BackstopJSを利用した差分チェックテストの導入
+
 ## 1.16.1
 - README.mdにてv1.16.0の更新内容記述忘れの対応
 

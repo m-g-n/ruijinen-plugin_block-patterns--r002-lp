@@ -1,0 +1,191 @@
+[
+	{
+		"label": "RJE_R002LP_hero_media_and_text",
+		"url": "http://localhost:1021/rje_r002lp_hero_media_and_text",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_hero_media_and_text_right",
+		"url": "http://localhost:1021/rje_r002lp_hero_media_and_text2",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_hero_one_column",
+		"url": "http://localhost:1021/rje_r002lp_hero_one_column",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_message_normal",
+		"url": "http://localhost:1021/rje_r002lp_message_normal",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_message_normal_right",
+		"url": "http://localhost:1021/rje_r002lp_message_normal2",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_message_accent",
+		"url": "http://localhost:1021/rje_r002lp_message_accent",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_message_accent2",
+		"url": "http://localhost:1021/rje_r002lp_message_accent2",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_flow",
+		"url": "http://localhost:1021/rje_r002lp_flow",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_merit",
+		"url": "http://localhost:1021/rje_r002lp_merit",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_voice",
+		"url": "http://localhost:1021/rje_r002lp_voice",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_faq",
+		"url": "http://localhost:1021/rje_r002lp_faq",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_gallery",
+		"url": "http://localhost:1021/rje_r002lp_gallery",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_variation",
+		"url": "http://localhost:1021/rje_r002lp_variation",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_media_list",
+		"url": "http://localhost:1021/rje_r002lp_media_list",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_corp_list",
+		"url": "http://localhost:1021/rje_r002lp_corp_list",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_spec",
+		"url": "http://localhost:1021/rje_r002lp_spec",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_news",
+		"url": "http://localhost:1021/rje_r002lp_news",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_prices",
+		"url": "http://localhost:1021/rje_r002lp_prices",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_cta",
+		"url": "http://localhost:1021/rje_r002lp_cta",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_cta_fix",
+		"url": "http://localhost:1021/rje_r002lp_cta_fix",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "RJE_R002LP_section1",
+		"url": "http://localhost:1021/rje_r002lp_section1",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".p-entry-content"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	}
+]
