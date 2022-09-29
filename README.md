@@ -18,6 +18,12 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 1.18.0
+- 画像をdist/img直ではなくsrc/imgから出力する形に変更
+- Snow Monkey依存スタイル名取得用のプロパティ名の変更
+- GitHub ActionsについてPRのマージなしのcloseは動かないように調整
+- Nodeパッケージの更新
+
 ## 1.17.1
 - JSのコンパイルの指示抜けを復旧
 
