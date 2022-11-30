@@ -28,7 +28,7 @@
 	}
 	//ボタン - ノーマル
 	:not(.is-style-text):not(.is-style-ghost) > .smb-btn,
-	:not(.is-style-outline):not(.is-style-sme-shadowed) > .wp-block-button__link{ 
+	:not(.is-style-outline):not(.is-style-sme-shadowed) > .wp-block-button__link{
 		@include i.button--normal;
 	}
 	//ボタン - ゴースト
