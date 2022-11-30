@@ -11,31 +11,130 @@ class RegisterPatterns {
 	/**
 	 * Constructor.
 	 */
-	public function __construct() {
-		// 登録するパターンをhookに追加
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_hero_media_and_text' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_hero_media_and_text__alignright' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_hero_one_column' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_message_normal' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_message_normal__alignright' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_message_accent' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_message_accent2' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_flow' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_merit' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_voices' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_faq' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_gallery' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_variation' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_media_list' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_corp_list' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_spec' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_news' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_prices' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_cta' ), 10 );
-		add_filter( 'rje_register_patterns_args', array( $this, 'rje_r002lp_cta_fix' ), 10 );
+	public function __construct( $variable_name ) {
+		//フィルターに登録したいメソッドの情報
+		$methods = array(
+			array(
+				'name' => 'hero_media_and_text',
+				'label' => 'Heroイメージ（メディアと文章',
+				'priority' => 10
+			),
+			array(
+				'name' => 'hero_media_and_text__alignright',
+				'label' => 'Heroイメージ（メディアと文章) - 右寄せ',
+				'priority' => 10
+			),
+			array(
+				'name' => 'hero_one_column',
+				'label' => 'Heroイメージ（1カラム)',
+				'priority' => 10
+			),
+			array(
+				'name' => 'message_normal',
+				'label' => '伝えたいこと（ノーマル)',
+				'priority' => 10
+			),
+			array(
+				'name' => 'message_normal__alignright',
+				'label' => '伝えたいこと（ノーマル) - 右寄せ',
+				'priority' => 10
+			),
+			array(
+				'name' => 'message_accent',
+				'label' => '伝えたいこと（アクセント)',
+				'priority' => 10
+			),
+			array(
+				'name' => 'message_accent2',
+				'label' => '伝えたいこと（アクセント2)',
+				'priority' => 10
+			),
+			array(
+				'name' => 'flow',
+				'label' => '流れ・手順',
+				'priority' => 10
+			),
+			array(
+				'name' => 'merit',
+				'label' => 'メリット・ポイント',
+				'priority' => 10
+			),
+			array(
+				'name' => 'voices',
+				'label' => 'お客様の声',
+				'priority' => 10
+			),
+			array(
+				'name' => 'faq',
+				'label' => 'よくある質問',
+				'priority' => 10
+			),
+			array(
+				'name' => 'gallery',
+				'label' => 'ギャラリー',
+				'priority' => 10
+			),
+			array(
+				'name' => 'variation',
+				'label' => 'バリエーション',
+				'priority' => 10
+			),
+			array(
+				'name' => 'media_list',
+				'label' => 'メディア掲載一覧',
+				'priority' => 10
+			),
+			array(
+				'name' => 'corp_list',
+				'label' => '採用企業一覧',
+				'priority' => 10
+			),
+			array(
+				'name' => 'spec',
+				'label' => 'サービス・製品仕様',
+				'priority' => 10
+			),
+			array(
+				'name' => 'news',
+				'label' => 'お知らせ一覧',
+				'priority' => 10
+			),
+			array(
+				'name' => 'prices',
+				'label' => '料金表',
+				'priority' => 10
+			),
+			array(
+				'name' => 'cta',
+				'label' => 'CTA',
+				'priority' => 10
+			),
+			array(
+				'name' => 'cta_fix',
+				'label' => 'CTA（固定表示）',
+				'priority' => 10
+			)
+		);
+		//無効化のオプションページに情報を登録
+		add_filter(
+			'rje_option_unregister_args',
+			function ( $args ) use ( $variable_name, $methods ) {
+				$lp = array(
+					'section_id'   => $variable_name,
+					'section_name' => 'LP向けパターン集',
+					'fields' => $methods
+				);
+				array_push( $args, $lp );
+				return $args;
+			}
+		);
+		//パターンの情報をフィルターに登録
+		foreach ( $methods as $method ) {
+			add_filter( 'rje_register_patterns_args', array( $this, $method['name'] ), $method['priority'] );
+		}
 	}
 
-	public function rje_r002lp_hero_media_and_text( $args ) {
+	public function hero_media_and_text( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_hero_media_and_text',
 			'title'          => 'Heroイメージ（メディアと文章)',
@@ -47,7 +146,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_hero_media_and_text__alignright( $args ) {
+	public function hero_media_and_text__alignright( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_hero_media_and_text__alignright',
 			'title'          => 'Heroイメージ（メディアと文章) - 右寄せ',
@@ -59,7 +158,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_hero_one_column( $args ) {
+	public function hero_one_column( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_hero_one_column',
 			'title'          => 'Heroイメージ（1カラム)',
@@ -71,7 +170,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_message_normal( $args ) {
+	public function message_normal( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_message_normal',
 			'title'          => '伝えたいこと（ノーマル)',
@@ -83,7 +182,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_message_normal__alignright( $args ) {
+	public function message_normal__alignright( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_message_normal__alignright',
 			'title'          => '伝えたいこと（ノーマル) - 右寄せ',
@@ -95,7 +194,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_message_accent( $args ) {
+	public function message_accent( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_message_accent',
 			'title'          => '伝えたいこと（アクセント)',
@@ -107,7 +206,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_message_accent2( $args ) {
+	public function message_accent2( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_message_accent2',
 			'title'          => '伝えたいこと（アクセント2)',
@@ -119,7 +218,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_flow( $args ) {
+	public function flow( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_flow',
 			'title'          => '流れ・手順',
@@ -131,7 +230,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_merit( $args ) {
+	public function merit( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_merit',
 			'title'          => 'メリット・ポイント',
@@ -143,7 +242,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_voices( $args ) {
+	public function voices( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_voices',
 			'title'          => 'お客様の声',
@@ -155,7 +254,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_faq( $args ) {
+	public function faq( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_faq',
 			'title'          => 'よくある質問',
@@ -167,7 +266,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_gallery( $args ) {
+	public function gallery( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_gallery',
 			'title'          => 'ギャラリー',
@@ -179,7 +278,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_variation( $args ) {
+	public function variation( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_variation',
 			'title'          => 'バリエーション',
@@ -191,7 +290,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_media_list( $args ) {
+	public function media_list( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_media_list',
 			'title'          => 'メディア掲載一覧',
@@ -203,7 +302,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_corp_list( $args ) {
+	public function corp_list( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_corp_list',
 			'title'          => '採用企業一覧',
@@ -215,7 +314,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_spec( $args ) {
+	public function spec( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_spec',
 			'title'          => 'サービス・製品仕様',
@@ -227,7 +326,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_news( $args ) {
+	public function news( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_news',
 			'title'          => 'お知らせ一覧',
@@ -239,7 +338,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_prices( $args ) {
+	public function prices( $args ) {
 		$args[] = array(
 			'key'            => RJE_R002LP_KEY . '_prices',
 			'title'          => '料金表',
@@ -251,7 +350,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_cta( $args ) {
+	public function cta( $args ) {
 		$args[] = array(
 			'key'             => RJE_R002LP_KEY . '_cta',
 			'title'           => 'CTA',
@@ -263,7 +362,7 @@ class RegisterPatterns {
 		);
 		return $args;
 	}
-	public function rje_r002lp_cta_fix( $args ) {
+	public function cta_fix( $args ) {
 		$args[] = array(
 			'key'             => RJE_R002LP_KEY . '_cta_fix',
 			'title'           => 'CTA（固定表示）',
