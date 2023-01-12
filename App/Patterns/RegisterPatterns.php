@@ -17,47 +17,47 @@ class RegisterPatterns {
 			array(
 				'name' => 'hero_media_and_text',
 				'label' => 'Heroイメージ（メディアと文章',
-				'priority' => 10
+				'priority' => 1
 			),
 			array(
 				'name' => 'hero_media_and_text__alignright',
 				'label' => 'Heroイメージ（メディアと文章) - 右寄せ',
-				'priority' => 10
+				'priority' => 2
 			),
 			array(
 				'name' => 'hero_one_column',
 				'label' => 'Heroイメージ（1カラム)',
-				'priority' => 10
+				'priority' => 3
 			),
 			array(
 				'name' => 'message_normal',
 				'label' => '伝えたいこと（ノーマル)',
-				'priority' => 10
+				'priority' => 4
 			),
 			array(
 				'name' => 'message_normal__alignright',
 				'label' => '伝えたいこと（ノーマル) - 右寄せ',
-				'priority' => 10
+				'priority' => 5
 			),
 			array(
 				'name' => 'message_accent',
 				'label' => '伝えたいこと（アクセント)',
-				'priority' => 10
+				'priority' => 6
 			),
 			array(
 				'name' => 'message_accent2',
 				'label' => '伝えたいこと（アクセント2)',
-				'priority' => 10
+				'priority' => 7
 			),
 			array(
 				'name' => 'flow',
 				'label' => '流れ・手順',
-				'priority' => 10
+				'priority' => 8
 			),
 			array(
 				'name' => 'merit',
 				'label' => 'メリット・ポイント',
-				'priority' => 10
+				'priority' => 9
 			),
 			array(
 				'name' => 'voices',
@@ -67,54 +67,62 @@ class RegisterPatterns {
 			array(
 				'name' => 'faq',
 				'label' => 'よくある質問',
-				'priority' => 10
+				'priority' => 11
 			),
 			array(
 				'name' => 'gallery',
 				'label' => 'ギャラリー',
-				'priority' => 10
+				'priority' => 12
 			),
 			array(
 				'name' => 'variation',
 				'label' => 'バリエーション',
-				'priority' => 10
+				'priority' => 13
 			),
 			array(
 				'name' => 'media_list',
 				'label' => 'メディア掲載一覧',
-				'priority' => 10
+				'priority' => 14
 			),
 			array(
 				'name' => 'corp_list',
 				'label' => '採用企業一覧',
-				'priority' => 10
+				'priority' => 15
 			),
 			array(
 				'name' => 'spec',
 				'label' => 'サービス・製品仕様',
-				'priority' => 10
-			),
-			array(
-				'name' => 'news',
-				'label' => 'お知らせ一覧',
-				'priority' => 10
+				'priority' => 16
 			),
 			array(
 				'name' => 'prices',
 				'label' => '料金表',
-				'priority' => 10
+				'priority' => 18
 			),
 			array(
 				'name' => 'cta',
 				'label' => 'CTA',
-				'priority' => 10
+				'priority' => 19
 			),
 			array(
 				'name' => 'cta_fix',
 				'label' => 'CTA（固定表示）',
-				'priority' => 10
+				'priority' => 20
 			)
 		);
+
+		//Snow Monkey専用のパターン情報を追加
+		if ( 'snow-monkey' === RJE_ACTIVATE_THEME ) {
+			$sm_patterns = array(
+				array(
+					'name' => 'news',
+					'label' => 'お知らせ一覧',
+					'priority' => 17
+				)
+			);
+			$methods = array_merge($methods, $sm_patterns);
+		}
+
 		//無効化のオプションページに情報を登録
 		add_filter(
 			'rje_option_unregister_args',
@@ -128,6 +136,7 @@ class RegisterPatterns {
 				return $args;
 			}
 		);
+
 		//パターンの情報をフィルターに登録
 		foreach ( $methods as $method ) {
 			add_filter( 'rje_register_patterns_args', array( $this, $method['name'] ), $method['priority'] );
