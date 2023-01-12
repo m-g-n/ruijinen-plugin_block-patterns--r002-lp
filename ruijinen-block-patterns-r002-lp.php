@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿ブロックパターン：LP向けパターン集
  * Description: 類人猿ブロックパターン LP向けパターンアドオンです
- * Version: 2.0.0
+ * Version: 3.0.0
  * Tested up to: 6.1.1
  * Requires at least: 6.1
  * Author: mgn Inc.,
@@ -65,6 +65,9 @@ class Bootstrap {
 			return;
 		}
 
+		//アクティブテーマ名を取得
+		$this->get_activate_theme();
+
 		// LPパターン用の汎用CSS・JS読み込み・テンプレートの読み込み
 		add_theme_support( 'editor-styles' );
 		new App\Setup\Assets();
@@ -76,6 +79,20 @@ class Bootstrap {
 	 */
 	public function load_textdomain() {
 		new App\Setup\TextDomain();
+	}
+
+	/**
+	 * Get Activate Themes.
+	 */
+	public function get_activate_theme() {
+		if ( defined ('RJE_ACTIVATE_THEME') ) { return; } //アクティブテーマ用の定数が存在する場合は離脱
+		$theme = wp_get_theme( get_template() );
+		if ( 'snow-monkey/resources' === $theme->template ) { //古いバージョンのSnow Monkey対応
+			$name = 'snow-monkey';
+		} else {
+			$name = $theme->template;
+		}
+		define( 'RJE_ACTIVATE_THEME', $name );
 	}
 
 	/**
