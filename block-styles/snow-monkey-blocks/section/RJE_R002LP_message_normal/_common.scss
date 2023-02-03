@@ -18,6 +18,7 @@
 		margin-right: 0;
 		margin-left: 0;
 		width: 100%;
+    max-width: unset;
 	}
 
 	// ------------------------------------------------------
@@ -25,6 +26,9 @@
 	//
 	>.smb-section__inner {
 		> .c-container{
+      // @include i.mq(sm, max, true){
+      //   width: 100%;
+      // }
 			@include i.mq(lg){
 				padding-right: 0;
 				padding-left: 0;
@@ -34,20 +38,20 @@
 			//
 			// ----- @deprecated - SMB v12.6.1まで -----
 			//サブタイトル
-			> .smb-section__subtitle{ 
+			> .smb-section__subtitle{
 				@include i.smb-section-subtitle;
 			}
 			//セクションタイトル
-			> .smb-section__title{ 
+			> .smb-section__title{
 				@include i.smb-section-title;
 			}
 			// ----- SMB v13.0.0から -----
 			> .smb-section__contents-wrapper > .smb-section__header{
-				> .smb-section__subtitle{ 
+				> .smb-section__subtitle{
 					@include i.smb-section-subtitle;
 				}
 				//セクションタイトル
-				> .smb-section__title{ 
+				> .smb-section__title{
 					@include i.smb-section-title;
 				}
 				> .smb-section__body{
@@ -102,6 +106,7 @@
 		padding-bottom: 0;
 		text-align: left;
 		.smb-section__inner > .c-container{
+      width: 100%;
 			padding-right: 0;
 			padding-left: 0;
 		}
@@ -180,7 +185,7 @@
 			width: calc(100% + 10rem);
 		}
 		@include i.mq(sm,max,true){
-			width: calc(100% + 0.9rem);
+			width: calc(100% + 1.8rem);
 		}
 	}
 	//テキスト
@@ -211,7 +216,7 @@
 			@include i.mq(sm){
 				right: -1em;
 				margin-left: -10rem;
-				
+
 			}
 			@include i.mq(sm,max,true){
 				right: 0 !important;
@@ -233,11 +238,15 @@
 		}
 		//画像
 		.smb-section-break-the-grid__figure{
-			right: 0;
-			left: -1rem;
+			right: 0 !important;
+			left: -1rem !important;
 			@include i.mq(sm){
 				margin-right: 10em;
 				margin-left: 0;
+			}
+			@include i.mq(sm,max,true){
+				right: auto !important;
+        left: -1.8rem !important;
 			}
 		}
 	}

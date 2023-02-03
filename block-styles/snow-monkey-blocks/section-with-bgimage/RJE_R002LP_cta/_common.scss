@@ -34,6 +34,11 @@
 								padding-right: 1.25rem;
 								padding-left: 1.25rem;
 							}
+              @include i.mq(md){
+                @include i.mq(lg,max,true){
+                  order: 0;
+                }
+              }
 							//文章
 							&:first-child{
 								padding-top: 1rem;
@@ -49,7 +54,7 @@
 								}
 								@include i.mq(md){
 									@include i.mq(lg,max,true){
-										order: 2;
+                    padding-top: 1em;
 									}
 								}
 							}
@@ -59,41 +64,49 @@
 									flex-basis: 40%;
 									max-width: 40%;
 								}
-								@include i.mq(md){
-									@include i.mq(lg,max,true){
-										order: 1;
-									}
-								}
+								// @include i.mq(md){
+								// 	@include i.mq(lg,max,true){
+								// 		order: 1;
+								// 	}
+								// }
 							}
 						}
 					}
 					>.c-row--reverse{
+            // @include i.mq(md){
+            //   @include i.mq(lg,max,true){
+            //     flex-direction: row;
+            //   }
+            // }
 						> .c-row__col{
 							//文章
 							&:first-child{
 								padding-top: 1rem;
-								@include i.mq(md){
-									@include i.mq(lg,max,true){
-										order: 2;
-									}
-								}
+                // BUG:orderが効かないため一旦コメントアウト
+								// @include i.mq(md){
+								// 	@include i.mq(lg,max,true){
+								// 		order: 2;
+								// 	}
+								// }
 								@include i.mq(lg){
 									padding-top: 2.5rem;
 								}
 							}
 							//メディア
-							&:last-child{
-								@include i.mq(md){
-									@include i.mq(lg,max,true){
-										order: 1;
-									}
-								}
-							}
+              // BUG:oorderが効かないため一旦コメントアウト
+							// &:last-child{
+								// @include i.mq(md){
+								// 	@include i.mq(lg,max,true){
+								// 		order: 1;
+								// 	}
+								// }
+							// }
 						}
 					}
 					.smb-media-text__figure{
 						text-align: center;
 						img{
+              vertical-align: middle;
 							@include i.mq(md,max,true){
 								max-height: 400px;
 								width: auto;

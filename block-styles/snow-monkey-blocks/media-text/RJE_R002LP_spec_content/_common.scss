@@ -50,10 +50,18 @@
 			}
 		}
 	}
+  .smb-media-text__figure{
+    img{
+      vertical-align: middle;
+    }
+  }
 	.smb-media-text__title{
 		@include i.heading2;
 		+ .smb-media-text__body{
 			margin-top: 1.5rem;
+      >p{
+        margin-bottom: initial;
+      }
 		}
 	}
 	.smb-media-text__body{
@@ -70,8 +78,11 @@
 		border-radius: 0;
 	}
 	.smb-box__body{
-		p + p{
-			margin-top: 0.25rem;
-		}
+		p{
+      margin-bottom: initial;
+      + p{
+        margin-top: 0.25rem;
+      }
+    }
 	}
 }

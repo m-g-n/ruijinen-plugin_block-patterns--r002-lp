@@ -66,12 +66,14 @@
 				}
 			}
 			.c-entry-summary__term{
+        display: inline-block;
 				min-width: 100px;
 				padding: 0.25rem 0.5rem;
 				background-color: transparent;
 				border: 1px solid;
 				font-weight: normal;
 				text-align: center;
+        line-height: 1.2;
 				color: var(--accent-color,#cd162c);
 			}
 		}
