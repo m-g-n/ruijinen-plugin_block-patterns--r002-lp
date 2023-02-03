@@ -22,6 +22,9 @@
 	.smb-items__item__figure{
 		margin-bottom: 1rem;
 		text-align: left;
+    img{
+      vertical-align: middle;
+    }
 	}
 	.smb-items__item__body{
 		width: 100%;
@@ -29,6 +32,7 @@
 		letter-spacing: 0.05em;
 	}
 	.smb-items__item__title{
+    font-size: 1rem;
 		font-weight: normal;
 		line-height: 1.625;
 	}

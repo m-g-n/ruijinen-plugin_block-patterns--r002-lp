@@ -35,6 +35,7 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 	.smb-section__inner > .c-container{
 		padding-right: 1em;
 		padding-left: 1em;
+    width: 100%;
 		@include i.mq(sm){
 			max-width: 90%;
 			padding-right: 0;
