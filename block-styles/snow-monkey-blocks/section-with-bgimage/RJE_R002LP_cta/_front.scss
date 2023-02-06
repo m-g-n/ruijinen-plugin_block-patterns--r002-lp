@@ -15,10 +15,10 @@
 .is-style-RJE_R002LP_cta:not(:root){
 	position: relative;
 	z-index: 2;
-	margin-top: -5rem;
+	margin-top: -5rem !important;
 	padding-top: 5rem;
 	@include i.mq(md){
-		margin-top: -3.5rem;
+		margin-top: -3.5rem !important;
 		padding-top: 3.5rem;
 	}
 	> .smb-section-with-bgimage__bgimage{
