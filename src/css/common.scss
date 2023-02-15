@@ -7,6 +7,10 @@
 @use "./import" as i;
 
 [class*="RJE_R002LP"] {
+  //変数
+  --_global--border-radius: 6.25rem;
+
+  //初期スタイル
 	font-size: 0.875rem;
 	@include i.mq(sm){
 		font-size: 1rem;
