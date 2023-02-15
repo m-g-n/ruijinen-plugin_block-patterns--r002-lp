@@ -13,7 +13,7 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_message_normal:not(:root){
-	@include i.mq(sm, max, true){
+  @include i.mq(sm, max, true){
 		overflow: visible;
 		margin-right: 0;
 		margin-left: 0;
@@ -102,6 +102,9 @@
 	// ブロークングリッド（共通）
 	//
 	.smb-section-break-the-grid{
+    //変数
+    --smb-section-break-the-grid--content-background-color: rgba(255,255,255,0.6);
+    //スタイル
 		padding-top: 0;
 		padding-bottom: 0;
 		text-align: left;
@@ -155,7 +158,6 @@
 	.smb-section-break-the-grid__content {
 		margin-top: -3.875rem;
 		padding: 1rem;
-		background-color: rgba(#fff,0.6);
 		@include i.mq(sm){
 			margin-top: 8.75rem;
 			padding: 2.5rem;
