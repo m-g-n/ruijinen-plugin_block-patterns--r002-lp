@@ -98,12 +98,14 @@
 		order: 4;
 	}
 	.smb-items__item__btn:not(:root){
+    //変数
+    --smb-btn--background-color: #fff;
+    --smb-btn--color: var(--accent-color,#cd162c);
+    //プロパティ
 		min-width: 9em !important;
 		padding: 3px !important;
-		background-color: #fff !important;
 		border: 1px solid;
 		font-size: 0.75rem;
-		color: var(--accent-color,#cd162c);
 		line-height: 1.5;
 		@include i.mq(lg){
 			padding: 6px;
