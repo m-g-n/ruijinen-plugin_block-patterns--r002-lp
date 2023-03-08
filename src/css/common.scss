@@ -7,9 +7,6 @@
 @use "./import" as i;
 
 [class*="RJE_R002LP"] {
-  //変数
-  --_global--border-radius: 6.25rem;
-
   //初期スタイル
 	font-size: 0.875rem;
 	@include i.mq(sm){
@@ -30,6 +27,10 @@
 	h4{
 		@include i.heading4;
 	}
+  //ボタン共通
+  .smb-btn{
+    --smb-btn--border-radius: 6.25rem;
+  }
 	//ボタン - ノーマル
 	:not(.is-style-text):not(.is-style-ghost) > .smb-btn,
 	:not(.is-style-outline):not(.is-style-sme-shadowed) > .wp-block-button__link{
