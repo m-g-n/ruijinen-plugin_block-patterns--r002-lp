@@ -50,6 +50,18 @@
 			}
 		}
 	}
+  &[data-sm-split-point]{
+    > .c-row{
+      @include i.mq(md){
+        --smb-media-text--direction: row !important;
+      }
+    }
+    > .c-row--reverse{
+      @include i.mq(md){
+        --smb-media-text--direction: row-reverse !important;
+      }
+    }
+  }
   .smb-media-text__figure{
     img{
       vertical-align: middle;

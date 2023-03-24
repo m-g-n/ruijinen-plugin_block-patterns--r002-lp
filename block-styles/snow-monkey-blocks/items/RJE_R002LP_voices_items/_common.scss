@@ -69,6 +69,7 @@
 	font-size: 0.875rem;
 	line-height: 1.5;
 	color: #8F8F8F;
+  overflow: initial;
 	.c-row{
 		justify-content: center;
 		margin-left: 0;
@@ -85,6 +86,14 @@
 	.c-row:not(.c-row--reverse) .c-row__col:last-child .smb-media-text__figure img{
 		margin-left: 0.75rem;
 	}
+  &[data-sm-split-point]{
+    > .c-row{
+        --smb-media-text--direction: row !important;
+    }
+    > .c-row--reverse{
+        --smb-media-text--direction: row-reverse !important;
+    }
+  }
 
 	.c-row__col{
 		flex-basis: auto;
