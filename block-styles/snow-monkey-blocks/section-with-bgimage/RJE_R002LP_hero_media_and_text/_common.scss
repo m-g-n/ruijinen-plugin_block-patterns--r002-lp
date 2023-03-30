@@ -48,6 +48,18 @@ $content-width: (100% - $figure-width);  //PC・タブレット時のコンテ�
 			margin-right: 0;
 			margin-left: 0;
 		}
+    &[data-sm-split-point]{
+      > .c-row{
+        @include i.mq(md){
+          --smb-media-text--direction: row !important;
+        }
+      }
+      > .c-row--reverse{
+        @include i.mq(md){
+          --smb-media-text--direction: row-reverse !important;
+        }
+      }
+    }
 		.c-row__col{
 			padding-right: 0;
 			padding-left: 0;
