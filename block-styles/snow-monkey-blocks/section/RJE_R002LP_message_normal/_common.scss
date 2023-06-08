@@ -14,11 +14,11 @@
 // ------------------------------------------------------
 .is-style-RJE_R002LP_message_normal:not(:root){
   @include i.mq(sm, max, true){
-		overflow: visible;
-		margin-right: 0;
-		margin-left: 0;
-		width: 100%;
-    max-width: unset;
+		// overflow: visible;
+		// margin-right: 0;
+		// margin-left: 0;
+		// width: 100%;
+    // max-width: unset; //SMB v19.5.1だと必要ない？
 	}
 
 	// ------------------------------------------------------
@@ -26,13 +26,16 @@
 	//
 	>.smb-section__inner {
 		> .c-container{
-      // @include i.mq(sm, max, true){
-      //   width: 100%;
+      --_container-margin-right: 0;
+      --_container-margin-left: 0;
+      // @include i.mq(md, max, true){
+			// 	padding-right: 0;
+			// 	padding-left: 0;
       // }
-			@include i.mq(lg){
-				padding-right: 0;
-				padding-left: 0;
-			}
+			// @include i.mq(lg){
+				// padding-right: 0;
+				// padding-left: 0;
+			// }
 			// ------------------------------------------------------
 			// ヘッダー
 			//
@@ -215,10 +218,11 @@
 		}
 		//画像
 		.smb-section-break-the-grid__figure{
+      @include i.mq(lg){
+        right: -1em;
+      }
 			@include i.mq(sm){
-				right: -1em;
-				margin-left: -10rem;
-
+				margin-left: -10rem !important;
 			}
 			@include i.mq(sm,max,true){
 				right: 0 !important;
