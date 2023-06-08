@@ -5843,7 +5843,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:128c623ee9ee9334def4a55506afbc7c14afc17eb16a7bbf21b055da8008bc15e10a2382e511f38faa15c9a1ce944acf372fa685fbdaf356b31a832cd908425b#npm:10.4.13"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.4"],\
-            ["caniuse-lite", "npm:1.0.30001434"],\
+            ["caniuse-lite", "npm:1.0.30001495"],\
             ["fraction.js", "npm:4.2.0"],\
             ["normalize-range", "npm:0.1.2"],\
             ["picocolors", "npm:1.0.0"],\
@@ -6374,7 +6374,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.21.4-7d64a96afc-4af3793704.zip/node_modules/browserslist/",\
           "packageDependencies": [\
             ["browserslist", "npm:4.21.4"],\
-            ["caniuse-lite", "npm:1.0.30001434"],\
+            ["caniuse-lite", "npm:1.0.30001495"],\
             ["electron-to-chromium", "npm:1.4.284"],\
             ["node-releases", "npm:2.0.6"],\
             ["update-browserslist-db", "virtual:7d64a96afc8cf9b31b95951ccc2f47931d0cf97faa526fd0d20448bf2c73ddf9f5ef9e5cd28839ae8b5791451df45079a407b3f4978367b4210748169f5848f6#npm:1.0.10"]\
@@ -6608,7 +6608,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["caniuse-api", "npm:3.0.0"],\
             ["browserslist", "npm:4.21.4"],\
-            ["caniuse-lite", "npm:1.0.30001434"],\
+            ["caniuse-lite", "npm:1.0.30001495"],\
             ["lodash.memoize", "npm:4.1.2"],\
             ["lodash.uniq", "npm:4.5.0"]\
           ],\
@@ -6616,10 +6616,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["caniuse-lite", [\
-        ["npm:1.0.30001434", {\
-          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001434-9c6ea57daf-7c9d2641e8.zip/node_modules/caniuse-lite/",\
+        ["npm:1.0.30001495", {\
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001495-4b9e0263f7-c0a139a2e6.zip/node_modules/caniuse-lite/",\
           "packageDependencies": [\
-            ["caniuse-lite", "npm:1.0.30001434"]\
+            ["caniuse-lite", "npm:1.0.30001495"]\
           ],\
           "linkType": "HARD"\
         }]\
