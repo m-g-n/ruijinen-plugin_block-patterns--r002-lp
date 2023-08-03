@@ -13,10 +13,12 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_corp_list_items:not(:root){
+  overflow: hidden; //ネガティブマージンはみ出ないため
 	> .c-row{
-		margin: -0.75rem;
+    --_gap: 1.5rem;
+		margin: calc(var(--_gap) * .5 * -1);
 		> .c-row__col{
-			padding: 0.75rem;
+      padding: calc(var(--_gap) * .5);
 		}
 	}
 	.smb-items__item__figure{
