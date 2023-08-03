@@ -13,10 +13,14 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_media_list_items:not(:root){
+  overflow: hidden;
 	> .c-row{
-		margin: -0.75rem;
+    --_gap: 1.5rem;
+		margin: calc(var(--_gap) * .5 * -1);
+		// margin: -0.75rem;
 		> .c-row__col{
-			padding: 0.75rem;
+      // margin-bottom: 0;
+      padding: calc(var(--_gap) * .5);
 		}
 	}
 	.smb-items__item__figure{
