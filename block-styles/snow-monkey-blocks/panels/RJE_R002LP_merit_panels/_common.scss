@@ -13,18 +13,21 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_merit_panels:not(:root){
+  overflow: hidden; //リストのネガティブマージン分スクロールを出さないため
 	> .c-row{
-		counter-reset: flow-no;
-		margin: -1.875rem;
+    --_gap: 3.75rem;
+		margin: calc(var(--_gap) * .5 * -1);
 		> .c-row__col{
 			position: relative;
       flex-direction: initial;
 			margin-top: 4.375rem;
 			margin-bottom: 0;
-			padding: 1.875rem 1.25rem;
-			@media screen and (min-width: 1050px){
-				padding-right: 1.875rem;
-				padding-left: 1.875rem;
+      padding-top: calc(var(--_gap) * .5);
+      padding-bottom: calc(var(--_gap) * .5);
+			// padding: 1.875rem 1.25rem;
+			@media screen and (max-width: 1049.9px){
+				padding-right: 1.25rem;
+				padding-left: 1.25rem;
 			}
 		}
 	}

@@ -13,11 +13,15 @@
 // スタイル
 // ------------------------------------------------------
 .is-style-RJE_R002LP_variation_items:not(:root){
+  overflow: hidden;
 	> .c-row{
-		margin: -1.125rem;
+    --_gap: 2.25rem;
+		margin: calc(var(--_gap) * .5 * -1);
+		// margin: -1.125rem;
 		> .c-row__col{
 			margin-bottom: 0;
-			padding: 1.125rem;
+      padding: calc(var(--_gap) * .5);
+			// padding: 1.125rem;
 		}
 	}
 	.smb-items__item{
