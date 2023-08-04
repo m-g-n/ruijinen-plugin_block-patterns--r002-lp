@@ -219,12 +219,13 @@
 		//画像
 		.smb-section-break-the-grid__figure{
       @include i.mq(lg){
-        right: -1em;
+        // right: -1em;
       }
 			@include i.mq(sm){
 				margin-left: -10rem !important;
 			}
 			@include i.mq(sm,max,true){
+        margin-left: 0 !important;
 				right: 0 !important;
 			}
 		}
@@ -245,10 +246,9 @@
 		//画像
 		.smb-section-break-the-grid__figure{
 			right: 0 !important;
-			left: -1rem !important;
+      margin-left: 0;
 			@include i.mq(sm){
 				margin-right: 10em;
-				margin-left: 0;
 			}
 			@include i.mq(sm,max,true){
 				right: auto !important;
