@@ -18,6 +18,8 @@ WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパター�
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 3.1.9
+- add_editor_styleで読み込んだCSSに自動的にclassが付与されない場合用のスタイルを追加
 ## 3.1.8
 - 伝えたいことパターンのはみ出し具合を調整
 ## 3.1.7
