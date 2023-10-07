@@ -12,89 +12,96 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_cta_fix:not(:root){
-	position: relative;
-	min-height: unset;
-	padding: 2.5rem 1rem 1rem;
-	background-color: rgba(#e00, 0.14);
-	border: 1px dotted #e00;
-	&::before{
-		content: "※右下に固定表示されるCTAパターンです。１ページに１つのみ設置可能（２つ目以上設置すると表示が正常に行われません）";
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: block;
-		background-color: #e00;
-		font-size: 0.857rem;
-		font-weight: bold;
-		color: #fff;
-	}
-	> .c-row{
-		> .c-row__col{
-			position: static !important;
-			//追加ボタンを消す
-			+ .block-list-appender{
-				display: none;
-			}
-			&:not(:first-of-type){
-				display: block !important; //フロント側のCSSで消されてしまうのでこちらで再定義
-				&::before{
-					content: "※このブロックは表示されません";
-					display: block;
-					margin-top: 1rem;
-					font-size: 0.857rem;
-					color: #e00;
-				}
-				> .smb-items__item{
-					opacity: 0.5;
-				}
-			}
-			&.is-selected .smb-items__item__figure{
-				&::before{
-					content: unset;
-				}
-				> img{
-					position: unset;
-				}
-			}
-		}
-	}
-	.smb-items__banner{
-		position: relative;
-		&::before{
-			content: "バナータイプは対象外です";
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			background-color: #e00;
-			font-size: 0.857rem;
-			font-weight: bold;
-			color: #fff;
-			z-index: 2;
-		}
-		.smb-items__banner__figure,
-		.smb-items__banner__body{
-			opacity: 0.5;
-		}
-	}
-	.smb-items__item--free{
-		position: relative;
-		&::before{
-			content: "自由入力タイプは対象外です";
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			background-color: #e00;
-			font-size: 0.857rem;
-			font-weight: bold;
-			color: #fff;
-			z-index: 2;
-		}
-		.smb-items__banner__figure,
-		.smb-items__banner__body{
-			opacity: 0.5;
-		}
-	}
+@mixin styles () {
+  .is-style-RJE_R002LP_cta_fix:not(:root){
+    position: relative;
+    min-height: unset;
+    padding: 2.5rem 1rem 1rem;
+    background-color: rgba(#e00, 0.14);
+    border: 1px dotted #e00;
+    &::before{
+      content: "※右下に固定表示されるCTAパターンです。１ページに１つのみ設置可能（２つ目以上設置すると表示が正常に行われません）";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background-color: #e00;
+      font-size: 0.857rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    > .c-row{
+      > .c-row__col{
+        position: static !important;
+        //追加ボタンを消す
+        + .block-list-appender{
+          display: none;
+        }
+        &:not(:first-of-type){
+          display: block !important; //フロント側のCSSで消されてしまうのでこちらで再定義
+          &::before{
+            content: "※このブロックは表示されません";
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.857rem;
+            color: #e00;
+          }
+          > .smb-items__item{
+            opacity: 0.5;
+          }
+        }
+        &.is-selected .smb-items__item__figure{
+          &::before{
+            content: unset;
+          }
+          > img{
+            position: unset;
+          }
+        }
+      }
+    }
+    .smb-items__banner{
+      position: relative;
+      &::before{
+        content: "バナータイプは対象外です";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        background-color: #e00;
+        font-size: 0.857rem;
+        font-weight: bold;
+        color: #fff;
+        z-index: 2;
+      }
+      .smb-items__banner__figure,
+      .smb-items__banner__body{
+        opacity: 0.5;
+      }
+    }
+    .smb-items__item--free{
+      position: relative;
+      &::before{
+        content: "自由入力タイプは対象外です";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        background-color: #e00;
+        font-size: 0.857rem;
+        font-weight: bold;
+        color: #fff;
+        z-index: 2;
+      }
+      .smb-items__banner__figure,
+      .smb-items__banner__body{
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@include styles;
+.editor-styles-wrapper{
+  @include styles;
 }
