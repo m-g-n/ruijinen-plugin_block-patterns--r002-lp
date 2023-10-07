@@ -12,8 +12,15 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_cta_fix:not(:root){
-	position: relative;
-	min-height: 400px;
-	background-color: 1px solid #ddd;
+@mixin style_preview() {
+  .is-style-RJE_R002LP_cta_fix:not(:root){
+    position: relative;
+    min-height: 400px;
+    background-color: 1px solid #ddd;
+  }
+}
+
+@include style_preview;
+.editor-styles-wrapper{
+  @include style_preview;
 }

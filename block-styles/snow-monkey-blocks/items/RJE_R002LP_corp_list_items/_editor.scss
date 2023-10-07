@@ -12,34 +12,41 @@
 // ------------------------------------------------------
 // スタイル
 // ------------------------------------------------------
-.is-style-RJE_R002LP_corp_list_items:not(:root){
-	.smb-items__banner,
-	.smb-items__item--free{
-		position: relative;
-		&::before{
-			content: "このパターン内では非推奨です";
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			padding: 0.25rem;
-			background-color: rgba(#e00, 0.7);
-			font-size: 0.75rem;
-			font-weight: bold;
-			color: #fff;
-			z-index: 2;
-		}
-	}
-	> .c-row{
-		> .c-row__col{
-			&.is-selected .smb-items__item__figure{
-				&::before{
-					content: unset;
-				}
-				> img{
-					position: unset;
-				}
-			}
-		}
-	}
+@mixin styles () {
+  .is-style-RJE_R002LP_corp_list_items:not(:root){
+    .smb-items__banner,
+    .smb-items__item--free{
+      position: relative;
+      &::before{
+        content: "このパターン内では非推奨です";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        padding: 0.25rem;
+        background-color: rgba(#e00, 0.7);
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: #fff;
+        z-index: 2;
+      }
+    }
+    > .c-row{
+      > .c-row__col{
+        &.is-selected .smb-items__item__figure{
+          &::before{
+            content: unset;
+          }
+          > img{
+            position: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include styles;
+.editor-styles-wrapper{
+  @include styles;
 }
