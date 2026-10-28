@@ -33,11 +33,20 @@ class Assets {
 	}
 
 	/**
+	 * 共通CSSの依存ハンドル（Snow Monkey以外のテーマでは依存なし）.
+	 *
+	 * @return array
+	 */
+	private function get_style_deps() {
+		return $this->sm_style_handles ? array( $this->sm_style_handles ) : array();
+	}
+
+	/**
 	 * Enqueue front assets
 	 */
 	public function wp_enqueue_scripts() {
 		$path = 'dist/css/common.css';
-		wp_enqueue_style( RJE_R002LP_KEY . '_common', RJE_R002LP_URL . $path, [ $this->sm_style_handles ], filemtime( RJE_R002LP_PATH . $path ) );
+		wp_enqueue_style( RJE_R002LP_KEY . '_common', RJE_R002LP_URL . $path, $this->get_style_deps(), filemtime( RJE_R002LP_PATH . $path ) );
 	}
 
 	/**
@@ -45,6 +54,6 @@ class Assets {
 	 */
 	public function enqueue_block_editor_assets() {
 		$path = 'dist/css/common.css';
-		wp_enqueue_style( RJE_R002LP_KEY . '_common', RJE_R002LP_URL . $path, [ $this->sm_style_handles ], filemtime( RJE_R002LP_PATH . $path ) );
+		wp_enqueue_style( RJE_R002LP_KEY . '_common', RJE_R002LP_URL . $path, $this->get_style_deps(), filemtime( RJE_R002LP_PATH . $path ) );
 	}
 }

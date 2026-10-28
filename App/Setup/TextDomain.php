@@ -12,7 +12,7 @@ class TextDomain{
 	 * Constructor.
 	 */
 	public function __construct() {
-		load_plugin_textdomain( RJE_R002LP_TEXTDOMAIN, false, RJE_R002LP_PATH . '/languages' );
+		load_plugin_textdomain( RJE_R002LP_TEXTDOMAIN, false, dirname( RJE_R002LP_BASENAME ) . '/languages' );
 		add_filter( 'load_textdomain_mofile', [ $this, 'load_textdomain_mofile' ], 10, 2 );
 	}
 
@@ -26,7 +26,7 @@ class TextDomain{
 	public function load_textdomain_mofile( $mofile, $domain ) {
 		if ( RJE_R002LP_TEXTDOMAIN === $domain ) {
 			$mofilename   = basename( $mofile );
-			$local_mofile = RJE_R002LP_PATH . '/languages/' . $mofilename;
+			$local_mofile = RJE_R002LP_PATH . 'languages/' . $mofilename;
 			if ( file_exists( $local_mofile ) ) {
 				return $local_mofile;
 			}

@@ -14,4 +14,4 @@ $front_filetime = ( file_exists( RJE_R002LP_PATH . $front_filename ) ) ? filemti
 
 
 //フロント・エディター用のCSSファイルを登録
-wp_register_script( $basename . '-script-front', RJE_R002LP_URL . $front_filename, '', $front_filetime, true );
+wp_register_script( $basename . '-script-front', RJE_R002LP_URL . $front_filename, array(), $front_filetime, true );
