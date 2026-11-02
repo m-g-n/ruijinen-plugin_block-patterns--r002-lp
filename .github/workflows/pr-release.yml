@@ -1,7 +1,8 @@
 name: Create release pull request
 
 # dev へ PR がマージされたら、dev → main のリリース PR を作成（既存なら更新）する。
-# PR タイトルはプラグインのルートファイルの Version ヘッダーから取得する。
+# PR タイトルはプラグインのルートファイルの Version ヘッダーから、
+# PR 本文（リリースノート）は README.md の変更履歴の該当バージョンの節から作成する。
 on:
   pull_request:
     branches:
@@ -37,6 +38,23 @@ jobs:
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "Version=$version"
 
+      - name: Create release notes from README.md
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          # 「## <バージョン>」から次の見出しまでを抜き出す
+          notes=$(awk -v version="$VERSION" '
+            $0 == "## " version { found = 1; next }
+            found && /^##? / { exit }
+            found { print }
+          ' README.md | sed -e :a -e '/^[[:space:]]*$/{$d;N;ba' -e '}')
+          if [ -z "$notes" ]; then
+            echo "::warning file=README.md::README.md に ${VERSION} の変更履歴がありません"
+            notes="（README.md に ${VERSION} の変更履歴がありません）"
+          fi
+          printf '## 変更内容\n%s\n' "$notes" > release-notes.md
+          cat release-notes.md
+
       - name: Create or update release pull request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,9 +62,9 @@ jobs:
         run: |
           number=$(gh pr list --base main --head dev --state open --json number --jq '.[0].number // empty')
           if [ -n "$number" ]; then
-            gh pr edit "$number" --title "$VERSION"
+            gh pr edit "$number" --title "$VERSION" --body-file release-notes.md
             echo "Updated release PR #$number"
           else
             gh pr create --base main --head dev --title "$VERSION" \
-              --body-file .github/release-pr-template.md --label release
+              --body-file release-notes.md --label release
           fi
