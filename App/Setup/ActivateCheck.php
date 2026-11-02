@@ -27,9 +27,9 @@ class ActivateCheck {
 	public function make_alert_message() {
 		$alert_html = '<div class="notice notice-warning is-dismissible"><p><strong>[類人猿LPパターン集]</strong></p>';
 		foreach ( $this->messages as $text ) {
-			$alert_html .= '<p>'.$text.'</p>';
+			$alert_html .= '<p>' . esc_html( $text ) . '</p>';
 		}
 		$alert_html .= '</div>';
-		echo $alert_html;
+		echo $alert_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- 上記でエスケープ済み.
 	}
 }

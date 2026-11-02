@@ -5,7 +5,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:snow-monkey-blocks/box {"borderColor":"#999999"} -->
-<div class="wp-block-snow-monkey-blocks-box smb-box"><div class="smb-box__background" style="border-color:#999999;border-width:1px;opacity:1"></div><div class="smb-box__body"><!-- wp:paragraph -->
+<div class="wp-block-snow-monkey-blocks-box smb-box" style="--smb-box--background-opacity:1;--smb-box--border-color:#999999;--smb-box--border-width:1px"><div class="smb-box__background"></div><div class="smb-box__body"><!-- wp:paragraph -->
 <p>内容量 : 300ml</p>
 <!-- /wp:paragraph -->
 

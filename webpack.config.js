@@ -1,25 +1,25 @@
 const path = require("path");
 const glob = require("glob");
 
-const srcDir = "./patterns";
-const entries = glob
-  .sync("**/*.js", {
-    ignore: "**/_*.js",
-    cwd: srcDir,
-  })
-  .map(function (key) {
-    // [ '**/*.js' , './src/**/*.js' ]という形式の配列になる
-    return [key, path.resolve(srcDir, key)];
-  });
+// [出力先（dist/js からの相対）, 入力元] の配列を作る
+const collectEntries = (srcDir, distDir) =>
+	glob
+		.sync("**/*.js", {
+			ignore: "**/_*.js",
+			cwd: srcDir,
+		})
+		.map((key) => [path.join(distDir, key), path.resolve(srcDir, key)]);
 
-// 配列→{key:value}の連想配列へ変換
-const entryObj = Object.fromEntries(entries);
+const entryObj = Object.fromEntries([
+	...collectEntries("./patterns", "patterns"), // パターン固有のスクリプト
+	...collectEntries("./src/js", "."), // エディター用などの共通スクリプト
+]);
 
 module.exports = {
-  mode: 'production',
-  entry: entryObj,
-  output: {
-    path: path.join(__dirname, "dist/js/patterns"),
-    filename: "[name]",
-  },
+	mode: "production",
+	entry: entryObj,
+	output: {
+		path: path.join(__dirname, "dist/js"),
+		filename: "[name]",
+	},
 };
