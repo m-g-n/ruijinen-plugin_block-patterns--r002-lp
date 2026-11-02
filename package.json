@@ -26,6 +26,9 @@
     "webpack": "^5.112.2",
     "webpack-cli": "^7.2.3"
   },
+  "overrides": {
+    "qs": "^6.16.1"
+  },
   "scripts": {
     "export:wp-content:themes": "npm run cli cp -- -r wp-content/themes .export/wp-content",
     "export:wp-content:uploads": "npm run cli cp -- -r wp-content/uploads .export/wp-content",
