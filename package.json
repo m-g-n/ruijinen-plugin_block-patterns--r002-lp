@@ -11,7 +11,6 @@
     "@playwright/test": "^1.64.1",
     "@wordpress/e2e-test-utils-playwright": "^3.1.0",
     "@wordpress/env": "^12.0.0",
-    "backstopjs": "^6.3.25",
     "cssnano": "^9.9.0",
     "del-cli": "^8.0.1",
     "glob": "^14.0.3",
@@ -25,6 +24,9 @@
     "svgo": "^4.1.0",
     "webpack": "^5.112.2",
     "webpack-cli": "^7.2.3"
+  },
+  "overrides": {
+    "qs": "^6.16.1"
   },
   "scripts": {
     "export:wp-content:themes": "npm run cli cp -- -r wp-content/themes .export/wp-content",
@@ -53,12 +55,10 @@
     "watch": "run-p \"watch:*\"",
     "watch:sass": "sass src/css:dist/css block-styles:dist/css/block-styles patterns:dist/css/patterns --no-error-css --no-source-map --watch",
     "watch:postcss": "postcss dist/css --base ./dist/css -d dist/css --watch",
-    "backstop_reference": "npm run backstop reference",
-    "backstop_test": "npm run backstop test",
-    "backstop_approve": "npm run backstop approve",
-    "backstop": "node ./backstop_data/runner.js",
     "test:e2e:setup": "wp-env run cli -- bash -c \"wp user get e2e-admin >/dev/null 2>&1 || wp user create e2e-admin e2e-admin@example.com --role=administrator; wp user update e2e-admin --user_pass=password --skip-email; wp user meta update e2e-admin locale en_US\"",
-    "test:e2e": "playwright test --config tests/e2e/playwright.config.js"
+    "test:e2e": "playwright test --config tests/e2e/playwright.config.js",
+    "test:visual": "playwright test --config tests/visual/playwright.config.js",
+    "test:visual:update": "playwright test --config tests/visual/playwright.config.js --update-snapshots"
   },
   "browserslist": [
     ">0.25% in JP",
@@ -67,7 +67,6 @@
     "Android >= 4.4"
   ],
   "allowScripts": {
-    "puppeteer": true,
     "@parcel/watcher": false,
     "fs-ext-extra-prebuilt": false
   }

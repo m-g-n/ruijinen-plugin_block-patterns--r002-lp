@@ -17,6 +17,16 @@ Node.js のバージョンは [mise](https://mise.jdx.dev/) で管理してい�
 - `npm run watch` でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
 - `npm run build` でCSS・JS・画像をビルド（コマンド走ったときだけコンパイル）
 
+# 見た目の差分チェック
+
+固定ページ（`rje_r002lp_*`）のフロント画面を Playwright で撮影し、基準画像と比較します（以前は BackstopJS を利用）。`npm start` で wp-env を起動した状態で実行してください。
+
+- `npx playwright install chromium` でブラウザをインストール（初回のみ）
+- `npm run test:visual:update` で基準画像を作成・更新（変更前の状態で実行。`tests/visual/__screenshots__` に保存され、Git には含めません）
+- `npm run test:visual` で基準画像と比較（差分がある場合は `artifacts/visual-report` に差分画像を出力）
+
+対象ページ・除外する要素は `tests/visual/scenarios.json`、画面幅（sp / md / lg / xg）は `tests/visual/playwright.config.js` で設定します。
+
 # エディターの編集チェック（E2Eテスト）
 
 各ブロックパターンがエディターで編集できるかを Playwright で確認します。`npm start` で wp-env を起動した状態で実行してください。
