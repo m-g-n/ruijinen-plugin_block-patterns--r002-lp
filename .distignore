@@ -8,8 +8,6 @@
 .wp-env.json
 mise.toml
 node_modules/*
-backstop_data/*
-backstop.json
 tests/*
 artifacts/*
 src/*
