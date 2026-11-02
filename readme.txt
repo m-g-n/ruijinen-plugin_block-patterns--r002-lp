@@ -4,7 +4,7 @@ Donate link: https://rui-jin-en.com/
 Tags: gutenberg, block, blocks, editor, gutenberg blocks, page builder, landing page, microcopy, steps, call to action
 Requires at least: 6.3
 Tested up to: 7.1
-Stable tag: 3.2.2
+Stable tag: 3.2.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
