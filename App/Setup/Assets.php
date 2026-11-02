@@ -55,5 +55,15 @@ class Assets {
 	public function enqueue_block_editor_assets() {
 		$path = 'dist/css/common.css';
 		wp_enqueue_style( RJE_R002LP_KEY . '_common', RJE_R002LP_URL . $path, $this->get_style_deps(), filemtime( RJE_R002LP_PATH . $path ) );
+
+		//旧形式の box ブロックを読み込めるようにする（ブロック登録前に読み込むため head で出力）
+		$path = 'dist/js/editor/box-deprecation.js';
+		wp_enqueue_script(
+			RJE_R002LP_KEY . '_box_deprecation',
+			RJE_R002LP_URL . $path,
+			array( 'wp-hooks', 'wp-element', 'wp-block-editor' ),
+			filemtime( RJE_R002LP_PATH . $path ),
+			false
+		);
 	}
 }

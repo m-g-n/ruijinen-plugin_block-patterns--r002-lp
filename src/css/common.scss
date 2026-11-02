@@ -55,3 +55,34 @@
 		@include i.button--normal;
 	}
 }
+
+// ------------------------------------------------------
+// メディアとテキストブロックの新マークアップ対応
+// Snow Monkey Blocks のメディアとテキストブロックは、エディターで保存し直すと新しいマークアップ
+// （data-sm-split-point 付き、c-row--margin・c-row--middle が無くなる）に変換される。
+// LP パターンでは旧マークアップの見た目を正とし、新マークアップでも同じ表示になるようにする。
+// ------------------------------------------------------
+:is(
+  .RJE_R002LP_voices__person,
+  .is-style-RJE_R002LP_spec_content,
+  .is-style-RJE_R002LP_hero_media_and_text .smb-media-text,
+  .is-style-RJE_R002LP_cta .smb-media-text,
+  .is-style-RJE_R002LP_message_accent .smb-media-text,
+  .is-style-RJE_R002LP_message_accent2 .smb-media-text
+)[data-sm-split-point] {
+  //テキスト側の余白（.smb-media-text__contents-wrapper の margin）を無くし、旧マークアップの c-row--margin と同じ間隔にする
+  --smb-media-text--gap: 0px;
+  > .c-row {
+    --_gap: var(--_margin1);
+  }
+  //旧マークアップと同じく、全画面幅で縦位置を揃える
+  > .c-row--lg-top {
+    align-items: flex-start;
+  }
+  > .c-row--lg-middle {
+    align-items: center;
+  }
+  > .c-row--lg-bottom {
+    align-items: flex-end;
+  }
+}
