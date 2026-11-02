@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿ブロックパターン：LP向けパターン集
  * Description: 類人猿ブロックパターン LP向けパターンアドオンです
- * Version: 3.2.2
+ * Version: 3.2.3
  * Tested up to: 7.1
  * Requires at least: 6.3
  * Author: mgn Inc.,
