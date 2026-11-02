@@ -1,37 +1,52 @@
-name: Create release pull requests
+name: Create release pull request
 
+# dev へ PR がマージされたら、dev → main のリリース PR を作成（既存なら更新）する。
+# PR タイトルはプラグインのルートファイルの Version ヘッダーから取得する。
 on:
   pull_request:
     branches:
       - dev
     types: [closed]
 
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: release-pr
+  cancel-in-progress: false
+
 jobs:
   create-release-pr:
-    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'main') == false
+    # main → dev の同期 PR（リリース残処理）では動かさない
+    if: github.event.pull_request.merged == true && !startsWith(github.event.pull_request.head.ref, 'main')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
         with:
-          fetch-depth: 0
+          ref: dev
 
-      - name: Get Version
-        id: get_version
-        uses: bbonkr/get-version-action@v1.0.1
-        with:
-          project: "./version.json"
-
-      - name: Echo Version
-        id: echo-version
+      - name: Get plugin version
+        id: version
         run: |
-          echo "Version=${{ steps.get_version.outputs.version }}"
+          version=$(sed -n 's/^[[:space:]]*\*[[:space:]]*Version:[[:space:]]*\([^[:space:]]*\).*/\1/p' ruijinen-block-patterns-r002-lp.php | head -n 1)
+          if [ -z "$version" ]; then
+            echo "::error file=ruijinen-block-patterns-r002-lp.php::Version header not found"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Version=$version"
 
-      - name: Create a release pull request
-        uses: bakunyo/git-pr-release-action@master
+      - name: Create or update release pull request
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_PR_RELEASE_BRANCH_PRODUCTION: main
-          GIT_PR_RELEASE_BRANCH_STAGING: dev
-          GIT_PR_RELEASE_LABELS: release
-          PKG_VERSION: ${{ steps.get_version.outputs.version }}
-          GIT_PR_RELEASE_TEMPLATE: .github/git-pr-release/.git-pr-release-template
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          number=$(gh pr list --base main --head dev --state open --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh pr edit "$number" --title "$VERSION"
+            echo "Updated release PR #$number"
+          else
+            gh pr create --base main --head dev --title "$VERSION" \
+              --body-file .github/release-pr-template.md --label release
+          fi

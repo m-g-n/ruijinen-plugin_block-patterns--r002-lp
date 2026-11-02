@@ -3,19 +3,34 @@
 # 類人猿ブロックパターン：LP向けパターン集
 WordPressテーマ Snow Monkeyを拡張する「類人猿ブロックパターンプラグイン」のLP向けパターン集アドオンです
 
+# 開発環境
+
+Node.js のバージョンは [mise](https://mise.jdx.dev/) で管理しています（`mise.toml` で Node.js 24 を指定）。
+
+当プラグインディレクトリーまで移動したあと、
+
+- `mise install` で Node.js をインストール（初回のみ。`mise trust` を求められた場合は実行）
+- `npm ci` でパッケージをインストール
+
 # SCSSのコンパイル方法
 
-当プラグインディレクトリーまで移動したあと、
+- `npm run watch` でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
+- `npm run build` でCSS・JS・画像をビルド（コマンド走ったときだけコンパイル）
 
-- npm i(yarn)でpackegeをインストール
-- npm run watch(yarn watch)でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
-- npm run build (yarn build)でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
-
-# comporserの準備
+# composerの準備
 
 当プラグインディレクトリーまで移動したあと、
 
-- composer install でパッケージをインストール
+- `composer install` でパッケージをインストール
+
+# リリース手順
+
+1. 作業ブランチを dev にマージすると、dev → main のリリースPRが自動作成（既存ならタイトルを更新）されます
+2. リリースPRのタイトルにはプラグインのルートファイル（`ruijinen-block-patterns-r002-lp.php`）の `Version` が使われます
+3. リリースPRを main にマージすると、`Version` をタグ名としてリリースとzipが作成されます
+	- 同じバージョンのタグが既に存在する場合、リリースはスキップされます（バージョンを上げ忘れた場合など）
+	- リリースPRの本文がリリースノートになります
+4. main の内容を dev へ反映するPRが自動作成されます
 
 # 変更履歴
 ## 3.2.1

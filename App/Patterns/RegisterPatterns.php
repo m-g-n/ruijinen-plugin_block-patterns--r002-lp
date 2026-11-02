@@ -16,7 +16,7 @@ class RegisterPatterns {
 		$methods = array(
 			array(
 				'name' => 'hero_media_and_text',
-				'label' => 'Heroイメージ（メディアと文章',
+				'label' => 'Heroイメージ（メディアと文章)',
 				'priority' => 1
 			),
 			array(
