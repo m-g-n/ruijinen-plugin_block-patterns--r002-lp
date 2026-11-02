@@ -1,0 +1,191 @@
+[
+  {
+    "label": "hero_media_and_text",
+    "path": "/rje_r002lp_hero_media_and_text",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "hero_media_and_text_right",
+    "path": "/rje_r002lp_hero_media_and_text2",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "hero_one_column",
+    "path": "/rje_r002lp_hero_one_column",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "message_normal",
+    "path": "/rje_r002lp_message_normal",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "message_normal_right",
+    "path": "/rje_r002lp_message_normal2",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "message_accent",
+    "path": "/rje_r002lp_message_accent",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "message_accent2",
+    "path": "/rje_r002lp_message_accent2",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "flow",
+    "path": "/rje_r002lp_flow",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "merit",
+    "path": "/rje_r002lp_merit",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "voice",
+    "path": "/rje_r002lp_voice",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "faq",
+    "path": "/rje_r002lp_faq",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "gallery",
+    "path": "/rje_r002lp_gallery",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "variation",
+    "path": "/rje_r002lp_variation",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "media_list",
+    "path": "/rje_r002lp_media_list",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "corp_list",
+    "path": "/rje_r002lp_corp_list",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "spec",
+    "path": "/rje_r002lp_spec",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "news",
+    "path": "/rje_r002lp_news",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "prices",
+    "path": "/rje_r002lp_prices",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "cta",
+    "path": "/rje_r002lp_cta",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  },
+  {
+    "label": "cta_fix",
+    "path": "/rje_r002lp_cta_fix",
+    "selector": null,
+    "hide": [
+      ".l-header",
+      ".l-footer"
+    ]
+  },
+  {
+    "label": "section1",
+    "path": "/rje_r002lp_section1",
+    "selector": ".l-contents__container",
+    "hide": [
+      ".p-breadcrumbs-wrapper",
+      ".c-entry__header"
+    ]
+  }
+]
