@@ -80,8 +80,16 @@ jobs:
       - name: Composer install
         run: composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
+      # WordPress はzip直下が単一ディレクトリの場合のみ、そのディレクトリ名をプラグインのディレクトリ名に使う。
+      # 直下にファイルを平置きすると一時ディレクトリ名（ランダム文字列付き）でインストールされるため、
+      # プラグインスラッグ名のフォルダに格納してからzip化する。
       - name: Zip plugin
-        run: zip -r "$PLUGIN_SLUG.zip" . -x@.distignore
+        run: |
+          zip -rq "$RUNNER_TEMP/flat.zip" . -x@.distignore
+          mkdir -p "$RUNNER_TEMP/dist"
+          unzip -q "$RUNNER_TEMP/flat.zip" -d "$RUNNER_TEMP/dist/$PLUGIN_SLUG"
+          (cd "$RUNNER_TEMP/dist" && zip -rq "$GITHUB_WORKSPACE/$PLUGIN_SLUG.zip" "$PLUGIN_SLUG")
+          unzip -l "$PLUGIN_SLUG.zip" | head -n 10
 
       - name: Create Release
         env:
