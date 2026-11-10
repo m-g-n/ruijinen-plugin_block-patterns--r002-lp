@@ -26,6 +26,8 @@
     "webpack-cli": "^7.2.3"
   },
   "overrides": {
+    "isomorphic-git": "^1.38.6",
+    "glob": "$glob",
     "qs": "^6.16.1"
   },
   "scripts": {
